@@ -57,6 +57,9 @@
 \newcommand{\lang}[1]{\textcolor{orange}{#1}}
 
 
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+
 %% We encourage the use of mathptmx for consistent usage of times font
 %% throughout the proceedings. However, if you encounter conflicts
 %% with other math-related packages, you may want to disable it.
@@ -214,6 +217,42 @@ We propose a model that decomposes a visualization into three levels of structur
  \caption{Illustration of the 4 types of relationship between visual units}
  \label{fig:sample}
 \end{figure}
+
+
+
+
+\begin{table}[tb]
+  \small
+  \centering
+  \begin{tabular}{p{0.8cm}|p{2.1cm}|p{2.1cm}|p{2.1cm}}
+  \toprule
+  &\textbf{Radial} & \textbf{Linear / Parallel} & \textbf{Metric-dependent} \Tstrut\Bstrut  \\ 
+  \midrule
+  \textbf{Line} & & Line Chart & \\ 
+  \midrule
+  \textbf{Area} & &Area Graph  & Treemap \\ 
+  \midrule
+  \textbf{Bar} &Radial Bar Chart & Bar Chart & \\
+  \midrule
+  \textbf{Dot} & &Scatter Plot &Bubble Map \\
+  \midrule
+  \textbf{Wedge} & Pie Chart &Arc Diagram & \\
+  \midrule
+  \textbf{Link} &Chord Diagram &Parallel Coordinates &Node-link Diagram \\
+  \midrule
+  \textbf{Text} & &Parallel Tag Cloud [] &Word Cloud \\
+  \midrule
+  \textbf{Image} & &Heatmap Matrix &Heatmap \\
+
+  \bottomrule
+
+  \end{tabular}
+  \vspace{1mm}
+  \caption{A summary of visual units.}
+  \label{tab:unit}
+\end{table}
+
+
 \subsubsection{Relationships between visual units}
 An advanced visualization is often the combination of several visual units. Through observing the approaches people apply to design new visualizations, \wrong{we define four types of relationship between visual units in our model, \textbf{need a table for it}}: irrelevance, relevance, enhancement, and dependency. \par
 \textbf{Irrelevance} refers to that two visual units have no correlations in their visual encodings. It is a bi-directional relation. As in \textbf{figure1a}, 2 donut charts are applied to illustrate the distribution of age and gender groups respectively in a population. They are put together just for space-efficiency and there is no correlation between these two charts. \par

@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex template"] 1489740371 "template.aux" "template.bbl" "template" 1489740418
+["bibtex template"] 1489740591 "template.aux" "template.bbl" "template" 1489740593
   "./abbrv-doi.bst" 1489740305 25959 663f3219541050a59ab672891be08502 ""
-  "template.aux" 1489740418 9830 88584bbabd85222737080bc636961101 ""
+  "template.aux" 1489740593 10009 ca0f9553f202862c7a25937b075de029 ""
   "template.bcf" 0 -1 0 ""
   "template.bib" 1489740305 282460 c69d0c6be363d1a720f85914ceeefac2 ""
   (generated)
   "template.bbl"
   "template.blg"
-["pdflatex"] 1489740417 "template.tex" "template.pdf" "template" 1489740418
+["pdflatex"] 1489740591 "template.tex" "template.pdf" "template" 1489740593
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -100,13 +100,13 @@
   "pictures/Picture1.png" 1489740305 416033 138501cfa48959606245e5cd53ad4895 ""
   "pictures/Picture2.png" 1489740305 323047 cb2b1186a3bd8cba9a5a9bad1e5b05da ""
   "pictures/unit_relationship.png" 1489740305 341684 794c6057ae56ecf84eae0867d1c3d92b ""
-  "template.aux" 1489740418 9830 88584bbabd85222737080bc636961101 ""
-  "template.bbl" 1489740371 15503 ad851fd6e81753f4f581f908c8b6f9ef "bibtex template"
-  "template.out" 1489740418 3078 7e8d46224d4949b3693b0d00fa259574 ""
-  "template.tex" 1489740417 52937 d7ffc7de19ed2c809118c1e0d7dab16e ""
+  "template.aux" 1489740593 10009 ca0f9553f202862c7a25937b075de029 ""
+  "template.bbl" 1489740591 15503 ad851fd6e81753f4f581f908c8b6f9ef "bibtex template"
+  "template.out" 1489740593 3078 6a2b5e52d014aba621094baf14da4e00 ""
+  "template.tex" 1489740589 53881 732f9bd24fcb4d19cbd54cbbfd33274f ""
   "vgtc.cls" 1489740305 32703 a647890a92b54c8c749f342e876d0207 ""
   (generated)
-  "template.pdf"
-  "template.log"
-  "template.out"
   "template.aux"
+  "template.log"
+  "template.pdf"
+  "template.out"
