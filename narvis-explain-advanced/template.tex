@@ -212,26 +212,26 @@ However, these decomposing methods exclusively focus on simple visualization des
 \end{table}
 
 \section{Analysis of a visualization} 
-To better inform the crafting of a narrative explanation, we survey more than 60 papers about data visualization design that published in journals with high impact and have high citations. Based on our survey, we propose a model that try to decompose the structure of an advanced visualization, as well as to identify correlations and visual distractions existing between different compositions. At the same time, borrowing heavily from the existing perceptual and cognitive theory, we put forward some suggestions for the design of narrative visualization explanation. 
-\par
+
 \begin{figure}
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
  \includegraphics[width=\columnwidth]{Picture2}
  \caption{An example of the hierarchical structure of a visualization, Opinion Seer\cite{wu_opinionseer:_2010}}
- \label{fig:sample}
+ \label{fig:structure}
 \end{figure}
 \subsection{Compositions of a visualization}
-Previous works have proven that learning by constructin is effective for grasping new knowledge.\cite{huron_constructive_2014, chapman_constructive_1988}  We incorporate the lessons from previous work\cite{munzner_visualization_2014, huron_constructive_2014, chi_taxonomy_2000}  with our observation, define the compositions of a visualization. 
+Previous works have proven that learning by constructin is effective for grasping new knowledge.\cite{huron_constructive_2014, chapman_constructive_1988}  We incorporate the lessons from previous work\cite{munzner_visualization_2014, huron_constructive_2014, chi_taxonomy_2000}  with our observation, define the compositions of a visualization and the relationships between these compositions. 
+
 \wrong{maybe define what is an advanced visualization design????}
 \subsubsection{Hierarchical structure}
-We propose a model that decomposes a visualization into three levels of structure: visual primitives, visual units, and then an advanced visualization design. A visual primitive is one graphic element, also called as mark\cite{munzner_visualization_2014} or token\cite{huron_constructive_2014}, with all the visual channels controlling its appearance. For instance, a point whose position and color are encoded is a visual primitive. It is the combination of one mark, point, with two visual channels, color and position. A visual unit is the combination of visual primitives. It is also the smallest functional unit of a visualization. A scatter plot, which groups the points mentioned above, is a visual unit. A node-link diagram, which is also a visual unit, is consist of two visual primitives, points mentioned above and lines whose position and color are encoded.  An advanced visualization can be treated as the combination of visual units. 
+We propose a model that decomposes a visualization into three levels of structure: visual primitives, visual units, and then an advanced visualization design. A visual primitive is one graphic element, also called as mark\cite{munzner_visualization_2014} or token\cite{huron_constructive_2014}, with all the visual channels controlling its appearance. For instance, a point whose position and color are encoded is a visual primitive. It is the combination of one mark, point, with two visual channels, color and position. A visual unit is the assembly of visual primitives based on a certain construction rule.\wrong{waiting for a demo fig} It is also the smallest functional unit of a visualization. A scatter plot, which groups the points mentioned above, is a visual unit. A node-link diagram, which is also a visual unit, is consist of two visual primitives, points mentioned above and lines whose position and color are encoded.  An advanced visualization can be treated as the combination of visual units. 
 
 \par
 \begin{figure}[tb]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
  \includegraphics[width=\columnwidth]{unit_relationship}
  \caption{Illustration of the 4 types of relationship between visual units}
- \label{fig:sample}
+ \label{fig:relationship}
 \end{figure}
 \subsubsection{Relationships between visual units}
 An advanced visualization is often the combination of several visual units. Through observing the approaches people apply to design new visualizations, \wrong{we define four types of relationship between visual units in our model, \textbf{need a table for it}}: irrelevance, relevance, enhancement, and dependency. \par
@@ -263,14 +263,17 @@ From our observation, we identify two kinds of visual distractions: visual distr
 \textbf{Channels}: As discussed in section 3.1.4, when explaining channels, we should take information complexity as well as visual saliency into account. 
 
 As for one channel, the narrative explanation depends on the type of the channel. As defined previous work, therer namely, whether it is a magnitude channel, which expresses ordered data attributes, or an identity channel, which expresses category data attributes. For a magnitude channel, two extreme examples will be enough for explaining, while for an ordered channel, introducing each category one by one might be a better option.\par
-\textbf{Units}: As discussed in section 3.1.2, there are four types of relationships between visual units, and they will influence the order of a narrative explanation. Thus, we display the correlations between units in a tree diagram where a child node is the enhancement/dependence of its parent node and sibling nodes have logic dependences. When explaining these visual units, we can simply obey a deep first search (DFS) order to visit all the visual units.\par
-\textbf{Non-linear sequence}: so far, all the narrative explanation we discussed is linear. We move from one channel to another channel, then from one primitive to another primitive, then from one unit to another unit. However, the fact is that no one likes to read a lengthy, extremely detailed instruction. A good narrative explanation should include non-linear design, allowing users to skip uninterested, go back to previous information and freely switch between different parts. Also, users should be allowed the flexibility to choose explanations at different levels of details, more specifically, a detailed mode, a normal mode, an abstract mode. \par
-\section{Narvis: Authoring Narrative Explanation for Data Visualization}
+\textbf{Units}: As discussed in section 3.1.2, there are four types of relationships between visual units, and they will influence the order of a narrative explanation. Thus, we display the correlations between units in a tree diagram where a child node is the enhancement/dependence of its parent node and sibling nodes have logic dependences. When explaining these visual units, we can simply follow a deep first search (DFS) order to visit all the visual units.\par
+\textbf{Non-linear sequence}: so far, all the narrative explanation we discussed is linear. We move from one channel to another channel, then from one primitive to another primitive, then from one unit to another unit. However, reading a lengthy, extremely detailed instruction maybe tedious. A good narrative explanation should include non-linear design, allowing users to skip uninterested parts, go back to previous information and freely switch between different parts. Also, users should be allowed the flexibility to choose explanations at different levels of details. 
+
+\section{Narvis: System Design and Implementation}
 \subsection{An overview}
-Narvis is aimed to offer an efficient, expressive and friendly authoring tool for the experts in data visualization, help them create a slide show for the purpose of introducing an advanced visualization design to general audience.  \par
-Narvis is consist of three phase: Automatic Analysis Phase, Human Editing Phase, Reviewing Phase.\par
-In Automatic Analysis Phase, the system will automatically extract the graphical elements in the input visualization with an algorithm based on edge detection. These graphic elements will be classified based on their visual appearance, such as the area, color, the number of corners. Input text description will also be classified based on the keywords we pre-defined in our system. \par 
-In Human Editing Phase, users will modify the output from the Automatic Analysis Phase, call the templates we offer, and craft a slide show to introduce an advanced visualization. \par 
+Narvis aims to offer an efficient, expressive and friendly authoring tool for the experts in data visualization, help them create a slide show for the purpose of introducing an advanced visualization design to general audience.  It is consist of three phase: Automatic Analysis Phase, Human Editing Phase, Viewing Phase. Narvis has two kinds of users: editor, the data visualization experts who use Narvis to create an explanation slideshow, and audience, the general audience who watch the slideshow created by ediors.
+
+In Automatic Analysis Phase, the system will automatically extract the graphical elements in the input visualization with an algorithm based on edge detection. These graphic elements will be classified based on their visual appearance, such as the area, color, the number of corners. Input text description will also be classified based on a basic keyword detection and sentence classification approach. 
+
+In Human Editing Phase, editors will be involved to modify the output from the Automatic Analysis Phase. Narvis offers templates and pre-defined animation to better support them to craft a explanation slideshow. 
+ 
 In Reviewing Phase, reviews can assess the slide show generated in Human Editing Phase. Their feedback, more specifically, their click activity and comments, will be recorded and send to the Human Editing Phase, helping improve the quality of the slide show. 
 \subsection{Design consideration}
 Hence, we settle on six design considerations(DCs) for this authoring tool. Our premise is that the user is familiar with the visual encodings of a visualization design but unclear how to educate his audiences in an efficient way. \par
