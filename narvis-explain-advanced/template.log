@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.28)  17 MAR 2017 16:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.28)  17 MAR 2017 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -706,11 +706,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 447.
  ) 
 Here is how much of TeX's memory you used:
- 8795 strings out of 493014
- 134513 string characters out of 6133351
+ 8800 strings out of 493014
+ 134558 string characters out of 6133351
  263352 words of memory out of 5000000
  11843 multiletter control sequences out of 15000+600000
- 52746 words of font info for 243 fonts, out of 8000000 for 9000
+ 52997 words of font info for 247 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,12n,38p,991b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -720,7 +720,7 @@ xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/f
 onts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on template.pdf (8 pages, 931987 bytes).
+Output written on template.pdf (8 pages, 932094 bytes).
 PDF statistics:
  384 PDF objects out of 1000 (max. 8388607)
  356 compressed objects within 4 object streams
