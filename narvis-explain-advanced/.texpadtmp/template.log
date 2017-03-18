@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.14)  17 MAR 2017 12:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.14)  18 MAR 2017 00:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -389,7 +389,7 @@ Package hyperref Info: Option `nesting' set `true' on input line 138.
 Package hyperref Info: Option `linktocpage' set `true' on input line 138.
 (/Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.aux
 
-LaTeX Warning: Label `fig:sample' multiply defined.
+LaTeX Warning: Label `fig:hierarchic' multiply defined.
 
 )
 \openout1 = `template.aux'.
@@ -480,7 +480,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 \abstractwidth=\skip54
- <pictures/Picture1.png, id=176, 1472.50125pt x 505.13719pt>
+ <pictures/Picture1.png, id=180, 1472.50125pt x 505.13719pt>
 File: pictures/Picture1.png Graphic file (type png)
  <use pictures/Picture1.png>
 Package pdftex.def Info: pictures/Picture1.png used on input line 151.
@@ -513,7 +513,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 151.
- <diamondrule.pdf, id=178, 213.79875pt x 12.045pt>
+ <diamondrule.pdf, id=182, 213.79875pt x 12.045pt>
 File: diamondrule.pdf Graphic file (type pdf)
  <use diamondrule.pdf>
 Package pdftex.def Info: diamondrule.pdf used on input line 151.
@@ -571,82 +571,111 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
+ <pictures/hierarchic.png, id=250, 498.36188pt x 490.08093pt>
+File: pictures/hierarchic.png Graphic file (type png)
+ <use pictures/hierarchic.png>
+Package pdftex.def Info: pictures/hierarchic.png used on input line 202.
+(pdftex.def)             Requested size: 251.31898pt x 247.14119pt.
+ <pictures/assemble.png, id=253, 901.86937pt x 726.46407pt>
+File: pictures/assemble.png Graphic file (type png)
+ <use pictures/assemble.png>
+Package pdftex.def Info: pictures/assemble.png used on input line 209.
+(pdftex.def)             Requested size: 251.31898pt x 202.43307pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 204.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 204.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
+ [2pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.16}) has been already used, duplicate ignored
 
-Overfull \hbox (32.04433pt too wide) in paragraph at lines 204--214
- [][] 
- []
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.239 
+      pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.16}) has been already used, duplicate ignored
 
-<pictures/Picture2.png, id=245, 891.33pt x 731.73375pt>
-File: pictures/Picture2.png Graphic file (type png)
- <use pictures/Picture2.png>
-Package pdftex.def Info: pictures/Picture2.png used on input line 222.
-(pdftex.def)             Requested size: 251.31898pt x 206.31322pt.
- [2] <pictures/unit_relationship.png, id=280, 1368.61313pt x 788.19469pt>
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.239 
+      ] <pictures/unit_relationship.png, id=295, 1368.61313pt x 788.19469pt>
 File: pictures/unit_relationship.png Graphic file (type png)
  <use pictures/unit_relationship.png>
-Package pdftex.def Info: pictures/unit_relationship.png used on input line 235.
+Package pdftex.def Info: pictures/unit_relationship.png used on input line 276.
 (pdftex.def)             Requested size: 251.31898pt x 144.73131pt.
+
+Overfull \vbox (2.32803pt too high) has occurred while \output is active []
+
+ [3pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.284 ...ling plot.\cite{chen_peakvizor:_2016}\par
+                                                   <./pictures/hierarchic.png> <./pictures/assemble.png> <./pictures/unit_relationship.png>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
+ <pictures/overview.png, id=324, 1257.19687pt x 834.86906pt>
+File: pictures/overview.png Graphic file (type png)
+ <use pictures/overview.png>
+Package pdftex.def Info: pictures/overview.png used on input line 320.
+(pdftex.def)             Requested size: 251.31898pt x 166.89442pt.
 
-Overfull \vbox (2.32803pt too high) has occurred while \output is active []
+Underfull \vbox (badness 4686) has occurred while \output is active []
 
- [3 <./pictures/Picture2.png> <./pictures/unit_relationship.png>] [4]
+ [4 <./pictures/overview.png>]
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
  [5]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 337.
- [6] (/Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.bbl
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 362.
+ [6]
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
- [7]
+ [7] (/Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.bbl
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \hbox (badness 1189) in paragraph at lines 418--427
+ [8]
+Underfull \hbox (badness 1189) in paragraph at lines 452--461
 []\OT1/ptm/m/n/8 (+20) J. Zhao, N. Cao, Z. Wen, Y. Song, Y. R. Lin, and C. Collins.
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 425.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 425.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 501.
+
+Overfull \vbox (2.32803pt too high) has occurred while \output is active []
+
+ [9
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 501.
  (/Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 425.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 425.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 501.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 501.
 Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 425.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 501.
  ) 
 Here is how much of TeX's memory you used:
- 8774 strings out of 493014
- 135414 string characters out of 6133351
- 261757 words of memory out of 5000000
- 11840 multiletter control sequences out of 15000+600000
- 49697 words of font info for 234 fonts, out of 8000000 for 9000
+ 8823 strings out of 493014
+ 136185 string characters out of 6133351
+ 260753 words of memory out of 5000000
+ 11849 multiletter control sequences out of 15000+600000
+ 54925 words of font info for 253 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,14n,38p,991b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,12n,38p,987b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.pdf (8 pages, 931426 bytes).
+Output written on /Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.pdf (9 pages, 1395283 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
- 349 compressed objects within 4 object streams
- 97 named destinations out of 1000 (max. 500000)
- 39789 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 415 PDF objects out of 1000 (max. 8388607)
+ 379 compressed objects within 4 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 44415 words of extra memory for PDF output out of 51595 (max. 10000000)
 

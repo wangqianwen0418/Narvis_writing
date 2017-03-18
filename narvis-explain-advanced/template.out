@@ -4,40 +4,41 @@
 \BOOKMARK [2][]{subsection.5}{Animation for data visualization}{section.3}% 4
 \BOOKMARK [2][]{subsection.6}{Authoring tools for narrative visualization}{section.3}% 5
 \BOOKMARK [2][]{subsection.7}{Decompose a data visualization}{section.3}% 6
-\BOOKMARK [1][]{section.9}{Analysis of a visualization}{}% 7
-\BOOKMARK [2][]{subsection.11}{Compositions of a visualization}{section.9}% 8
-\BOOKMARK [3][-]{subsubsection.12}{Hierarchical structure}{subsection.11}% 9
-\BOOKMARK [3][-]{subsubsection.15}{Relationships between visual units}{subsection.11}% 10
-\BOOKMARK [3][-]{subsubsection.16}{Correlations between visual primitives}{subsection.11}% 11
-\BOOKMARK [3][-]{subsubsection.17}{Correlations between visual channels}{subsection.11}% 12
-\BOOKMARK [2][]{subsection.18}{Analysis of existing visual distraction}{section.9}% 13
-\BOOKMARK [2][]{subsection.19}{Design considerations of narrative sequence}{section.9}% 14
-\BOOKMARK [1][]{section.20}{Narvis: Authoring Narrative Explanation for Data Visualization}{}% 15
-\BOOKMARK [2][]{subsection.21}{An overview}{section.20}% 16
-\BOOKMARK [2][]{subsection.22}{Design consideration}{section.20}% 17
-\BOOKMARK [2][]{subsection.23}{Figure decomposition and text detection}{section.20}% 18
-\BOOKMARK [2][]{subsection.24}{Animation, Information repetition, annotation }{section.20}% 19
-\BOOKMARK [2][]{subsection.25}{Library of explanation templates}{section.20}% 20
-\BOOKMARK [3][-]{subsubsection.26}{Templates design}{subsection.25}% 21
-\BOOKMARK [3][-]{subsubsection.27}{Types of Templates}{subsection.25}% 22
-\BOOKMARK [3][-]{subsubsection.28}{Utility}{subsection.25}% 23
-\BOOKMARK [2][]{subsection.29}{User interface}{section.20}% 24
-\BOOKMARK [3][-]{subsubsection.30}{Editing mode}{subsection.29}% 25
-\BOOKMARK [3][-]{subsubsection.31}{Reviewing mode}{subsection.29}% 26
-\BOOKMARK [2][]{subsection.32}{A working scenario}{section.20}% 27
-\BOOKMARK [3][-]{subsubsection.33}{Motivation}{subsection.32}% 28
-\BOOKMARK [3][-]{subsubsection.34}{Editing Procedure}{subsection.32}% 29
-\BOOKMARK [3][-]{subsubsection.35}{Collect feedback}{subsection.32}% 30
-\BOOKMARK [1][]{section.36}{Evaluation}{}% 31
-\BOOKMARK [2][]{subsection.37}{Participants}{section.36}% 32
-\BOOKMARK [2][]{subsection.38}{Material}{section.36}% 33
-\BOOKMARK [2][]{subsection.39}{Procedure}{section.36}% 34
-\BOOKMARK [3][-]{subsubsection.40}{Producing}{subsection.39}% 35
-\BOOKMARK [3][-]{subsubsection.41}{Reviewing and feedback}{subsection.39}% 36
-\BOOKMARK [2][]{subsection.42}{Results}{section.36}% 37
-\BOOKMARK [3][-]{subsubsection.43}{}{subsection.42}% 38
-\BOOKMARK [3][-]{subsubsection.44}{}{subsection.42}% 39
-\BOOKMARK [3][-]{subsubsection.45}{Generated slideshow}{subsection.42}% 40
-\BOOKMARK [3][-]{subsubsection.46}{Authoring experience}{subsection.42}% 41
-\BOOKMARK [1][]{section.47}{Limitation and Discussion}{}% 42
-\BOOKMARK [1][]{section.48}{Conclusion and Future Work}{}% 43
+\BOOKMARK [1][]{section.8}{Analysis of a visualization}{}% 7
+\BOOKMARK [2][]{subsection.10}{Compositions of a visualization}{section.8}% 8
+\BOOKMARK [3][-]{subsubsection.11}{Hierarchical structure}{subsection.10}% 9
+\BOOKMARK [3][-]{subsubsection.20}{Relationships between visual units}{subsection.10}% 10
+\BOOKMARK [3][-]{subsubsection.21}{Correlations between visual primitives}{subsection.10}% 11
+\BOOKMARK [3][-]{subsubsection.23}{Correlations between visual channels}{subsection.10}% 12
+\BOOKMARK [2][]{subsection.24}{Analysis of existing visual distraction}{section.8}% 13
+\BOOKMARK [2][]{subsection.25}{Design considerations of narrative sequence}{section.8}% 14
+\BOOKMARK [1][]{section.26}{Narvis: System Design and Implementation}{}% 15
+\BOOKMARK [2][]{subsection.27}{An overview}{section.26}% 16
+\BOOKMARK [2][]{subsection.29}{Design consideration}{section.26}% 17
+\BOOKMARK [2][]{subsection.32}{Phase1: Auto Analysis}{section.26}% 18
+\BOOKMARK [3][-]{subsubsection.33}{Analysis of input image}{subsection.32}% 19
+\BOOKMARK [3][-]{subsubsection.34}{Analysis of input textual description}{subsection.32}% 20
+\BOOKMARK [2][]{subsection.35}{Phase2: Human Editing}{section.26}% 21
+\BOOKMARK [3][-]{subsubsection.36}{The interface for editing}{subsection.35}% 22
+\BOOKMARK [3][-]{subsubsection.37}{A library of templates}{subsection.35}% 23
+\BOOKMARK [3][-]{subsubsection.38}{Utility}{subsection.35}% 24
+\BOOKMARK [2][]{subsection.39}{Phase3: Viewing}{section.26}% 25
+\BOOKMARK [3][-]{subsubsection.40}{The interface for audience}{subsection.39}% 26
+\BOOKMARK [3][-]{subsubsection.41}{Generated Report}{subsection.39}% 27
+\BOOKMARK [2][]{subsection.42}{A working scenario}{section.26}% 28
+\BOOKMARK [3][-]{subsubsection.43}{Motivation}{subsection.42}% 29
+\BOOKMARK [3][-]{subsubsection.44}{Editing Procedure}{subsection.42}% 30
+\BOOKMARK [3][-]{subsubsection.45}{Collect feedback}{subsection.42}% 31
+\BOOKMARK [1][]{section.46}{Evaluation}{}% 32
+\BOOKMARK [2][]{subsection.47}{Participants}{section.46}% 33
+\BOOKMARK [2][]{subsection.48}{Material}{section.46}% 34
+\BOOKMARK [2][]{subsection.49}{Procedure}{section.46}% 35
+\BOOKMARK [3][-]{subsubsection.50}{Producing}{subsection.49}% 36
+\BOOKMARK [3][-]{subsubsection.51}{Reviewing and feedback}{subsection.49}% 37
+\BOOKMARK [2][]{subsection.52}{Results}{section.46}% 38
+\BOOKMARK [3][-]{subsubsection.53}{}{subsection.52}% 39
+\BOOKMARK [3][-]{subsubsection.54}{}{subsection.52}% 40
+\BOOKMARK [3][-]{subsubsection.55}{Generated slideshow}{subsection.52}% 41
+\BOOKMARK [3][-]{subsubsection.56}{Authoring experience}{subsection.52}% 42
+\BOOKMARK [1][]{section.57}{Limitation and Discussion}{}% 43
+\BOOKMARK [1][]{section.58}{Conclusion and Future Work}{}% 44

@@ -155,6 +155,18 @@ R.~Eccles, T.~Kapler, R.~Harper, and W.~Wright.
 }{.}\hspace{.4pt}4388992}}
 
 
+\bibitem{fulda_timelinecurator:_2016}
+J.~Fulda, M.~Brehmel, and T.~Munzner.
+\newblock {TimeLineCurator}: Interactive authoring of visual timelines from
+  unstructured text.
+\newblock 22(1):300--309. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2015\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2467531}}
+
+
 \bibitem{gershon_what_2001}
 N.~Gershon and W.~Page.
 \newblock What storytelling can do for information visualization.
@@ -369,6 +381,19 @@ E.~Segel and J.~Heer.
 }{.}\hspace{.4pt}179}}
 
 
+\bibitem{standage_modelling_2005}
+D.~I. Standage, T.~P. Trappenberg, and R.~M. Klein.
+\newblock Modelling divided visual attention with a winner-take-all network.
+\newblock 18(5):620--627. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1016\discretionary{/}{%
+}{/}j\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}neunet\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2005\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}06\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}015}}
+
+
 \bibitem{waldner_attractive_2014}
 M.~Waldner, M.~L. Muzic, M.~Bernhard, W.~Purgathofer, and I.~Viola.
 \newblock Attractive flicker \#x2014; guiding attention in dynamic narrative
@@ -390,6 +415,15 @@ Y.~Wang, Z.~Chen, Q.~Li, X.~Ma, Q.~Luo, and H.~Qu.
 }{.}\hspace{.4pt}1145\discretionary{/}{%
 }{/}3002151\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}3002155}}
+
+
+\bibitem{wolfe_guided_1994}
+J.~M. Wolfe.
+\newblock Guided search 2.0 a revised model of visual search.
+\newblock 1(2):202--238. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}3758\discretionary{/}{%
+}{/}BF03200774}}
 
 
 \bibitem{wu_opinionflow:_2014}
