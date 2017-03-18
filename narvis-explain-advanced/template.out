@@ -11,30 +11,35 @@
 \BOOKMARK [3][-]{subsubsection.21}{Correlations between visual primitives}{subsection.10}% 11
 \BOOKMARK [3][-]{subsubsection.23}{Correlations between visual channels}{subsection.10}% 12
 \BOOKMARK [2][]{subsection.24}{Analysis of existing visual distraction}{section.8}% 13
-\BOOKMARK [2][]{subsection.25}{Design considerations of narrative sequence}{section.8}% 14
-\BOOKMARK [1][]{section.26}{Narvis: System Design and Implementation}{}% 15
-\BOOKMARK [2][]{subsection.27}{An overview}{section.26}% 16
-\BOOKMARK [2][]{subsection.29}{Design consideration}{section.26}% 17
-\BOOKMARK [2][]{subsection.32}{Phase1: Auto Analysis}{section.26}% 18
-\BOOKMARK [3][-]{subsubsection.33}{Analysis of input image}{subsection.32}% 19
-\BOOKMARK [3][-]{subsubsection.34}{Analysis of input textual description}{subsection.32}% 20
-\BOOKMARK [2][]{subsection.35}{Phase2: Human Editing}{section.26}% 21
-\BOOKMARK [3][-]{subsubsection.36}{The interface for editing}{subsection.35}% 22
-\BOOKMARK [3][-]{subsubsection.37}{A library of templates}{subsection.35}% 23
-\BOOKMARK [2][]{subsection.39}{Phase3: Viewing}{section.26}% 24
-\BOOKMARK [3][-]{subsubsection.40}{The interface for audience}{subsection.39}% 25
-\BOOKMARK [3][-]{subsubsection.41}{Generated Report}{subsection.39}% 26
-\BOOKMARK [2][]{subsection.42}{A working scenario}{section.26}% 27
-\BOOKMARK [1][]{section.43}{Evaluation}{}% 28
-\BOOKMARK [2][]{subsection.44}{Participants}{section.43}% 29
-\BOOKMARK [2][]{subsection.45}{Material}{section.43}% 30
-\BOOKMARK [2][]{subsection.46}{Procedure}{section.43}% 31
-\BOOKMARK [3][-]{subsubsection.47}{Producing}{subsection.46}% 32
-\BOOKMARK [3][-]{subsubsection.48}{Reviewing and feedback}{subsection.46}% 33
-\BOOKMARK [2][]{subsection.49}{Results}{section.43}% 34
-\BOOKMARK [3][-]{subsubsection.50}{}{subsection.49}% 35
-\BOOKMARK [3][-]{subsubsection.51}{}{subsection.49}% 36
-\BOOKMARK [3][-]{subsubsection.52}{Generated slideshow}{subsection.49}% 37
-\BOOKMARK [3][-]{subsubsection.53}{Authoring experience}{subsection.49}% 38
-\BOOKMARK [1][]{section.54}{Limitation and Discussion}{}% 39
-\BOOKMARK [1][]{section.55}{Conclusion and Future Work}{}% 40
+\BOOKMARK [3][-]{subsubsection.25}{Visual distraction from the context}{subsection.24}% 14
+\BOOKMARK [3][-]{subsubsection.26}{Visual distraction from sibling channels}{subsection.24}% 15
+\BOOKMARK [2][]{subsection.27}{Design considerations of narrative sequence}{section.8}% 16
+\BOOKMARK [3][-]{subsubsection.28}{Channels}{subsection.27}% 17
+\BOOKMARK [3][-]{subsubsection.29}{Units}{subsection.27}% 18
+\BOOKMARK [3][-]{subsubsection.30}{Non-linear sequence}{subsection.27}% 19
+\BOOKMARK [1][]{section.31}{Narvis: System Design and Implementation}{}% 20
+\BOOKMARK [2][]{subsection.32}{An overview}{section.31}% 21
+\BOOKMARK [2][]{subsection.34}{Design Tasks}{section.31}% 22
+\BOOKMARK [2][]{subsection.37}{Phase1: Auto Analysis}{section.31}% 23
+\BOOKMARK [3][-]{subsubsection.38}{Analysis of input image}{subsection.37}% 24
+\BOOKMARK [3][-]{subsubsection.39}{Analysis of input textual description}{subsection.37}% 25
+\BOOKMARK [2][]{subsection.40}{Phase2: Human Editing}{section.31}% 26
+\BOOKMARK [3][-]{subsubsection.41}{The interface for editing}{subsection.40}% 27
+\BOOKMARK [3][-]{subsubsection.42}{A library of templates}{subsection.40}% 28
+\BOOKMARK [2][]{subsection.44}{Phase3: Viewing}{section.31}% 29
+\BOOKMARK [3][-]{subsubsection.45}{The interface for audience}{subsection.44}% 30
+\BOOKMARK [3][-]{subsubsection.46}{Generated Report}{subsection.44}% 31
+\BOOKMARK [2][]{subsection.47}{A working scenario}{section.31}% 32
+\BOOKMARK [1][]{section.48}{Evaluation}{}% 33
+\BOOKMARK [2][]{subsection.49}{Participants}{section.48}% 34
+\BOOKMARK [2][]{subsection.50}{Material}{section.48}% 35
+\BOOKMARK [2][]{subsection.51}{Procedure}{section.48}% 36
+\BOOKMARK [3][-]{subsubsection.52}{Producing}{subsection.51}% 37
+\BOOKMARK [3][-]{subsubsection.53}{Reviewing and feedback}{subsection.51}% 38
+\BOOKMARK [2][]{subsection.54}{Results}{section.48}% 39
+\BOOKMARK [3][-]{subsubsection.55}{}{subsection.54}% 40
+\BOOKMARK [3][-]{subsubsection.56}{}{subsection.54}% 41
+\BOOKMARK [3][-]{subsubsection.57}{Generated slideshow}{subsection.54}% 42
+\BOOKMARK [3][-]{subsubsection.58}{Authoring experience}{subsection.54}% 43
+\BOOKMARK [1][]{section.59}{Limitation and Discussion}{}% 44
+\BOOKMARK [1][]{section.60}{Conclusion and Future Work}{}% 45
