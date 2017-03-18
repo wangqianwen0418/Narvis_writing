@@ -3,11 +3,11 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: template.aux
 The style file: ../abbrv-doi.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: ../ref.bib
+Database file #1: ../template.bib
 Warning--entry type for "schmidt_living_2017" isn't style-file defined
---line 608 of file ../ref.bib
+--line 608 of file ../template.bib
 Warning--entry type for "bliss_effects_1992" isn't style-file defined
---line 1819 of file ../ref.bib
+--line 1819 of file ../template.bib
 Warning--empty year in amini_understanding_2015
 Warning--empty journal in amini_authoring_2017
 Warning--empty year in amini_authoring_2017
@@ -32,6 +32,8 @@ Warning--empty year in cohn_visual_2013
 Warning--empty journal in cui_textflow:_2011
 Warning--empty year in cui_textflow:_2011
 Warning--empty year in eccles_stories_2007
+Warning--empty journal in fulda_timelinecurator:_2016
+Warning--empty year in fulda_timelinecurator:_2016
 Warning--empty journal in gershon_what_2001
 Warning--empty year in gershon_what_2001
 Warning--empty year in harper_deconstructing_2014
@@ -62,54 +64,58 @@ Warning--empty year in satyanarayan_authoring_2014
 Warning--empty year in savva_revision:_2011
 Warning--empty journal in segel_narrative_2010
 Warning--empty year in segel_narrative_2010
+Warning--empty journal in standage_modelling_2005
+Warning--empty year in standage_modelling_2005
 Warning--empty journal in waldner_attractive_2014
 Warning--empty year in waldner_attractive_2014
 Warning--empty year in wang_animated_2016
+Warning--empty journal in wolfe_guided_1994
+Warning--empty year in wolfe_guided_1994
 Warning--empty journal in wu_opinionflow:_2014
 Warning--empty year in wu_opinionflow:_2014
 Warning--empty journal in wu_opinionseer:_2010
 Warning--empty year in wu_opinionseer:_2010
 Warning--empty journal in zhao_x0023;fluxflow:_2014
 Warning--empty year in zhao_x0023;fluxflow:_2014
-You've used 40 entries,
+You've used 43 entries,
             2598 wiz_defined-function locations,
-            851 strings with 12407 characters,
-and the built_in function-call counts, 42875 in all, are:
-= -- 9539
-> -- 814
-< -- 1576
-+ -- 1890
-- -- 315
-* -- 1535
-:= -- 6084
-add.period$ -- 128
-call.type$ -- 40
-change.case$ -- 258
+            869 strings with 13027 characters,
+and the built_in function-call counts, 46300 in all, are:
+= -- 10359
+> -- 857
+< -- 1718
++ -- 2049
+- -- 332
+* -- 1643
+:= -- 6566
+add.period$ -- 137
+call.type$ -- 43
+change.case$ -- 274
 chr.to.int$ -- 0
-cite$ -- 103
-duplicate$ -- 552
-empty$ -- 1259
-format.name$ -- 280
-if$ -- 11340
+cite$ -- 112
+duplicate$ -- 585
+empty$ -- 1343
+format.name$ -- 294
+if$ -- 12264
 int.to.chr$ -- 0
-int.to.str$ -- 40
-missing$ -- 40
-newline$ -- 403
-num.names$ -- 80
-pop$ -- 354
+int.to.str$ -- 43
+missing$ -- 43
+newline$ -- 436
+num.names$ -- 86
+pop$ -- 376
 preamble$ -- 1
-purify$ -- 220
+purify$ -- 233
 quote$ -- 0
-skip$ -- 383
+skip$ -- 401
 stack$ -- 0
-substring$ -- 2836
+substring$ -- 3071
 swap$ -- 111
-text.length$ -- 863
+text.length$ -- 940
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 156
-warning$ -- 63
-while$ -- 232
-width$ -- 42
-write$ -- 1338
-(There were 65 warnings)
+type$ -- 168
+warning$ -- 69
+while$ -- 250
+width$ -- 45
+write$ -- 1451
+(There were 71 warnings)
