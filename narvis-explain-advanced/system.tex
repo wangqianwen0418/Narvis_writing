@@ -81,34 +81,61 @@ In the editor panel, users get further to access the \textit{grammar} of each vi
 \subsubsection{A library of templates}
 We propose a library of templates for the narrative explanation of a visualization. A templates is a set of slides that tends to introduce a visual unit, which can be descibed as an orthogonal combination of a visual primitive and a construction rule, as shown in tab.1. Since advanced visualization design is the assembly of miscellaneous visual units, we conjecture such templates can achieve a high level of efficiency for the explanation of a viusalization. Meanwhile, allowing users a high flexible, friendly interface to edit offered templates, Narvis maintains a considerable level of expressiveness and accessibility. 
 
+\textbf{Types of templates}
+
+The initial set of templates provided by Narvis can be described as  a 9*4 matrix, 9 types of visual primitives and 4 types of construction rules. Narvis is extensible, new templates can be added by its developer through programming, or by end users through uploading their modified templates. At the same time, all the supported templates are condensed into well-defined types, so as to avoid overwhelming users with a cornucopia of confusing options.
+
 \textbf{Templates design}
 
-With a visual unit, more specifically, a set of graphic elements, as an input, these templates are aimed to provide 1) a well-considered narrative sequence for visual grammar explanation; 2) Embedded attention cues and animated transitions that orientate visual attention  when people view this slide show; 3) Formatted sentence for annotations that will be gradually disclosed in the slide show. 
+With a visual unit, more specifically, a set of graphic elements, as an input, these templates are aimed to provide 1) a well-considered narrative sequence for visual grammar explanation; 2) Embedded a series of narrative techniques such as attention cues, animated transitions, information repetition, to orientate visual attention and facilitate perception; 3) Formatted sentence for annotations that will be gradually disclosed in the slide show. 
 
 \textbf{Types of Templates}
 
 As described in section3.1, a visual unit is the orthogonal combination of visual primitives and assembly rules.   
 
-We now describe the initial set of graphical primitives provided by Narvis. Narvis is extensible, new templates can be introduced by web programmers as well as by end users with no programming skills. At the same time, it is desirable to condense the set of supported templates into several types, so as to avoid overwhelming users with a cornucopia of confusing options.\par
-theme river, \par
-node link, \par
-sankey diagram, \par
-radial diagram,\par
-scatter plot,\par 
-chart,\par
-donut chart\par
-\subsubsection{Utility}
-We demonstrate the utility of this library from the following aspects:
-\textbf{Efficiency}\par
-\textbf{Expressiveness}\par
-\textbf{Accessibility}\par
-To broaden the coverage of Narvis, we enable users high flexibility to edit the templates we provide. For example, for the triangle scatter plot in Opinion Seer\cite{wu_opinionseer:_2010}, which is a novel visualization design, we just need to edit the explanation template for ordinal scatter plot in our library, changing the position channel from "x-y position" to "force-direct region".  
-Through a high flexible interaction, the coverage of our library can reach up to xxx  without extra programming work. 
-% \textbf{full coverage}\par refers to that the templates need no change to craft a sense-making narrative explanation. 
-% \textbf{minor adjustment needed} refers to editing the current templates 
-% \textbf{major adjustment needed} means the implementation of new templates is needed. 
-
 \textbf{Animation embedded in templates }
+
+Narvis provides 8 types of animation, implement them in templates based on their effects on human attention and perception, which has been widely discussed in previous work.\cite{robertson_effectiveness_2008, waldner_attractive_2014, heer_animated_2007}
+
+\begin{table}[tb]
+  \caption{A summary of animation provided}
+  \label{tab:animation}
+  \small
+  \centering
+  \begin{tabular}{p{1cm}|p{0.9cm}|p{0.9cm}|p{0.9cm}|p{1.5cm}|p{0.9cm}}
+  \toprule
+ \textbf{Animation} &\textbf{Engaging} & \textbf{orientate attention} & \textbf{perception} &\textbf{working scenario} &\textbf{ref} \\ 
+  \midrule
+  \textbf{Morphing} &\checkmark & \checkmark &\checkmark & grammar of size, grammar of shape & \cite{ruchikachorn_learning_2015} \\ 
+  \midrule
+  \textbf{Blur} &   &\checkmark  &   & focus+context & \\ 
+  \midrule
+  \textbf{Flicker} & & \checkmark &  & focus & \\
+  \midrule
+  \textbf{Motion} & \checkmark & \checkmark & \checkmark &grammar of position &  \\
+  \midrule
+  \textbf{Zoom-in/out} & \checkmark &\checkmark &  & focus&  \\
+  \midrule
+  \textbf{Annotation} &  & \checkmark &\checkmark &   textual explain & \\
+  \midrule
+  \textbf{Fade in/out} &  & \checkmark &  &   textual explain & \\
+  \midrule
+  \textbf{Decompose} & \checkmark &  &\checkmark & Show how a visualization is composed by visual units & A novel design bu us \\
+  \bottomrule
+
+  \end{tabular}
+  \vspace{1mm}
+\end{table}
+
+
+
+Animation are offered for three purposes: engaging audience, facilicate perception, and orientate attention. 
+\textbf{Engaging: }People fell animation enjoyable and exciting in a data visualization presentation, regardless of the effects it introduce to understanding.\cite{robertson_effectiveness_2008, heer_animated_2007} 
+
+We also provide an decomposition animation at the beginning of the introduction slide show to engage the audience as well as to help them get a sense of overview. Editors can choose to remove such effect if they prefer an abstract slide show. 
+
+\textbf{Facilitate perception: }
+\textbf{Orientate attention: }
 Narvis mainpulates transition to reveal the encodings of a visual primitive gradually, thus reducing the study burden of audiences. Thus, maintaing object constancy is attached with great importance in our design. 
 We offer the following animated transitions to support easy creation of animations in a narrative data visualization environment.\par 
 \textbf{Morphing:} morphing is widely applied to demonstrate the changing of size and shape of a graphic element. Thus, it can be an effective method to attract audiences' attention when explaining the encoding of these two visual channels. \par
@@ -132,20 +159,30 @@ Every slide show displayed in \textit{Gallery}is a series of slides, each of whi
 \subsubsection{Generated Report}
 
 \subsection{A working scenario}
-Here, we demonstrate the utility of Narvis through the creation of a narrative explanation of a visualization design that published in TVCG (http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5613449). 
-\subsubsection{Motivation}Jessica, a expert in data visualization, realizes the promising prospect of implementing this visualization design in an on-line review service website like Yelp. (pg student to classmates? prof to a journalist? prof with collaborators from other fields?  )\par
-However, she has to present this design in a general meeting to get the financial support. She is familiar with this visualization design, yet not sure whether her audiences, with little knowledge about data visualization, can quickly learn this visualization design from her introduction. Without clear awareness of the visual encodings, audience can hardly identify the interesting patterns this visualization reveals and realize its utility.  \par
-A traditional way is to add highlights and annotations in the original visualization. But Jessica worries about the effectiveness of information delivery. \par
-She considers about applying "focus + context" techniques,  but it will introduce some complicated operations for her, who has no experience in image editing. \par
-Moreover, with the large number of visual encodings existing, she fails to determine an optimized order for explaining them. Even though she has many years of experience in data visualization, she never think about this issue before. \par
-She then turns to Narvis for help. 
-\subsubsection{Editing Procedure}
-She first imports her visualization design, in the form of a PNG file, and the corresponding text description, which she directly copy from the paper, into the system. After a few seconds, the system will automatically detect graphics elements with a edge detection algorithm and cluster them based on their features. The algorithm cannot be perfect. For example, it puts geo ring and calendar ring in the same cluster based on their similar appearance. \par
-Jessica then refines the automatic cluster results, making sure every graphic elements in one visual unit is put in one cluster \textbf{figure xxx}. After that, she chooses narrative templates for each cluster, thus obtain 4 units in the \textbf{unit tree} panel. The triangle scatter plot is a novel design that the library has no narrative template matching it. Jessica then chooses the template for regular scatter plot, whose only difference to triangle plot is the encoding of position. \par
-Now, Jessica has four visual units in the unit tree panel showing in the form as tree nodes. By an easy dragging interaction, April organize the structure of the tree based on the relationships between units, as we discussed in section 3.3.\textbf{fig xxxx}\par
-Then Jessica edits the narrative templates based on her design. In the templates, we enumerate all the possible visual encodings. April goes through all four templates in the "in-unit", delete the visual channels that has no encodings. \par
-At this time point, a slide-show has already generated with the defaulted animated transitions. But Jessica can further improve its quality by adding annotations into animations, strengthening the binding between data and graphic elements. \par
-When adding annotation to a certain channel, the related text will highlight in the text area, aiming to offer a better user experience. \par  
-\subsubsection{Collect feedback}
+Jessica has extensive experience in the field of data visualization, and she has released a visual analytics system online \siwei{doing something}. To help audience better understand her system, she needs to publish a tutorial accompanied with the system.
+% Here, we demonstrate the utility of Narvis through the creation of a narrative explanation of a visualization design that published in TVCG (http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5613449). 
+
+% \subsubsection{Motivation}Jessica, a expert in data visualization, realizes the promising prospect of implementing this visualization design in an on-line review service website like Yelp. (pg student to classmates? prof to a journalist? prof with collaborators from other fields?  )\par
+% However, she has to present this design in a general meeting to get the financial support. She is familiar with this visualization design, yet not sure whether her audiences, with little knowledge about data visualization, can quickly learn this visualization design from her introduction. Without clear awareness of the visual encodings, audience can hardly identify the interesting patterns this visualization reveals and realize its utility.  
+% A traditional way is to add highlights and annotations in the original visualization. But Jessica worries about the effectiveness of information delivery. 
+% She considers about applying "focus + context" techniques,  but it will introduce some complicated operations for her, who has no experience in image editing. 
+% Moreover, with the large number of visual encodings existing, she fails to determine an optimized order for explaining them. Even though she has many years of experience in data visualization, she never think about this issue before. 
+% She then turns to Narvis for help. 
+
+% She first imports visualization design, in the form of a PNG file, and the corresponding text description, which she directly copy from the paper, into the system. 
+She loads the screen-shot of her system, as well as a piece of description, into Narvis.
+After a few seconds, the system automatically detects graphics elements with a edge detection algorithm and cluster them based on their features. The algorithm cannot be perfect. For example, it puts geo ring and calendar ring in the same cluster based on their similar appearance. 
+% After a few seconds, the system automatically detects graphics elements cluster them based on features \siwei{why to cluster?}. However, the results is not desirable.
+Jessica then refines the automatic cluster results, making sure every graphic elements in one visual unit is put in one cluster \textbf{figure xxx}. 
+
+After that, she chooses narrative templates for each cluster, thus obtain 4 units in the \textbf{unit tree} panel. The triangle scatter plot is a novel design that the library has no narrative template matching it. Jessica then chooses the template for regular scatter plot, whose only difference to triangle plot is the encoding of position. 
+
+Now, Jessica has four visual units in the unit tree panel showing in the form as tree nodes. By an easy dragging interaction, April organize the structure of the tree based on the relationships between units, as we discussed in section 3.3.\textbf{fig xxxx}
+
+Then Jessica edits the narrative templates based on her design. In the templates, we enumerate all the possible visual encodings. April goes through all four templates in the "in-unit", delete the visual channels that has no encodings. 
+
+At this time point, a slide-show has already generated with the defaulted animated transitions. But Jessica can further improve its quality by adding annotations into animations, strengthening the binding between data and graphic elements. 
+When adding annotation to a certain channel, the related text will highlight in the text area, aiming to offer a better user experience.   
+
 
 Before the general meeting, Jessica ask several friends, who have no experience in data visualization, to review her introduction slide show. Jessica can access to their feedback from their click activity, which is automatically recorded by Narvis. These click stream data, revealing information such as, "which slide they skip", "which slide they go back to revisit", and "which slide they spend abnormally long time on", provides cues for Jessica to strengthen the understandability as well as attractiveness of her introduction slide show.  

@@ -47,13 +47,14 @@
 \usepackage{textcomp}                  % use better special symbols
 \usepackage{mathptmx}                  % use matching math font
 \usepackage{colortbl}
+\usepackage{dingbat}
 \usepackage{times}                     % we use Times as the main font
 \renewcommand*\ttdefault{txtt}         % a nicer typewriter font
 \usepackage{cite}                      % needed to automatically sort the references
 \usepackage{tabu}                      % only used for the table example
 \usepackage{booktabs}                  % only used for the table example
 
-\newcommand{\wrong}[1]{\textcolor{red}{#1}}
+\newcommand{\siwei}[1]{\textcolor{red}{#1}}
 \newcommand{\lang}[1]{\textcolor{orange}{#1}}
 
 
@@ -149,12 +150,12 @@
 %% the only exception to this rule is the \firstsection command
 \maketitle
 
- \input{intro}
- \input{related_work}
-  \input{analysis}
- \input{system}
-  \input{evaluation}
-  \input{discussion_conclusion}
+\input{intro}
+\input{related_work}
+\input{analysis}
+\input{system}
+\input{evaluation}
+\input{discussion_conclusion}
 
 
 %\bibliographystyle{abbrv}

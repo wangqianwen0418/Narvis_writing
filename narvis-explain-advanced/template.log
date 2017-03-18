@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.14)  18 MAR 2017 13:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.14)  18 MAR 2017 16:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -232,6 +232,9 @@ Package color Info: Driver file: pdftex.def on input line 144.
 \everycr=\toks17
 \minrowclearance=\skip51
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/dingbat/dingbat.sty
+Package: dingbat 2001/04/27 v1.00 Hands and other dingbats
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
@@ -409,26 +412,26 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 
 Package hyperref Warning: Option `pdftex' has already been used,
-(hyperref)                setting the option has no effect on input line 138.
+(hyperref)                setting the option has no effect on input line 139.
 
 
 Package hyperref Warning: Option `pagebackref' has already been used,
-(hyperref)                setting the option has no effect on input line 138.
+(hyperref)                setting the option has no effect on input line 139.
 
-Package hyperref Info: Option `pageanchor' set `true' on input line 138.
-Package hyperref Info: Option `plainpages' set `false' on input line 138.
-Package hyperref Info: Option `hypertexnames' set `false' on input line 138.
+Package hyperref Info: Option `pageanchor' set `true' on input line 139.
+Package hyperref Info: Option `plainpages' set `false' on input line 139.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 139.
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 138.
+(hyperref)                setting the option has no effect on input line 139.
 
-Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 138
+Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 139
 .
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 138.
-Package hyperref Info: Option `breaklinks' set `true' on input line 138.
-Package hyperref Info: Option `colorlinks' set `false' on input line 138.
-Package hyperref Info: Option `nesting' set `true' on input line 138.
-Package hyperref Info: Option `linktocpage' set `true' on input line 138.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 139.
+Package hyperref Info: Option `breaklinks' set `true' on input line 139.
+Package hyperref Info: Option `colorlinks' set `false' on input line 139.
+Package hyperref Info: Option `nesting' set `true' on input line 139.
+Package hyperref Info: Option `linktocpage' set `true' on input line 139.
 (./template.aux
 
 LaTeX Warning: Label `fig:hierarchic' multiply defined.
@@ -436,28 +439,28 @@ LaTeX Warning: Label `fig:hierarchic' multiply defined.
 )
 \openout1 = `template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 144.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 144.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 145.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 144.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 145.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
@@ -490,7 +493,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 144.
+LaTeX Info: Redefining \microtypecontext on input line 145.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -506,7 +509,7 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 \big@size=\dimen140
 \AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 144.
+Package hyperref Info: Link coloring OFF on input line 145.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -516,15 +519,15 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count117
 )
-LaTeX Info: Redefining \ref on input line 144.
-LaTeX Info: Redefining \pageref on input line 144.
-LaTeX Info: Redefining \nameref on input line 144.
+LaTeX Info: Redefining \ref on input line 145.
+LaTeX Info: Redefining \pageref on input line 145.
+LaTeX Info: Redefining \nameref on input line 145.
 
 (./template.out) (./template.out)
 \@outlinefile=\write3
 \openout3 = `template.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 151.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 152.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1phv.fd
@@ -536,14 +539,14 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 \abstractwidth=\skip54
 
-<pictures/Picture1.png, id=180, 1472.50125pt x 505.13719pt>
+<pictures/Picture1.png, id=164, 1472.50125pt x 505.13719pt>
 File: pictures/Picture1.png Graphic file (type png)
 
 <use pictures/Picture1.png>
-Package pdftex.def Info: pictures/Picture1.png used on input line 151.
+Package pdftex.def Info: pictures/Picture1.png used on input line 152.
 (pdftex.def)             Requested size: 467.22528pt x 160.28293pt.
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 15
-1.
+2.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
@@ -553,36 +556,36 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 15
-1.
+2.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 15
-1.
+2.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 15
-1.
+2.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 152.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 152.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 152.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 151.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 152.
 
-<diamondrule.pdf, id=182, 213.79875pt x 12.045pt>
+<diamondrule.pdf, id=166, 213.79875pt x 12.045pt>
 File: diamondrule.pdf Graphic file (type pdf)
  <use diamondrule.pdf>
-Package pdftex.def Info: diamondrule.pdf used on input line 151.
+Package pdftex.def Info: diamondrule.pdf used on input line 152.
 (pdftex.def)             Requested size: 213.79822pt x 12.04495pt.
 
 (./intro.tex
@@ -640,23 +643,15 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-
-
-LaTeX Warning: Citation `fulda_timelinecurator:_2016' on page 2 undefined on in
-put line 17.
-
-) (./analysis.tex <pictures/hierarchic.png, id=249, 498.36188pt x 490.08093pt>
+) (./analysis.tex
+<pictures/hierarchic.png, id=234, 498.36188pt x 490.08093pt>
 File: pictures/hierarchic.png Graphic file (type png)
 
 <use pictures/hierarchic.png>
 Package pdftex.def Info: pictures/hierarchic.png used on input line 5.
 (pdftex.def)             Requested size: 251.31898pt x 247.14119pt.
-
-
-LaTeX Warning: Citation `satyanarayan_vega-lite:_2017' on page 2 undefined on i
-nput line 19.
-
-[2] <pictures/assemble.png, id=285, 901.86937pt x 726.46407pt>
+ [2]
+<pictures/assemble.png, id=273, 901.86937pt x 726.46407pt>
 File: pictures/assemble.png Graphic file (type png)
 
 <use pictures/assemble.png>
@@ -667,7 +662,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
 
-<pictures/unit_relationship.png, id=294, 1368.61313pt x 788.19469pt>
+<pictures/unit_relationship.png, id=282, 1368.61313pt x 788.19469pt>
 File: pictures/unit_relationship.png Graphic file (type png)
 
 <use pictures/unit_relationship.png>
@@ -700,7 +695,7 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 ) (./system.tex
-<pictures/overview.png, id=318, 1257.19687pt x 834.86906pt>
+<pictures/overview.png, id=306, 1257.19687pt x 834.86906pt>
 File: pictures/overview.png Graphic file (type png)
 
 <use pictures/overview.png>
@@ -713,7 +708,100 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 [5 <./pictures/overview.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 63.
- [6]) (./evaluation.tex
+
+
+LaTeX Warning: Citation `heer_animated_2007' on page 6 undefined on input line 
+98.
+
+
+Overfull \hbox (3.4389pt too wide) in paragraph at lines 107--107
+[]|\OT1/ptm/b/n/7 Animation| 
+ []
+
+
+Overfull \hbox (2.79147pt too wide) in paragraph at lines 107--107
+[]|\OT1/ptm/b/n/7 Engaging| 
+ []
+
+
+Overfull \hbox (1.21637pt too wide) in paragraph at lines 107--107
+[]|\OT1/ptm/b/n/7 orientate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
+\OT1/ptm/b/n/7 at-ten-
+ []
+
+
+Overfull \hbox (6.1513pt too wide) in paragraph at lines 107--107
+[]|\OT1/ptm/b/n/7 perception| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
+[]|\OT1/ptm/b/n/7 working
+ []
+
+
+Overfull \hbox (1.81496pt too wide) in paragraph at lines 109--109
+[]|\OT1/ptm/b/n/7 Morphing| 
+ []
+
+LaTeX Font Info:    Try loading font information for U+dingbat on input line 10
+9.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/dingbat/udingbat.fd
+File: udingbat.fd 2001/04/27 v1.00 Font definitions for the dingbat font
+)
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\OT1/ptm/m/n/7 (+20) grammar of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--117
+[]|\OT1/ptm/b/n/7 Zoom-
+ []
+
+
+Overfull \hbox (5.38493pt too wide) in paragraph at lines 119--119
+[]|\OT1/ptm/b/n/7 Annotation| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
+[]|\OT1/ptm/b/n/7 Fade
+ []
+
+
+Overfull \hbox (5.37094pt too wide) in paragraph at lines 123--123
+[]|\OT1/ptm/b/n/7 Decompose| 
+ []
+
+
+Underfull \hbox (badness 5119) in paragraph at lines 123--123
+[]|\OT1/ptm/m/n/7 (+20) Show how a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
+\OT1/ptm/m/n/7 (+20) com-posed by
+ []
+
+
+Underfull \hbox (badness 2443) in paragraph at lines 123--124
+[]|\OT1/ptm/m/n/7 (+20) A novel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+\OT1/ptm/m/n/7 (+20) de-sign
+ []
+
+
+LaTeX Warning: Citation `heer_animated_2007' on page 6 undefined on input line 
+133.
+
+[6]) (./evaluation.tex
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
@@ -724,13 +812,13 @@ Missing character: There is no © in font ptmr7t!
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-Underfull \hbox (badness 1189) in paragraph at lines 440--449
+Underfull \hbox (badness 1189) in paragraph at lines 463--472
 []\OT1/ptm/m/n/8 (+20) J. Zhao, N. Cao, Z. Wen, Y. Song, Y. R. Lin, and C. Coll
 ins.
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
@@ -738,12 +826,12 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 [9
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
  (./template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 168.
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: EF0636E2533305DECF41116504B35D45;3134.
+(rerunfilecheck)             Checksum: E950912D07C83772F93281C9E5D5D937;2860.
 
 
 LaTeX Warning: There were undefined references.
@@ -751,33 +839,34 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
  ) 
 Here is how much of TeX's memory you used:
- 8840 strings out of 493014
- 135494 string characters out of 6133351
- 259705 words of memory out of 5000000
- 11850 multiletter control sequences out of 15000+600000
- 53940 words of font info for 253 fonts, out of 8000000 for 9000
+ 8885 strings out of 493014
+ 136259 string characters out of 6133351
+ 261128 words of memory out of 5000000
+ 11879 multiletter control sequences out of 15000+600000
+ 54360 words of font info for 260 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,11n,38p,1082b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,11n,38p,1081b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not ex
 ist, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
 t, replaced by a fixed one
 
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fon
-ts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
-urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/
-utmri8a.pfb>
-Output written on template.pdf (9 pages, 1396137 bytes).
+ </Users/wangqianwen/Library/texlive/2016/texmf-var/fonts/pk/ljfour/public/ding
+bat/dingbat.420pk>{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.e
+nc}</usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/urw/times/utmri8a.pfb>
+Output written on template.pdf (9 pages, 1396883 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 380 compressed objects within 4 object streams
- 108 named destinations out of 1000 (max. 500000)
- 44415 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 413 PDF objects out of 1000 (max. 8388607)
+ 376 compressed objects within 4 object streams
+ 107 named destinations out of 1000 (max. 500000)
+ 44383 words of extra memory for PDF output out of 51595 (max. 10000000)
 
