@@ -132,7 +132,7 @@ Every slide show displayed in \textit{Gallery}is a series of slides, each of whi
 \subsubsection{Generated Report}
 
 \subsection{A working scenario}
-Jessica has extensive experience in the field of data visualization, and she has released a visual analytics system online \siwei{doing something}. To help audience better understand her system, she needs to publish a tutorial accompanied with the system.
+Jessica has extensive experience in the field of data visualization, and has released a visual analytics system online \siwei{doing something}. To help audience better understand the design, she needs to publish a tutorial accompanied with the system.
 % Here, we demonstrate the utility of Narvis through the creation of a narrative explanation of a visualization design that published in TVCG (http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5613449). 
 
 % \subsubsection{Motivation}Jessica, a expert in data visualization, realizes the promising prospect of implementing this visualization design in an on-line review service website like Yelp. (pg student to classmates? prof to a journalist? prof with collaborators from other fields?  )\par
@@ -144,18 +144,27 @@ Jessica has extensive experience in the field of data visualization, and she has
 
 % She first imports visualization design, in the form of a PNG file, and the corresponding text description, which she directly copy from the paper, into the system. 
 She loads the screen-shot of her system, as well as a piece of description, into Narvis.
-After a few seconds, the system automatically detects graphics elements with a edge detection algorithm and cluster them based on their features. The algorithm cannot be perfect. For example, it puts geo ring and calendar ring in the same cluster based on their similar appearance. 
-% After a few seconds, the system automatically detects graphics elements cluster them based on features \siwei{why to cluster?}. However, the results is not desirable.
-Jessica then refines the automatic cluster results, making sure every graphic elements in one visual unit is put in one cluster \textbf{figure xxx}. 
+% After a few seconds, the system automatically detects graphics elements with a edge detection algorithm and cluster them based on their features. The algorithm cannot be perfect. For example, it puts geo ring and calendar ring in the same cluster based on their similar appearance. 
+After a few seconds, the system automatically extracts graphics elements and clusters them based on features. As Figure\siwei{ref} shows, Jessica obtains four clusters. 
 
-After that, she chooses narrative templates for each cluster, thus obtain 4 units in the \textbf{unit tree} panel. The triangle scatter plot is a novel design that the library has no narrative template matching it. Jessica then chooses the template for regular scatter plot, whose only difference to triangle plot is the encoding of position. 
+Then, she defines visual units based on clusters. By default, each cluster includes all graphics elements belonging to one visual unit. However, she observes that geographic ring and calendar ring are in the same cluster due to their similar appearance. Therefore, she identifies two visual units for the ring cluster, containing geographic ring and calendar ring respectively.
+% then refines the clustering results, making sure every graphic elements in one visual unit is put in one cluster \textbf{figure xxx}. Finally she obtains four clusters.
 
-Now, Jessica has four visual units in the unit tree panel showing in the form as tree nodes. By an easy dragging interaction, April organize the structure of the tree based on the relationships between units, as we discussed in section 3.3.\textbf{fig xxxx}
+Next, she chooses narrative templates for each visual unit in the \textbf{unit tree} panel. Some visual units, such as the triangle scatter plot, are novel and no narrative template in the library is able to match. Therefore, Jessica chooses the template of regular scatter plot for best match.
+% for triangle scatter plot, which differs from the triangle plot in the encoding of position. 
+Moreover, Jessica edits the narrative templates based on her design. 
+% In the templates, we enumerate all the possible visual encodings. 
+She goes through all four templates in the ``\siwei{what is in-unit}in-unit'', and deletes the visual channels with no encodings, such as \siwei{sth}. 
+Through drag and drop, Jessica further organizes the structure of the unit tree based on the relationships between units. For example, \siwei{some example}
 
-Then Jessica edits the narrative templates based on her design. In the templates, we enumerate all the possible visual encodings. April goes through all four templates in the "in-unit", delete the visual channels that has no encodings. 
-
-At this time point, a slide-show has already generated with the defaulted animated transitions. But Jessica can further improve its quality by adding annotations into animations, strengthening the binding between data and graphic elements. 
-When adding annotation to a certain channel, the related text will highlight in the text area, aiming to offer a better user experience.   
+By clicking \siwei{a button}, a slide-show tutorial is generated with the defaulted animated transitions. Jessica further improves the quality of animation by adding annotations and strengthening the binding between data and graphic elements. 
+% When adding annotation to a certain channel, the related text will highlight in the text area, aiming to offer a better user experience.   
 
 
-Before the general meeting, Jessica ask several friends, who have no experience in data visualization, to review her introduction slide show. Jessica can access to their feedback from their click activity, which is automatically recorded by Narvis. These click stream data, revealing information such as, "which slide they skip", "which slide they go back to revisit", and "which slide they spend abnormally long time on", provides cues for Jessica to strengthen the understandability as well as attractiveness of her introduction slide show.  
+To refine the readability of the tutorial, Jessica asks several friends, who have no experience in data visualization, to study the tutorial before release. Narvis collects their viewing behavior from click activities and generates statistics results, which helps Jessica answer questions like \textit{``which slides do they skip?''}, \textit{``which slides do they review several times?''}, and \textit{``which slides do they stay for a long time?''}.
+% These click sequence data provides cues for Jessica to strengthen and refine the readability of the tutorial. 
+
+% revealing information such as, ,   
+
+
+
