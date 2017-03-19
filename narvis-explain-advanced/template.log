@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.14)  18 MAR 2017 22:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.14)  19 MAR 2017 12:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -662,14 +662,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
 
-<pictures/unit_relationship.png, id=302, 1368.61313pt x 788.19469pt>
-File: pictures/unit_relationship.png Graphic file (type png)
-
-<use pictures/unit_relationship.png>
-Package pdftex.def Info: pictures/unit_relationship.png used on input line 96.
-(pdftex.def)             Requested size: 251.31898pt x 144.73131pt.
-
-Underfull \vbox (badness 1845) has occurred while \output is active []
+Underfull \vbox (badness 1454) has occurred while \output is active []
 
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
@@ -680,35 +673,41 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.103 
-      pdfTeX warning (ext4): destination with the same identifier (name{Hfootno
-te.18}) has been already used, duplicate ignored
+l.92 
+     pdfTeX warning (ext4): destination with the same identifier (name{Hfootnot
+e.18}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.103 
-       <./pictures/hierarchic.png> <./pictures/assemble.png>]
+l.92 
+      <./pictures/hierarchic.png> <./pictures/assemble.png>]
+<pictures/unit_relationship.png, id=316, 1368.61313pt x 788.19469pt>
+File: pictures/unit_relationship.png Graphic file (type png)
+
+<use pictures/unit_relationship.png>
+Package pdftex.def Info: pictures/unit_relationship.png used on input line 96.
+(pdftex.def)             Requested size: 251.31898pt x 144.73131pt.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-) (./system.tex
-<pictures/overview.png, id=326, 1257.19687pt x 834.86906pt>
+) (./system.tex [4 <./pictures/unit_relationship.png>] <pictures/overview.png, 
+id=337, 1257.19687pt x 834.86906pt>
 File: pictures/overview.png Graphic file (type png)
 
 <use pictures/overview.png>
 Package pdftex.def Info: pictures/overview.png used on input line 13.
 (pdftex.def)             Requested size: 251.31898pt x 166.89442pt.
- [4 <./pictures/unit_relationship.png>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 75.
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
 [5 <./pictures/overview.png>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 75.
+
 
 LaTeX Warning: Citation `heer_animated_2007' on page 6 undefined on input line 
 106.
@@ -797,11 +796,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--132
 \OT1/ptm/m/n/7 (+20) de-sign
  []
 
-[6]) (./evaluation.tex) (./discussion_conclusion.tex) (./template.bbl
+[6]) (./evaluation.tex) (./discussion_conclusion.tex
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
-[7]
+[7]) (./template.bbl
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
 
@@ -831,11 +830,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
 Here is how much of TeX's memory you used:
  8903 strings out of 493014
  136501 string characters out of 6133351
- 262128 words of memory out of 5000000
+ 263168 words of memory out of 5000000
  11884 multiletter control sequences out of 15000+600000
  54881 words of font info for 266 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,11n,38p,1081b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,11n,38p,1081b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -850,7 +849,7 @@ r/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local
 016/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (8 pages, 1393043 bytes).
+Output written on template.pdf (8 pages, 1393027 bytes).
 PDF statistics:
  426 PDF objects out of 1000 (max. 8388607)
  390 compressed objects within 4 object streams
