@@ -1,12 +1,13 @@
 
 \section{Narvis: System Design and Implementation}
-\subsection{An overview}
 
-Narvis aims to offer an efficient, expressive and friendly authoring tool for the experts in data visualization, help them create a slide show for the purpose of introducing an advanced visualization design to general audience.  Thus, it has two kinds of users: editors, the data visualization experts who use Narvis to create an explanation slideshow, and audiences, the general audience who watch the slideshow created by ediors.
+% Thus, it has two kinds of users: editors, the data visualization experts who use Narvis to create an explanation slideshow, and audiences, the general audience who watch the slideshow created by ediors.
 
-The working flow of Narvis can be described as three phase: Automatic Analysis Phase, Human Editing Phase, Viewing Phase, as shown in Fig.5. In Automatic Analysis Phase, the system automatically extracta and classify the graphical elements in the input visualization. 
-In Human Editing Phase, editors will be involved to modify the output from the Automatic Analysis Phase, and use the templates Narvis provide to craft a explanation slideshow. 
-In Reviewing Phase, audience can assess the slide show generated in Human Editing Phase. Their click activity and comments will be recorded and send to the editors, helping them improve the quality of the slide show. 
+In this section, we first distill six design tasks based on our understanding of two kinds of end users, i.e., editors and general audience. Then, we describe the workflow of Narvis consisting of three phases (Figure \siwei{ref}), i.e., Automatic Analysis Phase, Human Editing Phase, and Viewing Phase.
+
+% The workflow of Narvis includes three phases (Figure \siwei{ref}):  In Automatic Analysis Phase, the system accepts the input visualization, extracts graphical elements and classifies them into groups for further edit. 
+% In Human Editing Phase, editors will be involved to modify the output from the Automatic Analysis Phase, and use the templates Narvis provide to craft a explanation slideshow. 
+% In Reviewing Phase, audience can assess the slide show generated in Human Editing Phase. Their click activity and comments will be recorded and send to the editors, helping them improve the quality of the slide show. 
 
 \begin{figure}
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -15,13 +16,29 @@ In Reviewing Phase, audience can assess the slide show generated in Human Editin
  \label{fig:overview}
 \end{figure}
 
-\subsection{Design Tasks}
-We should take editors and audiences alike into consideration for the design of Narvis. We conducted a interview with 3 experts in data visualization, asked what they could expect for an authoring tool for crafting an introduction slideshow. 
-We also constructed an interview with 7 undergraducate students. They have no prior experience in data visualization, and they just come back from a lecture about data visualization, which, as they said, ``totally confused'' them. They talked freely about what has confused them.
+\subsection{User Perspectives and Methods}
+
+Narvis aims to offer an efficient, expressive and friendly authoring tool for experts in data visualization, assisting them to create a slideshow to introduce advanced visual design to general audience.  
+Hence, we identify two different user perspectives: the editors and the general audience perspectives. Editors are visualization experts who have the need to create a slideshow to communicate visual design. General audience have no prerequisite for visualization. They gain understanding of the visual design by watching the slideshow. 
+
+To understand the current practice of making slideshows and the experience of reading tutorials, we collaborated with two teaching assistants (TAs) of a Data Visualization course and seven undergraduate students (UGs) taking this course. The two TAs are postgraduate students whose research interest is information visualization. Their duty of this course involves making slides for explaining visual design appears in major publications in the field of data visualization. The seven UGs have little background in visualization before the class, and have taken this course for less than one month.  
+
+We began by conducting semi-structured interviews with TAs, whom we identified as editors, and UGs, who are general audience. During the interviews with TAs, we asked their workflows of making slideshows and explaining visual design. To identify opportunities for Narvis, we also asked them to enumerate a list of challenges faced in the workflows. In the interviews with UGs, we asked their comments in reading the slideshows and attending course lectures. Then, we used mind-mapping to find clusters in their comments that defined goals for an ideal slideshow. 
+
+
+% two editors and seven general audience, respectively. Both interviews are semi-structured. 
+
+% We should take editors and audiences alike into consideration for the design of Narvis. We conducted a interview with 3 experts in data visualization, asked what they could expect for an authoring tool for crafting an introduction slideshow. 
+% We also constructed an interview with 7 undergraducate students. They have no prior experience in data visualization, and they just come back from a lecture about data visualization, which, as they said, ``totally confused'' them. They talked freely about what has confused them.
 %It is interesting that there are some overlap between the requirements from editors and that from audience. For example, they both require slide  
 
 
-Based on this interview, as well as  our own experience and examination of literature, we settle on six design considerations(DCs) for the aspect of editors (DE) and that of audiences (DA). 
+% Based on this interview, as well as  our own experience and examination of literature, we settle on six design considerations(DCs) for the aspect of editors (DE) and that of audiences (DA). 
+
+\subsection{Design Tasks}
+Based on our observations and the interviews, we categorize six design tasks to guide the design of Narvis.
+
+
 %Our premise is that the editor is familiar with a visualization design but unclear how to educate his audiences in an efficient way. Since the background of the audiences cannot be guaranteed, we assume they all have no prior knowledge in data visualization. 
 
 \textbf{DE1. Efficiency}
