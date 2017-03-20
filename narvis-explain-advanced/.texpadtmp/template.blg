@@ -39,6 +39,8 @@ Warning--empty year in gershon_what_2001
 Warning--empty year in harper_deconstructing_2014
 Warning--empty journal in heer_animated_2007-1
 Warning--empty year in heer_animated_2007-1
+Warning--empty journal in heer_animated_2007
+Warning--empty year in heer_animated_2007
 Warning--empty year in huber_visualizing_2005
 Warning--empty journal in hullman_deeper_2013
 Warning--empty year in hullman_deeper_2013
@@ -61,6 +63,8 @@ Warning--empty journal in ruchikachorn_learning_2015
 Warning--empty year in ruchikachorn_learning_2015
 Warning--empty journal in satyanarayan_authoring_2014
 Warning--empty year in satyanarayan_authoring_2014
+Warning--empty journal in satyanarayan_vega-lite:_2017
+Warning--empty year in satyanarayan_vega-lite:_2017
 Warning--empty year in savva_revision:_2011
 Warning--empty journal in segel_narrative_2010
 Warning--empty year in segel_narrative_2010
@@ -77,45 +81,45 @@ Warning--empty journal in wu_opinionseer:_2010
 Warning--empty year in wu_opinionseer:_2010
 Warning--empty journal in zhao_x0023;fluxflow:_2014
 Warning--empty year in zhao_x0023;fluxflow:_2014
-You've used 43 entries,
+You've used 45 entries,
             2598 wiz_defined-function locations,
-            869 strings with 13027 characters,
-and the built_in function-call counts, 46300 in all, are:
-= -- 10359
-> -- 857
-< -- 1718
-+ -- 2049
-- -- 332
-* -- 1643
-:= -- 6566
-add.period$ -- 137
-call.type$ -- 43
-change.case$ -- 274
+            875 strings with 13217 characters,
+and the built_in function-call counts, 48670 in all, are:
+= -- 10919
+> -- 893
+< -- 1814
++ -- 2159
+- -- 346
+* -- 1722
+:= -- 6900
+add.period$ -- 143
+call.type$ -- 45
+change.case$ -- 286
 chr.to.int$ -- 0
-cite$ -- 112
-duplicate$ -- 585
-empty$ -- 1343
-format.name$ -- 294
-if$ -- 12264
+cite$ -- 118
+duplicate$ -- 607
+empty$ -- 1401
+format.name$ -- 306
+if$ -- 12900
 int.to.chr$ -- 0
-int.to.str$ -- 43
-missing$ -- 43
-newline$ -- 436
-num.names$ -- 86
-pop$ -- 376
+int.to.str$ -- 45
+missing$ -- 45
+newline$ -- 458
+num.names$ -- 90
+pop$ -- 392
 preamble$ -- 1
-purify$ -- 233
+purify$ -- 243
 quote$ -- 0
-skip$ -- 401
+skip$ -- 414
 stack$ -- 0
-substring$ -- 3071
+substring$ -- 3235
 swap$ -- 111
-text.length$ -- 940
+text.length$ -- 992
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 168
-warning$ -- 69
-while$ -- 250
-width$ -- 45
-write$ -- 1451
-(There were 71 warnings)
+type$ -- 176
+warning$ -- 73
+while$ -- 262
+width$ -- 47
+write$ -- 1527
+(There were 75 warnings)

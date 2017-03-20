@@ -199,6 +199,17 @@ J.~Heer and G.~Robertson.
 }{.}\hspace{.4pt}70539}}
 
 
+\bibitem{heer_animated_2007}
+J.~Heer and G.~Robertson.
+\newblock Animated transitions in statistical data graphics.
+\newblock 13(6):1240--1247. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2007\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}70539}}
+
+
 \bibitem{Huang:2007:SUI:1284420.1284427}
 W.~Huang and C.~L. Tan.
 \newblock A system for understanding imaged infographics and its applications.
@@ -352,6 +363,17 @@ A.~Satyanarayan and J.~Heer.
 }{.}\hspace{.4pt}1111\discretionary{/}{%
 }{/}cgf\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}12392}}
+
+
+\bibitem{satyanarayan_vega-lite:_2017}
+A.~Satyanarayan, D.~Moritz, K.~Wongsuphasawat, and J.~Heer.
+\newblock Vega-lite: A grammar of interactive graphics.
+\newblock 23(1):341--350. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2016\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2599030}}
 
 
 \bibitem{savva_revision:_2011}
