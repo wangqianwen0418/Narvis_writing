@@ -86,8 +86,9 @@ For the input textual description, we offer a basic text detection and classific
 The algorithm we proposed is a compromise between efficiency and performance. At this time point, it is limited for image with high quality and clear edges, but its performance can be improved by applying a more advanced algorithm, such as the method based on patch detection and clustering mentioned in Revison\cite{savva_revision:_2011}.
 
 \subsection{Phase2: Human Editing}
+In Narvis, designers specify visualizations as a hierarchy of visual units with visual properties
 \subsubsection{The interface for editing}
-The interface of editing mode is composed of the following panels.We arrange the position of these panels and their content to better match the observed authoring work flow: refine clusters, bind with templates, organize the structure of visual units, modify templates, add annotation. 
+The interface of editing mode is composed of the following panels. We arrange the position of these panels and their content to better match the observed authoring work flow: refine clusters, bind with templates, organize the structure of visual units, modify templates, add annotation. 
 
 \textbf{\textit{Source Panel}: extracting and organizing graphic elements}\par
 FigSource is a tabbed panel where the extracted graphical elements are associated with different tabs based on the pre-cluster results. The user add, delete, modify the graphical elements associated with each tab, making sure that 1) All the graphical elements of the same visual unit is with one tab 2) every graphical element belongs to one and only one tab. For each tab, which actually equals to a visual unit now, the user call a template from our library in a drop-down list. 
