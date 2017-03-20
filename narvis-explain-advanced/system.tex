@@ -21,7 +21,7 @@ In this section, we first distill six design tasks based on our understanding of
 Narvis aims to offer an efficient, expressive and friendly authoring tool for experts in data visualization, assisting them to create a slideshow to introduce advanced visual design to general audience.  
 Hence, we identify two different user perspectives: the editors and the general audience perspectives. Editors are visualization experts who have the need to create a slideshow to communicate visual design. General audience have no prerequisite for visualization. They gain understanding of the visual design by watching the slideshow. 
 
-To understand the current practice of making slideshows and the experience of reading tutorials, we collaborated with two teaching assistants (TAs) of a Data Visualization course and seven undergraduate students (UGs) taking this course. The two TAs are postgraduate students whose research interest is information visualization. Their duty of this course involves making slides for explaining visual design appears in major publications in the field of data visualization. The seven UGs have little background in visualization before the class, and have taken this course for less than one month.  
+To understand the current practice of making slideshows and the experience of reading tutorials, we collaborated with two teaching assistants (TAs) of a Data Visualization course and seven undergraduate students (UGs) taking this course. The two TAs are postgraduate students whose research interest is information visualization. Their duty of this course involves making slides for explaining visual design appears in major publications in the field of data visualization. The slides should cover fine-grained description to help students review them after class. The seven UGs have little background in visualization before the class, and have taken this course for less than one month.  
 
 We began by conducting semi-structured interviews with TAs, whom we identified as editors, and UGs, who are general audience. During the interviews with TAs, we asked their workflows of making slideshows and explaining visual design. To identify opportunities for Narvis, we also asked them to enumerate a list of challenges faced in the workflows. In the interviews with UGs, we asked their comments in reading the slideshows and attending course lectures. Then, we used mind-mapping to find clusters in their comments that defined goals for an ideal slideshow. 
 
@@ -36,19 +36,20 @@ We began by conducting semi-structured interviews with TAs, whom we identified a
 % Based on this interview, as well as  our own experience and examination of literature, we settle on six design considerations(DCs) for the aspect of editors (DE) and that of audiences (DA). 
 
 \subsection{Design Tasks}
-Based on our observations and the interviews, we categorize six design tasks to guide the design of Narvis.
-
+Based on our observations and the interviews, we categorize six design tasks to guide the design of Narvis. Some tasks, denoted as DE, are originated from the interview with editors, i.e., the two TAs, and others (DA) are from audience (UGs).
 
 %Our premise is that the editor is familiar with a visualization design but unclear how to educate his audiences in an efficient way. Since the background of the audiences cannot be guaranteed, we assume they all have no prior knowledge in data visualization. 
 
 \textbf{DE1. Efficiency}
-There are many presentation tools, such as Power Point\footnote{https://office.live.com/start/PowerPoint.aspx}and KeyNote\footnote{http://www.apple.com/keynote/} that can be used for introducing a data visualization. But it can be time-consuming and tedious to use them for introducing a complex visualization, which has lots of graphical elements and various visual grammar.
+TAs used presentation tools, such as Power Point\footnote{https://office.live.com/start/PowerPoint.aspx}and KeyNote\footnote{http://www.apple.com/keynote/} to introduce visual design. However, these tools are for general purpose and not tailored for visualization. Hence, making a slideshow with a number of graphical elements and visual grammar is time-consuming. TAs require an efficient approach to generate a slideshow introducing visual design.
 
-\textbf{DE2. Support feedback.} ``When I present my design in public, I always wonder whether my audience get my idea. Do I explain too fast or too slow'', one participant said. Having access to the audience's feedback is crucial for the editors to improve  the quality of their introduction, making it more understandable and attractive.  
+
+\textbf{DE2. Support feedback.} \textit{``When students read my slides, I do not know whether they can follow the logic, or whether the slides cover enough details for them to grasp the visual design.''}, one TA commented. Collecting feedbacks of audience is crucial for editors to revise their slideshow, making it more understandable and attractive.  
+
 %We implement a click collector which will automatically record click activity when audience view the explanation in our system. The click stream data can reveal information about viewing order, for example, the audience might skip one slide or go back to revisit another, the time spent on each slide, the degree of understanding at each part.The audience can also write down their comments while reviewing such an introduction slide show. Editor can adjust the narrative sequence as well the level of details based on these feedbacks. 
 
 \textbf{DA3. Control the density of information flow.} 
-All interviwees mentioned that they experienced information overload during the lecture. Thus, they hope the introduction slideshow can well control the density of information flow, only revealing a proper amount of information at a time. 
+All UGs mentioned that they had experienced information overload during the lecture. Thus, they hope the introduction slideshow limits the density of information flow, only revealing a proper amount of information at a time. 
 
 \textbf{DA4. Avoid unconscious ignorance}
 
