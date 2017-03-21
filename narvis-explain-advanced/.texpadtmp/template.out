@@ -5,11 +5,11 @@
 \BOOKMARK [2][]{subsection.6}{Authoring tools for narrative visualization}{section.3}% 5
 \BOOKMARK [2][]{subsection.7}{Decompose a data visualization}{section.3}% 6
 \BOOKMARK [1][]{section.8}{Analysis of a visualization}{}% 7
-\BOOKMARK [2][]{subsection.10}{Compositions of a visualization}{section.8}% 8
-\BOOKMARK [3][-]{subsubsection.11}{Hierarchical structure}{subsection.10}% 9
-\BOOKMARK [3][-]{subsubsection.20}{Relationships between visual units}{subsection.10}% 10
-\BOOKMARK [3][-]{subsubsection.21}{Correlations between visual primitives}{subsection.10}% 11
-\BOOKMARK [3][-]{subsubsection.23}{Correlations between visual channels}{subsection.10}% 12
+\BOOKMARK [2][]{subsection.9}{Compositions of a visualization}{section.8}% 8
+\BOOKMARK [3][-]{subsubsection.10}{Hierarchical structure}{subsection.9}% 9
+\BOOKMARK [3][-]{subsubsection.20}{Relationships between visual units}{subsection.9}% 10
+\BOOKMARK [3][-]{subsubsection.21}{Correlations between visual primitives}{subsection.9}% 11
+\BOOKMARK [3][-]{subsubsection.23}{Correlations between visual channels}{subsection.9}% 12
 \BOOKMARK [2][]{subsection.24}{Analysis of existing visual distraction}{section.8}% 13
 \BOOKMARK [3][-]{subsubsection.25}{Visual distraction from the context}{subsection.24}% 14
 \BOOKMARK [3][-]{subsubsection.26}{Visual distraction from sibling channels}{subsection.24}% 15

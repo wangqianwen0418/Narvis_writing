@@ -5,9 +5,9 @@ The style file: ../abbrv-doi.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ../template.bib
 Warning--entry type for "schmidt_living_2017" isn't style-file defined
---line 608 of file ../template.bib
+--line 615 of file ../template.bib
 Warning--entry type for "bliss_effects_1992" isn't style-file defined
---line 1819 of file ../template.bib
+--line 1826 of file ../template.bib
 Warning--empty year in amini_understanding_2015
 Warning--empty journal in amini_authoring_2017
 Warning--empty year in amini_authoring_2017
