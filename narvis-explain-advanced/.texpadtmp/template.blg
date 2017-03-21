@@ -4,10 +4,15 @@ The top-level auxiliary file: template.aux
 The style file: ../abbrv-doi.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ../template.bib
+Repeated entry---line 22 of file ../template.bib
+ : @inproceedings{collins2009parallel
+ :                                   ,
+I'm skipping whatever remains of this entry
 Warning--entry type for "schmidt_living_2017" isn't style-file defined
---line 615 of file ../template.bib
+--line 655 of file ../template.bib
 Warning--entry type for "bliss_effects_1992" isn't style-file defined
---line 1826 of file ../template.bib
+--line 1866 of file ../template.bib
+Warning--I didn't find a database entry for "7042494"
 Warning--empty year in amini_understanding_2015
 Warning--empty journal in amini_authoring_2017
 Warning--empty year in amini_authoring_2017
@@ -22,7 +27,6 @@ Warning--empty year in cao_whisper:_2012
 Warning--empty year in chapman_constructive_1988
 Warning--empty journal in chen_peakvizor:_2016
 Warning--empty year in chen_peakvizor:_2016
-Warning--empty year in chi_taxonomy_2000
 Warning--empty journal in chi_morphable_2015
 Warning--empty year in chi_morphable_2015
 Warning--empty journal in cleveland_graphical_1984
@@ -81,45 +85,45 @@ Warning--empty journal in wu_opinionseer:_2010
 Warning--empty year in wu_opinionseer:_2010
 Warning--empty journal in zhao_x0023;fluxflow:_2014
 Warning--empty year in zhao_x0023;fluxflow:_2014
-You've used 45 entries,
+You've used 46 entries,
             2598 wiz_defined-function locations,
-            875 strings with 13217 characters,
-and the built_in function-call counts, 48670 in all, are:
-= -- 10919
-> -- 893
+            882 strings with 13361 characters,
+and the built_in function-call counts, 49083 in all, are:
+= -- 10961
+> -- 917
 < -- 1814
-+ -- 2159
-- -- 346
-* -- 1722
-:= -- 6900
-add.period$ -- 143
-call.type$ -- 45
-change.case$ -- 286
++ -- 2167
+- -- 354
+* -- 1756
+:= -- 6969
+add.period$ -- 146
+call.type$ -- 46
+change.case$ -- 293
 chr.to.int$ -- 0
 cite$ -- 118
-duplicate$ -- 607
-empty$ -- 1401
-format.name$ -- 306
-if$ -- 12900
+duplicate$ -- 618
+empty$ -- 1431
+format.name$ -- 314
+if$ -- 12985
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 45
-newline$ -- 458
-num.names$ -- 90
-pop$ -- 392
+int.to.str$ -- 46
+missing$ -- 46
+newline$ -- 463
+num.names$ -- 92
+pop$ -- 398
 preamble$ -- 1
-purify$ -- 243
+purify$ -- 249
 quote$ -- 0
-skip$ -- 414
+skip$ -- 421
 stack$ -- 0
-substring$ -- 3235
-swap$ -- 111
+substring$ -- 3270
+swap$ -- 112
 text.length$ -- 992
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 176
-warning$ -- 73
-while$ -- 262
-width$ -- 47
-write$ -- 1527
-(There were 75 warnings)
+type$ -- 180
+warning$ -- 72
+while$ -- 266
+width$ -- 48
+write$ -- 1538
+(There was 1 error message)

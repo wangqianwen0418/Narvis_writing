@@ -94,13 +94,6 @@ Q.~Chen, Y.~Chen, D.~Liu, C.~Shi, Y.~Wu, and H.~Qu.
 }{.}\hspace{.4pt}2505305}}
 
 
-\bibitem{chi_taxonomy_2000}
-E.~H. Chi.
-\newblock A taxonomy of visualization techniques using the data state reference
-  model.
-\newblock In {\em Proceedings of the {IEEE} Symposium on Information
-  Vizualization 2000}, {INFOVIS} '00, pp. 69--. {IEEE} Computer Society.
-
 \bibitem{chi_morphable_2015}
 M.~T. Chi, S.~S. Lin, S.~Y. Chen, C.~H. Lin, and T.~Y. Lee.
 \newblock Morphable word clouds for time-varying text data visualization.
@@ -131,6 +124,12 @@ N.~Cohn.
 }{/}cogs\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}12016}}
 
+
+\bibitem{collins2009parallel}
+C.~Collins, F.~B. Viegas, and M.~Wattenberg.
+\newblock Parallel tag clouds to explore and analyze faceted text corpora.
+\newblock In {\em Visual Analytics Science and Technology, 2009. VAST 2009.
+  IEEE Symposium on}, pp. 91--98. IEEE, 2009.
 
 \bibitem{cui_textflow:_2011}
 W.~Cui, S.~Liu, L.~Tan, C.~Shi, Y.~Song, Z.~Gao, H.~Qu, and X.~Tong.
@@ -265,6 +264,11 @@ S.~Huron, R.~Vuillemot, and J.~D. Fekete.
 }{.}\hspace{.4pt}2013\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}227}}
 
+
+\bibitem{itti2001computational}
+L.~Itti and C.~Koch.
+\newblock Computational modelling of visual attention.
+\newblock {\em Nature reviews neuroscience}, 2(3):194--203, 2001.
 
 \bibitem{kosara_storytelling:_2013}
 R.~Kosara and J.~Mackinlay.
