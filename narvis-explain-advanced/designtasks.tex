@@ -1,0 +1,46 @@
+\section{Design Considerations}
+In this section, we first describe our understanding of two groups of end users, i.e., editors and general audience. Then, we distill design tasks to guide our design and development of Narvis.
+
+\subsection{User Perspectives and Methods}
+
+Narvis aims to offer an efficient, expressive and friendly authoring tool for experts in data visualization, assisting them to create a slideshow to introduce advanced visual design to general audience.  
+Hence, we identify two different user perspectives: the editors and the general audience perspectives. Editors are visualization experts who have the need to create a slideshow to communicate visual design. General audience have no prerequisite for visualization. They gain understanding of the visual design by watching the slideshow. 
+
+To understand the current practice of making slideshows and the experience of reading tutorials, we collaborated with two teaching assistants (TAs) of a Data Visualization course and seven undergraduate students (UGs) taking this course. The two TAs are postgraduate students whose research interest is information visualization. Their duty of this course involves making slides for explaining visual design appears in major publications in the field of data visualization. The slides should cover fine-grained description to help students review them after class. The seven UGs have little background in visualization before the class, and have taken this course for less than one month.  
+
+We began by conducting semi-structured interviews with TAs, whom we identified as editors, and UGs, who are general audience. During the interviews with TAs, we asked their workflows of making slideshows and explaining visual design. To identify opportunities for Narvis, we also asked them to enumerate a list of challenges faced in the workflows. The interviews with UGs are semi-structured as well. We asked their comments in reading the slideshows and attending course lectures. Then, we used mind-mapping to find clusters in their comments that defined goals for an ideal slideshow. 
+
+
+\subsection{Design Tasks}
+Based on our observations and the interviews, we categorize six design tasks to guide the design of Narvis. Two tasks, denoted as DE, are originated from the interview with editors, i.e., the two TAs, and other four tasks (DA) are from audience (UGs).
+
+%Our premise is that the editor is familiar with a visualization design but unclear how to educate his audiences in an efficient way. Since the background of the audiences cannot be guaranteed, we assume they all have no prior knowledge in data visualization. 
+
+\textbf{DE1. Keep efficiency.}
+TAs used presentation tools, such as Power Point\footnote{https://office.live.com/start/PowerPoint.aspx}and KeyNote\footnote{http://www.apple.com/keynote/} to introduce visual design. However, these tools are for general purpose and not tailored for visualization. Splitting a visualization into fine-grained graphical elements and combining them into logic flow are tedious and time-consuming with existing tools. 
+Therefore, automatic decomposition of visualization and composition of graphical elements are necessary for facilitating design and production of a slideshow.
+% TAs require an efficient approach to generate a slideshow introducing visual design.
+
+
+\textbf{DE2. Collect feedback.} \textit{``When students read my slides, I do not know whether they can follow the logic, or whether the slides cover enough details for them to grasp the visual design.''}, one TA commented. 
+% When giving a lecture, TAs are able to understand how their slides and logic are accepted through in-class interactions. 
+However, Collecting feedbacks of audience is crucial for editors to revise their slideshow, making it more understandable and attractive.  
+
+%We implement a click collector which will automatically record click activity when audience view the explanation in our system. The click stream data can reveal information about viewing order, for example, the audience might skip one slide or go back to revisit another, the time spent on each slide, the degree of understanding at each part.The audience can also write down their comments while reviewing such an introduction slide show. Editor can adjust the narrative sequence as well the level of details based on these feedbacks. 
+
+\textbf{DA3. Avoid information overload.} 
+All UGs complained that they had experienced information overload in reading slides. Though they might separate an informative slideshow into parts and read one part at a time, they got lost if the information in one slide is overloaded.
+% We distinguish the amount of information in the slideshow and in one slide. Audience  However, 
+To reduce mental effort of audience, one slide should limit the amount of information, revealing one visual grammar of one graphical element. 
+
+\textbf{DA4. Avoid unconscious ignorance.}
+Experts in data visualization prone to treat some visual encodings as straightforward, and unconsciously ignore some crucial encodings when presenting a visualization. However, the lack of information confuses the UGs with no prior knowledge of visualization. A comprehensive slideshow is crucial to communicate a visual design to novice.
+
+\textbf{DA5. Keep logic flow.}
+The complicated relationship, spatial and logical alike,  between different graphic elements is one of the biggest barriers that impedes a smooth communication of visual encoding scheme. 
+%By encouraging users to refine the clusters of graphic elements, to figure out relationship between visual units by editing a unit tree, and to modify the narrative templates we offered, we aim at motivating users to sort out the structure of a visualization, which will then result in a better-organized narrative sequence. 
+
+
+\textbf{DA6. Emphasis on conveying intuitive concepts.} 
+Although algorithm might be crucial for the achievement of a visualization design, some of the interviees show little interest in it. 
+ 
