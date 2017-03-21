@@ -117,17 +117,28 @@ First, a proper explanation should follow the order of decreasing visual salienc
 In our system, we choose position-color hue-color saturation-size-shape as a trade-off between these two metrics. But we do allow and recommend the users to define their preferable sequence based on their situation. 
 
 
-\subsection{Design considerations of narrative sequence}
-\subsubsection{Channels}: As discussed in section 3.1.4, when explaining channels, we should take information complexity as well as visual saliency into account. 
-
-As for one channel, the narrative explanation depends on the type of the channel. As defined by previous work, therer two foundamentally different kinds of channels. The identity channels tell about what-where, while the magnitude channel tell how much. For a magnitude channel, one or two extreme examples will be enough for explaining, while for an ordered channel, introducing each category one by one might be a better option.\par
-\subsubsection{Units}: As discussed in section 3.1.2, there are four types of relationships between visual units, and they will influence the order of a narrative explanation. Thus, we display the correlations between units in a tree diagram where a child node is the enhancement/dependence of its parent node and sibling nodes have logic dependences. When explaining these visual units, we can simply follow a deep first search (DFS) order to visit all the visual units.\par
-\subsubsection{Non-linear sequence}: so far, all the narrative explanation we discussed is linear. We move from one channel to another channel, then from one primitive to another primitive, then from one unit to another unit. However, reading a lengthy, extremely detailed instruction maybe tedious. A good narrative explanation should include non-linear design, allowing users to skip uninterested parts, go back to previous information and freely switch between different parts. Also, users should be allowed the flexibility to choose explanations at different levels of details. 
-
 \subsection{Analysis of existing visual distraction}
 We aims to introduce a new visualization design in a visual method, more specifically, in the form of a slide show. To better inform the crafting an attractive and effective explanation, analyzing the existing visual distraction is necessary. 
 \textbf{add a fig}
 From our observation, we identify two kinds of visual distractions: visual distraction from context and visual distraction from sibling channels (sibling channels refer to the channels belonging to the same mark). \par
-\subsubsection{Visual distraction from the context}: This kind of distraction has been widely discussed in the field of object detection and human visual attention. \cite{nothdurft_salience_2000, standage_modelling_2005}Its intensity is mainly  determined by spatial distance and appearance similarity. \cite{wolfe_guided_1994}For example, when we try to focus on a green rectangel, a red triangel near by it can lead to visual distraction. And the intensity of such distraction is determined by the distance and the appearance similarity between the two graphics. Focus + Context, which might be the most popular techniques for this problem, make uneven use of graphic resources to discriminate focus from their context. At the same time, adding dynamic changes to focus elements has also been demonstrated as effective under various conditions\cite{waldner_attractive_2014}. 
+
+\subsubsection{Visual distraction from the context}
+This kind of distraction has been widely discussed in the field of object detection and human visual attention. \cite{nothdurft_salience_2000, standage_modelling_2005}Its intensity is mainly  determined by spatial distance and appearance similarity. \cite{wolfe_guided_1994}For example, when we try to focus on a green rectangel, a red triangel near by it can lead to visual distraction. And the intensity of such distraction is determined by the distance and the appearance similarity between the two graphics. Focus + Context, which might be the most popular techniques for this problem, make uneven use of graphic resources to discriminate focus from their context. At the same time, adding dynamic changes to focus elements has also been demonstrated as effective under various conditions\cite{waldner_attractive_2014}. 
 
 \subsubsection{Visual distraction from sibling channels}: A visual primitive usually has more than one visual channels. Thus, when recognizing one primitive, the channels with high visual saliency can significantly influence the expression of other channels. For example, color can be a strong noise when focus is supposed to be the shape.
+
+
+\subsection{Design considerations of narrative sequence}
+
+
+\subsubsection{Channels}
+As discussed in section 3.1.4, when explaining channels, we should take information complexity as well as visual saliency into account. 
+
+As for one channel, the narrative explanation depends on the type of the channel. As defined by previous work, therer two foundamentally different kinds of channels. The identity channels tell about what-where, while the magnitude channel tell how much. For a magnitude channel, one or two extreme examples will be enough for explaining, while for an ordered channel, introducing each category one by one might be a better option.
+
+\subsubsection{Units} 
+As discussed in section 3.1.2, there are four types of relationships between visual units, and they will influence the order of a narrative explanation. Thus, we display the correlations between units in a tree diagram where a child node is the enhancement/dependence of its parent node and sibling nodes have logic dependences. When explaining these visual units, we can simply follow a deep first search (DFS) order to visit all the visual units.
+
+\subsubsection{Non-linear sequence}
+so far, all the narrative explanation we discussed is linear. We move from one channel to another channel, then from one primitive to another primitive, then from one unit to another unit. However, reading a lengthy, extremely detailed instruction maybe tedious. A good narrative explanation should include non-linear design, allowing users to skip uninterested parts, go back to previous information and freely switch between different parts. Also, users should be allowed the flexibility to choose explanations at different levels of details. 
+

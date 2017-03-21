@@ -3,7 +3,7 @@
 
 % Thus, it has two kinds of users: editors, the data visualization experts who use Narvis to create an explanation slideshow, and audiences, the general audience who watch the slideshow created by ediors.
 
-In this section, we first distill six design tasks based on our understanding of two kinds of end users, i.e., editors and general audience. Then, we describe the workflow of Narvis consisting of three phases (Figure \siwei{ref}), i.e., Automatic Analysis Phase, Human Editing Phase, and Viewing Phase.
+With the considerations above in mind, we implement the workflow of Narvis consisting of three phases (Figure \siwei{ref}), i.e., Automatic Analysis Phase, Manual Editing Phase, and Viewing Phase.
 
 % The workflow of Narvis includes three phases (Figure \siwei{ref}):  In Automatic Analysis Phase, the system accepts the input visualization, extracts graphical elements and classifies them into groups for further edit. 
 % In Human Editing Phase, editors will be involved to modify the output from the Automatic Analysis Phase, and use the templates Narvis provide to craft a explanation slideshow. 
@@ -16,15 +16,6 @@ In this section, we first distill six design tasks based on our understanding of
  \label{fig:overview}
 \end{figure}
 
-\subsection{User Perspectives and Methods}
-
-Narvis aims to offer an efficient, expressive and friendly authoring tool for experts in data visualization, assisting them to create a slideshow to introduce advanced visual design to general audience.  
-Hence, we identify two different user perspectives: the editors and the general audience perspectives. Editors are visualization experts who have the need to create a slideshow to communicate visual design. General audience have no prerequisite for visualization. They gain understanding of the visual design by watching the slideshow. 
-
-To understand the current practice of making slideshows and the experience of reading tutorials, we collaborated with two teaching assistants (TAs) of a Data Visualization course and seven undergraduate students (UGs) taking this course. The two TAs are postgraduate students whose research interest is information visualization. Their duty of this course involves making slides for explaining visual design appears in major publications in the field of data visualization. The slides should cover fine-grained description to help students review them after class. The seven UGs have little background in visualization before the class, and have taken this course for less than one month.  
-
-We began by conducting semi-structured interviews with TAs, whom we identified as editors, and UGs, who are general audience. During the interviews with TAs, we asked their workflows of making slideshows and explaining visual design. To identify opportunities for Narvis, we also asked them to enumerate a list of challenges faced in the workflows. In the interviews with UGs, we asked their comments in reading the slideshows and attending course lectures. Then, we used mind-mapping to find clusters in their comments that defined goals for an ideal slideshow. 
-
 
 % two editors and seven general audience, respectively. Both interviews are semi-structured. 
 
@@ -35,73 +26,61 @@ We began by conducting semi-structured interviews with TAs, whom we identified a
 
 % Based on this interview, as well as  our own experience and examination of literature, we settle on six design considerations(DCs) for the aspect of editors (DE) and that of audiences (DA). 
 
-\subsection{Design Tasks}
-Based on our observations and the interviews, we categorize six design tasks to guide the design of Narvis. Some tasks, denoted as DE, are originated from the interview with editors, i.e., the two TAs, and others (DA) are from audience (UGs).
-
-%Our premise is that the editor is familiar with a visualization design but unclear how to educate his audiences in an efficient way. Since the background of the audiences cannot be guaranteed, we assume they all have no prior knowledge in data visualization. 
-
-\textbf{DE1. Efficiency}
-TAs used presentation tools, such as Power Point\footnote{https://office.live.com/start/PowerPoint.aspx}and KeyNote\footnote{http://www.apple.com/keynote/} to introduce visual design. However, these tools are for general purpose and not tailored for visualization. Hence, making a slideshow with a number of graphical elements and visual grammar is time-consuming. TAs require an efficient approach to generate a slideshow introducing visual design.
-
-
-\textbf{DE2. Support feedback.} \textit{``When students read my slides, I do not know whether they can follow the logic, or whether the slides cover enough details for them to grasp the visual design.''}, one TA commented. Collecting feedbacks of audience is crucial for editors to revise their slideshow, making it more understandable and attractive.  
-
-%We implement a click collector which will automatically record click activity when audience view the explanation in our system. The click stream data can reveal information about viewing order, for example, the audience might skip one slide or go back to revisit another, the time spent on each slide, the degree of understanding at each part.The audience can also write down their comments while reviewing such an introduction slide show. Editor can adjust the narrative sequence as well the level of details based on these feedbacks. 
-
-\textbf{DA3. Control the density of information flow.} 
-All UGs mentioned that they had experienced information overload during the lecture. Thus, they hope the introduction slideshow limits the density of information flow, only revealing a proper amount of information at a time. 
-
-\textbf{DA4. Avoid unconscious ignorance}
-
-Experts in data visualization, prone to treat some visual encodings as evident, might unconsciously ignore some crucial information when introducing a visualization. However, for these with no prior knowledge about data visualization, the lack of such information can totally confuse them. 
-
-\textbf{DA5. Clear structure.}
-
-The complicated relationship, spatial and logical alike,  between different graphic elements is one of the biggest barriers that impedes a smooth communication of visual encoding scheme. 
-%By encouraging users to refine the clusters of graphic elements, to figure out relationship between visual units by editing a unit tree, and to modify the narrative templates we offered, we aim at motivating users to sort out the structure of a visualization, which will then result in a better-organized narrative sequence. 
-
-
-\textbf{DA6. Emphasis on conveying intuitive concepts.} 
-
- Although algorithm might be crucial for the achievement of a visualization design, some of the interviees show little interest in it. 
- 
  %\textbf{DA7. Information repetion}
  %When introducing a visulization design, it is common for the audiences to forget previous information or lose the sense of overview. Information repetition, also called as redundancy, helps with visualization recall and understanding. \cite{borkin_what_2013}}
  %by providing simplified sentence pattern for annotation adding, we skip such parts in purpose.
 
 %The audience of the generated narrative explanations are ordinal people, and they usually have no interests in understanding the algorithm employed in a visualization design. For example, the comprehension that a transition line indicates public attention shift from one topic to another is enough for them. Explicating how to quantify public attention shift only bores the audience, even scares them away.
 
-\subsection{Phase1: Auto Analysis}\par
-The auto analysis has two parts: one for input image and one for input text. It automatically extract the graphic elements and divide them into different cluster, facilitating later editing.(DE1) Note that the textual input is not necessary but it provides hints when editors add annotations manually in the Human Editing Phase.(DE1)
- \subsubsection{Analysis of input image}
-The auto analysis of input image has three main steps. It first detects all primitives that it finds in the given image and also detects any labels that are present in the visualization. It will then cluster objects that are spacially linked and extract non-target objects. Finally, it will fill in any empty spaces left inside objects from extraction with the appropriate color so as to show the target object in its entirety.
+\subsection{Phase1: Auto Analysis}
 
-The first step, object detection, is done by iterating through all the pixels on the bitmap. At every iteration, we first check to see if this pixel has already been tagged as part of an object. If not, we know that this pixel forms a part of a new object.We explore the colors of the neighboring pixels, where the neighbors are chosen such that the distance between the current pixel and a potential neighbor is less than 3. If the difference in color between a neighbor pixel and the current pixel is less than a threshhold, the neighboring pixel is tagged as part of the same object. Once all neighbors have been classified as either part of the same object or not, we choose another pixel that was classified as part of the same object and apply this algorithm again. This is a modified BFS algorithm and allows us to identify all unique ojects in the given visualization.
+% The auto analysis has two parts: one for input image and one for input text. It automatically extract the graphic elements and divide them into different cluster, facilitating later editing.(DE1) Note that the textual input is not necessary but it provides hints when editors add annotations manually in the Human Editing Phase.(DE1)
 
-Once all the objects have been detected, we have to extract a target object. To extract an object means to only select the pixels that are classified as part of this object, so we should remove all objects that are not part of this object and we should extract objects that are inside our target object.It is trivial to set all pixels that are not within or part of our object to have color white. For objects that are inside our target object, i.e. those objects that are clustered with out target object, we will first detect that object then programmatically change its pixels to white.
+The input of Narvis includes two parts: one image presenting a visual design (mandatory) and a piece of text describing the design (optional). In this phase, Narvis accepts the input image and extracts graphical elements to facilitate further authoring. If text is provided, editors are able to add and edit annotations in the Manual Editing Phase.
 
-Once we have completed extraction, we have the issue of these white spaces. The reason this is an issue is because an extracted object might have been dividing two objects, and so when it is extracted, we lose the boundary between our target object and another object, which can cause confusion as to whether that white space should be colored in or not. To solve this boundary problem, we create a queue of the white spaces, with each data point giving the starting and ending point of that space. We then look at the intervals between enclosed white spaced objects, if that interval is above a threshhold, we take that white space to not be part of our object. If it is below our threshhold, then we enclose the white space with the target objects color, creating a boundary for it. The main difference is that for objects not within our target object, we do not create a boundary, whereas objects within our target object are enclosed with the target objects color.\par
+\subsubsection{Analysis of input image}
+% The auto analysis of input image has three main steps. It first detects all primitives that it finds in the given image and also detects any labels that are present in the visualization. It will then cluster objects that are spacially linked and extract non-target objects. Finally, it will fill in any empty spaces left inside objects from extraction with the appropriate color so as to show the target object in its entirety.
+The analysis of input image includes three steps, i.e., object detection, object clustering and object recovery.
+
+% The first step, object detection, is done by iterating through all the pixels on the bitmap. 
+\textbf{Object detection.} Narvis iterates through all pixels in the input image. At every iteration, we first check to see if this pixel has already been tagged as part of an object. If not, we know that this pixel forms \siwei{a part of a new object.} We explore the colors of the neighboring pixels, where the neighbors are chosen such that the distance between the current pixel and a potential neighbor \siwei{is less than 3}. If the difference in color between a neighbor pixel and the current pixel is less than a threshhold, the neighboring pixel is tagged as part of the same object. Once all neighbors have been classified as either part of the same object or not, we choose another pixel that was classified as part of the same object and apply this algorithm again. This is a modified BFS algorithm and allows us to identify all unique ojects in the given visualization.
+
+\textbf{Object clustering.} Once all the objects have been detected, we have to extract a target object. To extract an object means to only select the pixels that are classified as part of this object, so we should remove all objects that are not part of this object and we should extract objects that are inside our target object.It is trivial to set all pixels that are not within or part of our object to have color white. For objects that are inside our target object, i.e. those objects that are clustered with out target object, we will first detect that object then programmatically change its pixels to white.
+
+\textbf{Object recovery.} Once we have completed extraction, we have the issue of these white spaces. The reason this is an issue is because an extracted object might have been dividing two objects, and so when it is extracted, we lose the boundary between our target object and another object, which can cause confusion as to whether that white space should be colored in or not. To solve this boundary problem, we create a queue of the white spaces, with each data point giving the starting and ending point of that space. We then look at the intervals between enclosed white spaced objects, if that interval is above a threshhold, we take that white space to not be part of our object. If it is below our threshhold, then we enclose the white space with the target objects color, creating a boundary for it. The main difference is that for objects not within our target object, we do not create a boundary, whereas objects within our target object are enclosed with the target objects color.
+
 \subsubsection{Analysis of input textual description}
 For the input textual description, we offer a basic text detection and classification algorithm, which uses a dictionary of terms that are highly correlated with certain channels. E.g. the word "length" is highly correlated with the size channel. To do the text detection, we first classify each sentence depending on whether it contains any of the key words in our dictionary. If it contains a key word for one of the channels, the sentence is tagged as being a description of that channels visualization. Once we have tagged all the sentences, whenever a channel is selected, we show the entire text that was inputted and highlight the text that has been tagged as descriptive of that channels visualization.
 
 The algorithm we proposed is a compromise between efficiency and performance. At this time point, it is limited for image with high quality and clear edges, but its performance can be improved by applying a more advanced algorithm, such as the method based on patch detection and clustering mentioned in Revison\cite{savva_revision:_2011}.
 
-\subsection{Phase2: Human Editing}
-In Narvis, designers specify visualizations as a hierarchy of visual units with visual properties
-\subsubsection{The interface for editing}
-The interface of editing mode is composed of the following panels. We arrange the position of these panels and their content to better match the observed authoring work flow: refine clusters, bind with templates, organize the structure of visual units, modify templates, add annotation. 
+\subsection{Phase2: Manual Editing}
+% In Narvis, designers specify visualizations as a hierarchy of visual units with visual properties
+The workflow of this phase includes three steps, i.e., visual unit generation, visual unit organization and template integration, as illustrated in Figure \siwei{ref}. We further introduce a library of templates for \siwei{sth}
+% We introduce three panels in this phase acting as three steps in the workflow to allow editors  
 
-\textbf{\textit{Source Panel}: extracting and organizing graphic elements}\par
-FigSource is a tabbed panel where the extracted graphical elements are associated with different tabs based on the pre-cluster results. The user add, delete, modify the graphical elements associated with each tab, making sure that 1) All the graphical elements of the same visual unit is with one tab 2) every graphical element belongs to one and only one tab. For each tab, which actually equals to a visual unit now, the user call a template from our library in a drop-down list. 
+\subsubsection{Visual Unit Generation} 
+After graphical elements are extracted and clustered based on visual representation, each cluster appears as a tabbed view in the Source Panel (Figure \siwei{ref}). By default, each cluster includes all graphics elements belonging to one visual unit. However, editors might want to redefine visual units by semantics. For example, \siwei{add an example with figure}. 
+Narvis allows editors to \siwei{drag and drop, and other interactions} to ease the process of visual units generation. 
 
+% editors are able to manually edit and organize these elements to author a slideshow.  
+
+% \subsubsection{The interface for editing}
+% The interface of editing mode is composed of the following panels. We arrange the position of these panels and their content to better match the observed authoring work flow: refine clusters, bind with templates, organize the structure of visual units, modify templates, add annotation. 
+
+
+% \textbf{\textit{Source Panel}: extracting and organizing graphic elements}
+% FigSource is a tabbed panel where the extracted graphical elements are associated with different tabs based on the pre-cluster results. The user add, delete, modify the graphical elements associated with each tab, making sure that 1) All the graphical elements of the same visual unit is with one tab 2) every graphical element belongs to one and only one tab. For each tab, which actually equals to a visual unit now, the user call a template from our library in a drop-down list. 
+
+\subsubsection{Visual Unit Organization} 
 \textbf{\textit{Tree Panel}: clarify the structure of a visualization}
 \textit{Unit tree} panel tends to motivate the users to figure out the relationships between different visual units througn interacting.  
 In the \textit{Unit Tree} panel, all visual units are shown as tree nodes.
 With Interactions as simple as dragging and dropping, the users organized and display the structure of the visual units in the panel, like what we have discussed in section 3.3.(DA5) To help people better identify the relationship between visual units, which might be a new concept for them, we include a tutorial here. Even though learning the relationship between visual units requires extra effort and time, we believe it is worthwhile since it can give people a better understanding about the structure of a visualization. Based on the tree diagram, Narvis will refresh the narrative sequence of visual units. 
 
- \textbf{\textit{ Unit Panel \& Editor panel}: personalized modification}
- 
- Narvis provides templates to achieve high efficiency, but it also allow the users high flexibity to modify these temples, thus guaranteeing the expressiveness of this system. 
+\subsubsection{Template Integration} 
+\textbf{\textit{ Unit Panel \& Editor panel}: personalized modification}
+Narvis provides templates to achieve high efficiency, but it also allow the users high flexibity to modify these temples, thus guaranteeing the expressiveness of this system. 
  
 Editors can edit a template in \textit{Unit Panle} by selecting a node on the \textit{Tree Panel}.For each visual units, the template enumerates possible encodings and leave the users to delete unemployed one, thus eliminating the unconscious missing of crucial information. (DA4)It also recommends a narrative sequence based on the metrics we mentioned in section 3.1.4. (DE1, DA3, DA5) 
  
