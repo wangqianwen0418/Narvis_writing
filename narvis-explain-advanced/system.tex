@@ -36,7 +36,7 @@ With the considerations above in mind, we implement the workflow of Narvis consi
 
 % The auto analysis has two parts: one for input image and one for input text. It automatically extract the graphic elements and divide them into different cluster, facilitating later editing.(DE1) Note that the textual input is not necessary but it provides hints when editors add annotations manually in the Human Editing Phase.(DE1)
 
-The input of Narvis includes two parts: one image presenting a visual design (mandatory) and a piece of text describing the design (optional). In this phase, Narvis accepts the input image and extracts graphic elements to facilitate further authoring. If text is provided, editors are able to add and edit annotations in the Manual Editing Phase.
+The input of Narvis includes two parts: one image presenting a visual design (mandatory) and a piece of text describing the design (optional). In this phase, Narvis accepts the input image and extracts graphical elements to facilitate further authoring. If text is provided, editors are able to add and edit annotations in the Manual Editing Phase.
 
 \subsubsection{Analysis of input image}
 % The auto analysis of input image has three main steps. It first detects all primitives that it finds in the given image and also detects any labels that are present in the visualization. It will then cluster objects that are spacially linked and extract non-target objects. Finally, it will fill in any empty spaces left inside objects from extraction with the appropriate color so as to show the target object in its entirety.
@@ -55,19 +55,30 @@ For the input textual description, we offer a basic text detection and classific
 The algorithm we proposed is a compromise between efficiency and performance. At this time point, it is limited for image with high quality and clear edges, but its performance can be improved by applying a more advanced algorithm, such as the method based on patch detection and clustering mentioned in Revison\cite{savva_revision:_2011}.
 
 \subsection{Phase2: Manual Editing}
-In Narvis, designers specify visualizations as a hierarchy of visual units with visual properties
+% In Narvis, designers specify visualizations as a hierarchy of visual units with visual properties
+The workflow of this phase includes three steps, i.e., visual unit generation, visual unit organization and template integration, as illustrated in Figure \siwei{ref}. We further introduce a library of templates for \siwei{sth}
+% We introduce three panels in this phase acting as three steps in the workflow to allow editors  
 
-\subsubsection{The interface for editing}
-The interface of editing mode is composed of the following panels. We arrange the position of these panels and their content to better match the observed authoring work flow: refine clusters, bind with templates, organize the structure of visual units, modify templates, add annotation. 
+\subsubsection{Visual Unit Generation} 
+After graphical elements are extracted and clustered based on visual representation, each cluster appears as a tabbed view in the Source Panel (Figure \siwei{ref}). By default, each cluster includes all graphics elements belonging to one visual unit. However, editors might want to redefine visual units by semantics. For example, \siwei{add an example with figure}. 
+Narvis allows editors to \siwei{drag and drop, and other interactions} to ease the process of visual units generation. 
 
-\textbf{\textit{Source Panel}: extracting and organizing graphic elements}
-FigSource is a tabbed panel where the extracted graphical elements are associated with different tabs based on the pre-cluster results. The user add, delete, modify the graphical elements associated with each tab, making sure that 1) All the graphical elements of the same visual unit is with one tab 2) every graphical element belongs to one and only one tab. For each tab, which actually equals to a visual unit now, the user call a template from our library in a drop-down list. 
+% editors are able to manually edit and organize these elements to author a slideshow.  
 
+% \subsubsection{The interface for editing}
+% The interface of editing mode is composed of the following panels. We arrange the position of these panels and their content to better match the observed authoring work flow: refine clusters, bind with templates, organize the structure of visual units, modify templates, add annotation. 
+
+
+% \textbf{\textit{Source Panel}: extracting and organizing graphic elements}
+% FigSource is a tabbed panel where the extracted graphical elements are associated with different tabs based on the pre-cluster results. The user add, delete, modify the graphical elements associated with each tab, making sure that 1) All the graphical elements of the same visual unit is with one tab 2) every graphical element belongs to one and only one tab. For each tab, which actually equals to a visual unit now, the user call a template from our library in a drop-down list. 
+
+\subsubsection{Visual Unit Organization} 
 \textbf{\textit{Tree Panel}: clarify the structure of a visualization}
 \textit{Unit tree} panel tends to motivate the users to figure out the relationships between different visual units througn interacting.  
 In the \textit{Unit Tree} panel, all visual units are shown as tree nodes.
 With Interactions as simple as dragging and dropping, the users organized and display the structure of the visual units in the panel, like what we have discussed in section 3.3.(DA5) To help people better identify the relationship between visual units, which might be a new concept for them, we include a tutorial here. Even though learning the relationship between visual units requires extra effort and time, we believe it is worthwhile since it can give people a better understanding about the structure of a visualization. Based on the tree diagram, Narvis will refresh the narrative sequence of visual units. 
 
+\subsubsection{Template Integration} 
 \textbf{\textit{ Unit Panel \& Editor panel}: personalized modification}
 Narvis provides templates to achieve high efficiency, but it also allow the users high flexibity to modify these temples, thus guaranteeing the expressiveness of this system. 
  
