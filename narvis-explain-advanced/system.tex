@@ -56,35 +56,32 @@ The algorithm we proposed is a compromise between efficiency and performance. At
 
 \subsection{Phase2: Manual Editing}
 % In Narvis, designers specify visualizations as a hierarchy of visual units with visual properties
-The workflow of this phase includes three steps, i.e., visual unit generation, visual unit organization and template integration, as illustrated in Figure \siwei{ref}. We further introduce a library of templates for \siwei{sth}
+The workflow of this phase includes three steps, i.e., visual unit generation, visual unit organization and template modification, as illustrated in Figure \siwei{ref}. We further introduce a library of templates for \siwei{sth}
 % We introduce three panels in this phase acting as three steps in the workflow to allow editors  
 
 \subsubsection{Visual Unit Generation} 
-After graphical elements are extracted and clustered based on visual representation, each cluster appears as a tabbed view in the Source Panel (Figure \siwei{ref}). By default, each cluster includes all graphics elements belonging to one visual unit. However, editors might want to redefine visual units by semantics. For example, \siwei{add an example with figure}. 
-Narvis allows editors to \siwei{drag and drop, and other interactions} to ease the process of visual units generation. 
-
+After graphical elements are extracted and clustered based on visual representation, each cluster appears as a tabbed view in the Source Panel (Figure \siwei{ref}). 
+% By default, each cluster includes all graphics elements belonging to one visual unit. However, editors might want to redefine visual units by semantics. For example, \siwei{add an example with figure}. Narvis allows editors to \siwei{drag and drop, and other interactions} to ease the process of visual units generation. 
 % editors are able to manually edit and organize these elements to author a slideshow.  
-
 % \subsubsection{The interface for editing}
 % The interface of editing mode is composed of the following panels. We arrange the position of these panels and their content to better match the observed authoring work flow: refine clusters, bind with templates, organize the structure of visual units, modify templates, add annotation. 
-
-
 % \textbf{\textit{Source Panel}: extracting and organizing graphic elements}
-% FigSource is a tabbed panel where the extracted graphical elements are associated with different tabs based on the pre-cluster results. The user add, delete, modify the graphical elements associated with each tab, making sure that 1) All the graphical elements of the same visual unit is with one tab 2) every graphical element belongs to one and only one tab. For each tab, which actually equals to a visual unit now, the user call a template from our library in a drop-down list. 
+% FigSource is a tabbed panel where the extracted graphical elements are associated with different tabs based on the pre-cluster results. 
+Editors add, delete and modify the graphical elements associated with each tab, making sure that 1) All the graphical elements of the same visual unit is with one tab 2) every graphical element belongs to one and only one tab. For each visual unit, the user call a template from our library in a drop-down list. \siwei{where is the drop-down list? }
 
 \subsubsection{Visual Unit Organization} 
-\textbf{\textit{Tree Panel}: clarify the structure of a visualization}
-\textit{Unit tree} panel tends to motivate the users to figure out the relationships between different visual units througn interacting.  
-In the \textit{Unit Tree} panel, all visual units are shown as tree nodes.
-With Interactions as simple as dragging and dropping, the users organized and display the structure of the visual units in the panel, like what we have discussed in section 3.3.(DA5) To help people better identify the relationship between visual units, which might be a new concept for them, we include a tutorial here. Even though learning the relationship between visual units requires extra effort and time, we believe it is worthwhile since it can give people a better understanding about the structure of a visualization. Based on the tree diagram, Narvis will refresh the narrative sequence of visual units. 
+Editors are allowed to adjust the relationships between different visual units througn interacting in the \textit{Unit Tree} panel, where all visual units are shown as tree nodes.
+With drag and drop, editors organized and display the structure of the visual units, like what we have discussed in section 3.3 (DA5). 
+\original{To help editors better identify the relationship between visual units, which might be a new concept for them, we include a tutorial here. Even though learning the relationship between visual units requires extra effort and time, we believe it is worthwhile since it can give people a better understanding about the structure of a visualization. }\siwei{you spend too much words describing the tutorial. what is it? is it important?}
+Narvis will organize the narrative sequence of visual units based on the tree diagram. \siwei{sequential order is easy to understand. how about hierarchical order? which do you present first? do you mentioned this point in section 3? }
 
-\subsubsection{Template Integration} 
-\textbf{\textit{ Unit Panel \& Editor panel}: personalized modification}
-Narvis provides templates to achieve high efficiency, but it also allow the users high flexibity to modify these temples, thus guaranteeing the expressiveness of this system. 
- 
-Editors can edit a template in \textit{Unit Panle} by selecting a node on the \textit{Tree Panel}.For each visual units, the template enumerates possible encodings and leave the users to delete unemployed one, thus eliminating the unconscious missing of crucial information. (DA4)It also recommends a narrative sequence based on the metrics we mentioned in section 3.1.4. (DE1, DA3, DA5) 
- 
-In the editor panel, users get further to access the \textit{grammar} of each visual primitives, add a short annotation to describe it(DA6), refine or remove the animation we embedded in a template. 
+\subsubsection{Template Modification} 
+% \textbf{\textit{ Unit Panel \& Editor panel}: personalized modification}
+% but it also allow the users high flexibity to modify these temples, thus guaranteeing the expressiveness of this system. 
+Narvis provides templates to generate slideshows with high efficiency. 
+It also supports flexible modification of templates for enough expressiveness.
+Editors can edit a template in the \textit{Unit Panle} by selecting a node on the \textit{Tree Panel}. For each visual units, the template enumerates possible encodings and leave the users to delete unused ones, thus eliminating the unconscious missing of crucial information (DA4). It also recommends a narrative sequence based on the metrics we mentioned in section 3.1.4 (DE1, DA3, DA5). 
+In the editor panel, users can further access the \textit{grammar} of each visual primitives, adding a short annotation to describe it (DA6), refine or remove the animation we embedded in a template. \siwei{add figure reference for each panel}
 
 \subsubsection{A library of templates}
 We propose a library of templates for the narrative explanation of a visualization. A templates is a set of slides that tends to introduce a visual unit, which can be descibed as an orthogonal combination of a visual primitive and a construction rule, as shown in tab.1. Since advanced visualization design is the assembly of miscellaneous visual units, we conjecture such templates can achieve a high level of efficiency for the explanation of a viusalization. (DA1)Meanwhile, allowing users a high flexible, friendly interface to edit offered templates, Narvis maintains a considerable level of expressiveness and accessibility. 
