@@ -1,5 +1,5 @@
 \section{Introducing a data visualization} 
-To help people better understand a data visualization design, we propose a method that introduces a data visualization through constructing, which has been proven as an effective teaching method\cite{huron_constructive_2014, chapman_constructive_1988} . Thus, there are three questions we need to answer: ``\textit{what are the basic components that compose a data visualization? }'' ,``\textit{what is the relationship between these components? }'', ``\textit{How should we deal with these relationships in our narrative?}''. At the same time, considering the large number of graphical elements employed in a data visualization design, how to orientate audience's attention to the focus should also be taken into consideration.
+To help people better understand a data visualization design, we propose a method that introduces a data visualization through constructing, which has been proven as an effective teaching method\cite{huron_constructive_2014, chapman_constructive_1988} . Thus, there are three questions we need to answer: ``\textit{what are the basic components that compose a data visualization? }'' ,``\textit{what is the relationship between these components? }'', ``\textit{How should we deal with these relationships in our narrative?}''. At the same time, considering the large number of graphical elements employed in a data visualization design, we should eliminate the visual distraction to keep audience's focus on the target.
 
 \subsection{Compositions of a Visualization}
 We propose a model that decomposes a visualization into three levels of structure: visual primitives, visual units, and then an advanced visualization design. We apply this hierarchical structure theory to ``Opinionseer'' and decompose it, as shown in Fig.2. 
@@ -79,7 +79,7 @@ A visual primitive can assemble different visual units by following different co
 
 
 \subsection{Relationship between compositions}
-\subsubsection{Relationships between visual units}
+\subsubsection{Relationships between Visual Units}
 An advanced visualization can be specified as the combination of several visual units. Through observing the approaches people apply to design new visualizations, we define four types of relationship between visual units: irrelevance, relevance, enhancement, and dependency. 
 
 \textbf{Irrelevance} refers to that two visual units have no correlations in the visual grammar. It is a bi-directional relation. For example, 2 donut charts, Fig.4(a) and Fig.4(b), are applied to illustrate the distribution of age and gender groups respectively in a population. They are put together in Fig.4(c) just for space-efficiency and there is no correlation between these two charts. 
@@ -95,9 +95,9 @@ An advanced visualization can be specified as the combination of several visual 
 The inner relationship between visual primitives is relatively simple.
 A visual unit usually has 1 or 2 visual primitives. 
 
-The relationship between the 2 visual primitives, if there are two, depends on the data attribute they indicate. 
-\notsure{We identify three types of relationships between visual units: none, spacial, temporal, and logical.  The encoding of one primitive always has a high dependency on the encoding of another primitive. For example, in a chord diagram, the encoding of the arcs should be explained before the line connecting them. }
-
+\notsure{
+The relationship between the 2 visual primitives, if there are two, are usually self-evident. We identify four types of relationships between visual units: none, spacial, temporal, and logical.  The encoding of one primitive always has a high dependency on the encoding of another primitive. For example, in a chord diagram, the encoding of the arcs should be explained before the line connecting them. 
+}
 
 \begin{figure}[tb]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -106,39 +106,37 @@ The relationship between the 2 visual primitives, if there are two, depends on t
  \label{fig:relationship}
 \end{figure}
 
-\subsubsection{Correlations between visual channels}
-The relationship between channels might be the most complicated relationship in our model. Since different channels are encoded with different information, they are usually separated and have no logic dependency upon others. However, an arbitrary explaining order of visual channels may lead to an unefficient information delivery, especially when a mark has multiple channels, which is common in an advanced visualization. 
-
-Therefore, we define two metrics to order the explaining of visual channels: \textbf{the complexity of their encoded information} and \textbf{saliency of their visual appearance}.
-
-First, a proper explanation should follow the order of decreasing visual saliency.\cite{cleveland_graphical_1984} Even though different channels have intrinsically different perceptual salience and channel with high salience will suppress the expression of other, such salience strength can be influenced in a task-dependent manner. \cite{nothdurft_salience_2000} By introducing the channel with high saliency first, we remove it from the task list in our mind, decrease its saliency and give other channels more chance to attract limited human attention. (maybe introduce some concepts such as salience map, pre-attentive stage, and focused attention stage) \par
- Second, we should follow the order of increasing complexity. “Easy to difficult” practice has been long used and confirmed to be effective for learning new tasks\cite{bliss_effects_1992}.\par
- Based on our survey, there are five common visual channels: color hue, size, position, shape, color saturation. Sorted in the increasing complexity order, it is color hue-color saturation-position-size-shape, while sorted in the decreasing visual saliency order, it is position-color hue-size-shape-color saturation \cite{munzner_visualization_2014,cleveland_graphical_1984}.  \par
-In our system, we choose position-color hue-color saturation-size-shape as a trade-off between these two metrics. But we do allow and recommend the users to define their preferable sequence based on their situation. 
-
-
-\subsection{Analysis of existing visual distraction}
-We aims to introduce a new visualization design in a visual method, more specifically, in the form of a slide show. To better inform the crafting an attractive and effective explanation, analyzing the existing visual distraction is necessary. 
-\textbf{add a fig}
-From our observation, we identify two kinds of visual distractions: visual distraction from context and visual distraction from sibling channels (sibling channels refer to the channels belonging to the same mark). \par
-
-\subsubsection{Visual distraction from the context}
-This kind of distraction has been widely discussed in the field of object detection and human visual attention. \cite{nothdurft_salience_2000, standage_modelling_2005}Its intensity is mainly  determined by spatial distance and appearance similarity. \cite{wolfe_guided_1994}For example, when we try to focus on a green rectangel, a red triangel near by it can lead to visual distraction. And the intensity of such distraction is determined by the distance and the appearance similarity between the two graphics. Focus + Context, which might be the most popular techniques for this problem, make uneven use of graphic resources to discriminate focus from their context. At the same time, adding dynamic changes to focus elements has also been demonstrated as effective under various conditions\cite{waldner_attractive_2014}. 
-
-\subsubsection{Visual distraction from sibling channels}: A visual primitive usually has more than one visual channels. Thus, when recognizing one primitive, the channels with high visual saliency can significantly influence the expression of other channels. For example, color can be a strong noise when focus is supposed to be the shape.
-
+\subsubsection{Correlations Between Visual Channels}
+For a visual primitive, different channels are encoded with different data attribute. Thus, they are usually separated and have no logic dependency upon others. 
 
 \subsection{Design considerations of narrative sequence}
 
 
-\subsubsection{Channels}
-As discussed in section 3.1.4, when explaining channels, we should take information complexity as well as visual saliency into account. 
+\subsubsection{Narrative Sequence for introducing Different Visual Channels}
 
-As for one channel, the narrative explanation depends on the type of the channel. As defined by previous work, therer two foundamentally different kinds of channels. The identity channels tell about what-where, while the magnitude channel tell how much. For a magnitude channel, one or two extreme examples will be enough for explaining, while for an ordered channel, introducing each category one by one might be a better option.
+An arbitrary explaining order of visual channels may lead to an inefficient information delivery, especially when this visual primitive has multiple channels, which is common in an advanced visualization. 
 
-\subsubsection{Units} 
-As discussed in section 3.1.2, there are four types of relationships between visual units, and they will influence the order of a narrative explanation. Thus, we display the correlations between units in a tree diagram where a child node is the enhancement/dependence of its parent node and sibling nodes have logic dependences. When explaining these visual units, we can simply follow a deep first search (DFS) order to visit all the visual units.
+Therefore, we define two metrics to order the explaining of visual channels: \textbf{the complexity of their encoded information} and \textbf{saliency of their visual appearance}.
 
-\subsubsection{Non-linear sequence}
-so far, all the narrative explanation we discussed is linear. We move from one channel to another channel, then from one primitive to another primitive, then from one unit to another unit. However, reading a lengthy, extremely detailed instruction maybe tedious. A good narrative explanation should include non-linear design, allowing users to skip uninterested parts, go back to previous information and freely switch between different parts. Also, users should be allowed the flexibility to choose explanations at different levels of details. 
+First, a proper explanation should follow the order of decreasing visual saliency.\cite{cleveland_graphical_1984} Even though different channels have intrinsically different perceptual salience and channel with high salience will suppress the expression of other, such salience strength can be influenced in a task-dependent manner. \cite{nothdurft_salience_2000} By introducing the channel with high saliency first, we remove it from the task list in our mind\cite{}, decrease its saliency and give other channels more chance to attract limited human attention. 
+
+ Second, we should follow the order of increasing complexity. “Easy to difficult” practice has been long used and confirmed to be effective for learning new tasks\cite{bliss_effects_1992}.
+ 
+ Based on our survey, there are five common visual channels: color hue, size, position, shape, color saturation. Sorted in the increasing complexity order, it is color hue-color saturation-position-size-shape, while sorted in the decreasing visual saliency order, it is position-color hue-size-shape-color saturation \cite{munzner_visualization_2014,cleveland_graphical_1984}.  \par
+
+\subsubsection{Narrative Sequence for Introducing Different Visual Primitives}
+
+
+\subsubsection{Narrative Sequence for Introducing Different Units} 
+As discussed in section 3.1.2, there are four types of relationships between visual units, and they will influence the order of a narrative explanation. Thus, we display the correlations between units in a tree diagram where a child node is the enhancement/dependence of its parent node and sibling nodes have logic dependences. \notesure{as show in Fig}When explaining these visual units, we can simply follow a deep first search (DFS) order to visit all the visual units.
+
+\subsubsection{Non-linear Sequence}
+So far, all the narrative explanation we discussed is linear. However, reading a lengthy, extremely detailed instruction maybe tedious. A good narrative explanation should include non-linear design, allowing users to skip uninterested parts, go back to previous information and freely switch between different parts. Also, users should be allowed the flexibility to choose explanations at different levels of details. 
+
+\subsection{Attention Orientation}
+From our observation, we identify two kinds of visual distractions: visual distraction from context and visual distraction from sibling channels (sibling channels refer to the channels belonging to the same visual primitives). \par
+\subsubsection{Visual distraction from the context}
+This kind of distraction has been widely discussed in the field of object detection and human visual attention. \cite{nothdurft_salience_2000, standage_modelling_2005}Its intensity is mainly  determined by spatial distance and appearance similarity. \cite{wolfe_guided_1994}For example, when we try to focus on a green rectangel, a red triangel near by it can lead to visual distraction. And the intensity of such distraction is determined by the distance and the appearance similarity between the two graphics. Focus + Context, which might be the most popular techniques for this problem, make uneven use of graphic resources to discriminate focus from their context. At the same time, adding dynamic changes to focus elements has also been demonstrated as effective under various conditions\cite{waldner_attractive_2014}. 
+
+\subsubsection{Visual distraction from sibling channels}: A visual primitive usually has more than one visual channels. Thus, when recognizing one primitive, the channels with high visual saliency can significantly influence the expression of other channels. For example, color can be a strong noise when focus is supposed to be the shape.
 
