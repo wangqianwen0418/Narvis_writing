@@ -265,6 +265,11 @@ S.~Huron, R.~Vuillemot, and J.~D. Fekete.
 }{.}\hspace{.4pt}227}}
 
 
+\bibitem{itti2001computational}
+L.~Itti and C.~Koch.
+\newblock Computational modelling of visual attention.
+\newblock {\em Nature reviews neuroscience}, 2(3):194--203, 2001.
+
 \bibitem{kosara_storytelling:_2013}
 R.~Kosara and J.~Mackinlay.
 \newblock Storytelling: The next step for visualization.
@@ -298,6 +303,17 @@ B.~Lee, N.~H. Riche, P.~Isenberg, and S.~Carpendale.
 }{/}MCG\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}2015\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}99}}
+
+
+\bibitem{liu_online_2016}
+S.~Liu, J.~Yin, X.~Wang, W.~Cui, K.~Cao, and J.~Pei.
+\newblock Online visual analytics of text streams.
+\newblock 22(11):2451--2466. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2015\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2509990}}
 
 
 \bibitem{munzner_visualization_2014}
