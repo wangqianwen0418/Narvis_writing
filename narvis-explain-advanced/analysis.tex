@@ -128,13 +128,16 @@ For a visual primitive, different channels are encoded with different data attri
 
 \subsubsection{Narrative Sequence for Visual Channels}
 
-An arbitrary explaining order of visual channels may lead to an inefficient information delivery, especially when this visual primitive has multiple channels, which is common in an advanced visualization. 
+\original{An arbitrary explaining order of visual channels may lead to an inefficient information delivery, especially when this visual primitive has multiple channels, which is common in an advanced visualization. }
+\siwei{say following an order is important, and why. Do not say arbitrary order is bad. Because other improper order can also be bad.}
 
 Therefore, we define two metrics to order the explaining of visual channels: \textbf{the complexity of their encoded information} and \textbf{saliency of their visual appearance}.
 
-First, a proper explanation should follow the order of decreasing visual saliency.\cite{cleveland_graphical_1984} Even though different channels have intrinsically different perceptual salience and channel with high salience will suppress the expression of other, such salience strength can be influenced in a task-dependent manner. \cite{nothdurft_salience_2000} By introducing the channel with high saliency first, we remove it from the task list in our mind\cite{itti2001computational}, decrease its saliency and give other channels more chance to attract limited human attention. 
+First, a proper explanation should follow the order of decreasing visual saliency~\cite{cleveland_graphical_1984}. Even though different channels have intrinsically different perceptual salience and channel with high salience will suppress the expression of other, such salience strength can be influenced in a task-dependent manner \cite{nothdurft_salience_2000}. By introducing the channel with high saliency first, we remove it from the task list in our mind\cite{itti2001computational}, decrease its saliency and give other channels more chance to attract limited human attention. 
 
- Second, we should follow the order of increasing complexity. “Easy to difficult” practice has been long used and confirmed to be effective for learning new tasks\cite{bliss_effects_1992}.
+Second, we should follow the order of increasing complexity. “Easy to difficult” practice has been long used and confirmed to be effective for learning new tasks\cite{bliss_effects_1992}.
+
+\siwei{you said we should follow two orders. If they are not the same, which one should I follow?}
  
 The visual saliency of different channels is relatively constant and  well defined \cite{munzner_visualization_2014,cleveland_graphical_1984}, while the information complexity varies in different designs. 
 
@@ -142,20 +145,21 @@ The visual saliency of different channels is relatively constant and  well defin
 As discussed in section 3.2.2, relationships between visual primitives are self-evident, thus need no special consideration for the narrative sequence. 
 
 \subsubsection{Narrative Sequence for Visual Units} 
-As discussed in section 3.1.2, there are four types of relationships between visual units, and they will influence the order of a narrative explanation. Thus, we display the correlations between units in a tree diagram where a child node is the enhancement/dependence of its parent node and sibling nodes have logic dependences. \notsure{as show in Fig}When explaining these visual units, we can simply follow a deep first search (DFS) order to visit all the visual units.
+As discussed in section 3.1.2, there are four types of relationships between visual units, and they will influence the order of a narrative explanation. Thus, we display the correlations between units in a tree diagram where a child node is the enhancement/dependence of its parent node and sibling nodes have logic dependences. \notsure{as show in Fig}When explaining these visual units, we can simply follow a deep first search (DFS) order to visit all the visual units. \siwei{It is still no clear what is the relationships among: 1) the four relations, 2) the narrative sequence, 3) the tree diagram. For example, how to present irrelevance and relevance using the tree diagram? } 
 
 \subsubsection{Non-linear Sequence}
 So far, all the narrative explanation we discussed is linear. However, reading a lengthy, extremely detailed instruction maybe tedious. A good narrative explanation should include non-linear design, allowing users to skip uninterested parts, go back to previous information and freely switch between different parts. Also, users should be allowed the flexibility to choose explanations at different levels of details. 
 
 \subsection{Attention Orientation}
-To keep audience focus on the target object, it is necessary for us to identify existing visual distraction and take measures to suppress them. 
-We identify two kinds of visual distractions: visual distraction from context and visual distraction from sibling channels (sibling channels refer to the channels belonging to the same visual primitives). 
+To keep audience focus on the target object, it is necessary for us to identify and avoid visual distractions. 
+We identify two kinds of visual distractions: the one from context and the one from sibling channels, which are the visual channels belonging to the same visual primitives. 
 
 \subsubsection{Visual distraction from the context}
-This kind of distraction has been widely discussed in the field of object detection and human visual attention. \cite{nothdurft_salience_2000, standage_modelling_2005}Its intensity is mainly  determined by spatial distance and appearance similarity. \cite{wolfe_guided_1994}
+This kind of distraction has been widely discussed in the field of object detection and human visual attention \cite{nothdurft_salience_2000, standage_modelling_2005}. Its intensity is mainly  determined by spatial distance and appearance similarity \cite{wolfe_guided_1994}.
 \notsure{For example, when we try to focus on a green rectangel, a red triangel near by it can lead to visual distraction. And the intensity of such distraction is determined by the distance and the appearance similarity between the two graphics. Do i need this example} 
-Focus + Context, which might be the most popular techniques for this problem, make uneven use of graphic resources to discriminate focus from their context. At the same time, adding dynamic changes to focus elements has also been demonstrated as effective under various conditions\cite{waldner_attractive_2014}. 
+Focus + Context, which might be the most popular techniques for this problem, make uneven use of graphic resources to discriminate focus from their context. At the same time, adding dynamic changes to focus elements has also been demonstrated as effective under various conditions\cite{waldner_attractive_2014}. \siwei{it it not clear how the distraction inspires our system? do we take actions to prevent these distraction? do we use focus+context or dynamic changes in our system?} 
 
-\subsubsection{Visual distraction from sibling channels}: A visual primitive usually has more than one visual channels. Thus, when recognizing one primitive, the channels with high visual saliency can significantly influence the expression of other channels. For example, color can be a strong noise when focus is supposed to be the shape. By applying animated transition and revealing only one channel at a time, as demonstrated in \notsure{Fig1, the second line}, we are able to reduce such distraction.
+\subsubsection{Visual distraction from sibling channels}
+A visual primitive usually has more than one visual channels. Thus, when recognizing one primitive, the channels with high visual saliency can significantly influence the expression of other channels. For example, color can be a strong noise when focus is supposed to be the shape. By applying animated transition and revealing only one channel at a time, as demonstrated in \notsure{Fig1, the second line}, we are able to reduce such distraction.
 
 
