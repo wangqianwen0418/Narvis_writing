@@ -4,11 +4,11 @@ In this section, we first describe our understanding of two groups of end users,
 \subsection{User Perspectives and Methods}
 
 Narvis aims to offer an efficient, expressive and friendly authoring tool for experts in data visualization, assisting them to create a slideshow to introduce advanced visual design to general audience.  
-Hence, we identify two different user perspectives: the editors and the general audience perspectives. Editors are visualization experts who have the need to create a slideshow to communicate visual design. General audience have no prerequisite for visualization. They gain understanding of the visual design by watching the slideshow. 
+Hence, we identify two different user perspectives: the editors and the general audience perspectives. Editors are visualization experts who have the need to create a slideshow to present visual designs. General audience have no prerequisite for visualization. They gain understanding of a visual design through the slideshow created by the editor. 
 
-To understand the current practice of making slideshows and the experience of reading tutorials, we collaborated with two teaching assistants (TAs) of a Data Visualization course and seven undergraduate students (UGs) taking this course. The two TAs are postgraduate students whose research interest is information visualization. Their duty of this course involves making slides for explaining visual design appears in major publications in the field of data visualization. The slides should cover fine-grained description to help students review them after class. The seven UGs have little background in visualization before the class, and have taken this course for less than one month.  
+To understand the current practice of making slideshows and the experience of reading tutorials, we collaborated with two teaching assistants (TAs) of a Data Visualization course and seven undergraduate students (UGs) taking this course. The two TAs are postgraduate students whose research interests are information visualization. Their duty of this course involves making slides to introduce visual designs from major publications in the field. The slides should cover fine-grained description to help students review them after class. The seven UGs have no prior experience in visualization, and have taken this course for less than one month.  
 
-We began by conducting semi-structured interviews with TAs, whom we identified as editors, and UGs, who are general audience. During the interviews with TAs, we asked their workflows of making slideshows and explaining visual design. To identify opportunities for Narvis, we also asked them to enumerate a list of challenges faced in the workflows. The interviews with UGs are semi-structured as well. We asked their comments in reading the slideshows and attending course lectures. Then, we used mind-mapping to find clusters in their comments that defined goals for an ideal slideshow. 
+We began by conducting semi-structured interviews with TAs, whom we identified as editors, and UGs, as general audience. During the interviews with TAs, we asked their workflows of making slideshows and explaining visual design. To identify opportunities for Narvis, we also asked them to enumerate a list of challenges faced in the workflows. The interviews with UGs are semi-structured as well. We asked their comments in reading the slideshows and attending course lectures. Then, we used mind-mapping to find clusters in their comments that defined goals for an ideal slideshow. 
 
 
 \subsection{Design Tasks}
@@ -17,14 +17,17 @@ Based on our observations and the interviews, we categorize six design tasks to 
 %Our premise is that the editor is familiar with a visualization design but unclear how to educate his audiences in an efficient way. Since the background of the audiences cannot be guaranteed, we assume they all have no prior knowledge in data visualization. 
 
 \textbf{DE1. Keep efficiency.}
-TAs used presentation tools, such as Power Point\footnote{https://office.live.com/start/PowerPoint.aspx}and KeyNote\footnote{http://www.apple.com/keynote/} to introduce visual design. However, these tools are for general purpose and not tailored for visualization. Splitting a visualization into fine-grained graphical elements and combining them into logic flow are tedious and time-consuming with existing tools. 
+TAs used presentation tools, such as Power Point\footnote{https://office.live.com/start/PowerPoint.aspx}and KeyNote\footnote{http://www.apple.com/keynote/} to introduce visual designs. However, these tools are for general purpose and not tailored for visualization presentation. 
+For example, "focus + context" techniques are widely used in data visualization to guide the user’s attention to the region of interest.\cite{},  but it will introduce some complicated operations for her, who has no experience in image editing. 
+% Moreover, with the large number of visual encodings existing, she fails to determine an optimized order for explaining them. Even though she has many years of experience in data visualization, she never think about this issue before. 
+%Splitting a visualization into fine-grained graphical elements and combining them into logic flow are tedious and time-consuming with existing tools. 
 Therefore, automatic decomposition of visualization and composition of graphical elements are necessary for facilitating design and production of a slideshow.
 % TAs require an efficient approach to generate a slideshow introducing visual design.
 
 
 \textbf{DE2. Collect feedback.} \textit{``When students read my slides, I do not know whether they can follow the logic, or whether the slides cover enough details for them to grasp the visual design.''}, one TA commented. 
 % When giving a lecture, TAs are able to understand how their slides and logic are accepted through in-class interactions. 
-However, Collecting feedbacks of audience is crucial for editors to revise their slideshow, making it more understandable and attractive.  
+Collecting feedbacks of audience is crucial for editors to revise their slideshow, making it more understandable and attractive.  
 
 %We implement a click collector which will automatically record click activity when audience view the explanation in our system. The click stream data can reveal information about viewing order, for example, the audience might skip one slide or go back to revisit another, the time spent on each slide, the degree of understanding at each part.The audience can also write down their comments while reviewing such an introduction slide show. Editor can adjust the narrative sequence as well the level of details based on these feedbacks. 
 
