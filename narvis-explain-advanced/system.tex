@@ -1,9 +1,8 @@
-
 \section{Narvis: System Design and Implementation}
 
 % Thus, it has two kinds of users: editors, the data visualization experts who use Narvis to create an explanation slideshow, and audiences, the general audience who watch the slideshow created by ediors.
 
-With the considerations above in mind, we implement the workflow of Narvis consisting of three phases (Figure \siwei{ref}), i.e., Automatic Analysis Phase, Manual Editing Phase, and Viewing Phase.
+Guided by the theory model discussed in section3, as well as the design consideration mentioned in section 4, we desing and implement Narvis, an authoring tool for crafting slideshows for the presentation of visualization. The workflow of Narvis consists of three phases (Figure \siwei{ref}), i.e., Automatic Analysis Phase, Manual Editing Phase, and Viewing Phase.
 
 % The workflow of Narvis includes three phases (Figure \siwei{ref}):  In Automatic Analysis Phase, the system accepts the input visualization, extracts graphical elements and classifies them into groups for further edit. 
 % In Human Editing Phase, editors will be involved to modify the output from the Automatic Analysis Phase, and use the templates Narvis provide to craft a explanation slideshow. 
@@ -16,34 +15,18 @@ With the considerations above in mind, we implement the workflow of Narvis consi
  \label{fig:overview}
 \end{figure}
 
-
-% two editors and seven general audience, respectively. Both interviews are semi-structured. 
-
-% We should take editors and audiences alike into consideration for the design of Narvis. We conducted a interview with 3 experts in data visualization, asked what they could expect for an authoring tool for crafting an introduction slideshow. 
-% We also constructed an interview with 7 undergraducate students. They have no prior experience in data visualization, and they just come back from a lecture about data visualization, which, as they said, ``totally confused'' them. They talked freely about what has confused them.
-%It is interesting that there are some overlap between the requirements from editors and that from audience. For example, they both require slide  
-
-
-% Based on this interview, as well as  our own experience and examination of literature, we settle on six design considerations(DCs) for the aspect of editors (DE) and that of audiences (DA). 
-
- %\textbf{DA7. Information repetion}
- %When introducing a visulization design, it is common for the audiences to forget previous information or lose the sense of overview. Information repetition, also called as redundancy, helps with visualization recall and understanding. \cite{borkin_what_2013}}
- %by providing simplified sentence pattern for annotation adding, we skip such parts in purpose.
-
-%The audience of the generated narrative explanations are ordinal people, and they usually have no interests in understanding the algorithm employed in a visualization design. For example, the comprehension that a transition line indicates public attention shift from one topic to another is enough for them. Explicating how to quantify public attention shift only bores the audience, even scares them away.
-
 \subsection{Phase1: Auto Analysis}
 
 % The auto analysis has two parts: one for input image and one for input text. It automatically extract the graphic elements and divide them into different cluster, facilitating later editing.(DE1) Note that the textual input is not necessary but it provides hints when editors add annotations manually in the Human Editing Phase.(DE1)
 
-The input of Narvis includes two parts: one image presenting a visual design (mandatory) and a piece of text describing the design (optional). In this phase, Narvis accepts the input image and extracts graphical elements to facilitate further authoring. If text is provided, editors are able to add and edit annotations in the Manual Editing Phase.
+The input of Narvis includes two parts: one image presenting a visual design (mandatory) and a piece of text describing the design (optional). In this phase, Narvis accepts the input image and extracts graphical elements to facilitate further authoring. If a textual description is provided, Narvis groups these sentence based on a keyword detection method, and each sentence group is tagged as descriptive of a certain visual grammar.
 
 \subsubsection{Analysis of input image}
 % The auto analysis of input image has three main steps. It first detects all primitives that it finds in the given image and also detects any labels that are present in the visualization. It will then cluster objects that are spacially linked and extract non-target objects. Finally, it will fill in any empty spaces left inside objects from extraction with the appropriate color so as to show the target object in its entirety.
 The analysis of input image includes three steps, i.e., object detection, object clustering and object recovery.
 
 % The first step, object detection, is done by iterating through all the pixels on the bitmap. 
-\textbf{Object detection.} Narvis iterates through all pixels in the input image. At every iteration, we first check to see if this pixel has already been tagged as part of an object. If not, we know that this pixel forms \siwei{a part of a new object.} We explore the colors of the neighboring pixels, where the neighbors are chosen such that the distance between the current pixel and a potential neighbor \siwei{is less than 3}. If the difference in color between a neighbor pixel and the current pixel is less than a threshhold, the neighboring pixel is tagged as part of the same object. Once all neighbors have been classified as either part of the same object or not, we choose another pixel that was classified as part of the same object and apply this algorithm again. This is a modified BFS algorithm and allows us to identify all unique ojects in the given visualization.
+\textbf{Object detection.} Narvis iterates through all pixels in the input image. At every iteration, we first check to see if this pixel has already been tagged as part of an object. If not, we know that this pixel forms \siwei{a part of a new object.} We explore the colors of the neighboring pixels, where the neighbors are chosen such that the distance between the current pixel and a potential neighbor \siwei{is less than 3}. If the difference in color between a neighbor pixel and the current pixel is less than a threshold, the neighboring pixel is tagged as part of the same object. Once all neighbors have been classified as either part of the same object or not, we choose another pixel that was classified as part of the same object and apply this algorithm again. This is a modified BFS algorithm and allows us to identify all unique ojects in the given visualization.
 
 \textbf{Object clustering.} Once all the objects have been detected, we have to extract a target object. To extract an object means to only select the pixels that are classified as part of this object, so we should remove all objects that are not part of this object and we should extract objects that are inside our target object.It is trivial to set all pixels that are not within or part of our object to have color white. For objects that are inside our target object, i.e. those objects that are clustered with out target object, we will first detect that object then programmatically change its pixels to white.
 
@@ -52,53 +35,49 @@ The analysis of input image includes three steps, i.e., object detection, object
 \subsubsection{Analysis of input textual description}
 For the input textual description, we offer a basic text detection and classification algorithm, which uses a dictionary of terms that are highly correlated with certain channels. E.g. the word "length" is highly correlated with the size channel. To do the text detection, we first classify each sentence depending on whether it contains any of the key words in our dictionary. If it contains a key word for one of the channels, the sentence is tagged as being a description of that channels visualization. Once we have tagged all the sentences, whenever a channel is selected, we show the entire text that was inputted and highlight the text that has been tagged as descriptive of that channels visualization.
 
-The algorithm we proposed is a compromise between efficiency and performance. At this time point, it is limited for image with high quality and clear edges, but its performance can be improved by applying a more advanced algorithm, such as the method based on patch detection and clustering mentioned in Revison\cite{savva_revision:_2011}.
+The algorithm we proposed is a compromise between efficiency and performance. At this time point, it is limited to images with high quality and clear edges, but its performance can be improved by adopting other well-established algorithm, such as the algorithm based on patch detection and clustering \cite{savva_revision:_2011} and the algorithm based on edge maps \cite{huang2003model}.
 
 \subsection{Phase2: Manual Editing}
-% In Narvis, designers specify visualizations as a hierarchy of visual units with visual properties
-The workflow of this phase includes three steps, i.e., visual unit generation, visual unit organization and template modification, as illustrated in Figure \siwei{ref}. We further introduce a library of templates for \siwei{sth}
+In Narvis, editors craft an introduction slideshow by constructing build-in blocks called as templates in Narvis.(DE1) We first introduce the workflow of this phase, which includes three steps, i.e., invoking templates, organizing templates and modifying templates, as illustrated in Figure \siwei{ref}. Then ,we explain how we design and organize the templates in Narvis. \siwei{sth}
 % We introduce three panels in this phase acting as three steps in the workflow to allow editors  
 
-\subsubsection{Visual Unit Identification} 
-After graphical elements are extracted and clustered based on visual representation, each cluster appears as a tabbed view in the Source Panel (Figure \siwei{ref}). 
-% By default, each cluster includes all graphics elements belonging to one visual unit. However, editors might want to redefine visual units by semantics. For example, \siwei{add an example with figure}. Narvis allows editors to \siwei{drag and drop, and other interactions} to ease the process of visual units generation. 
-% editors are able to manually edit and organize these elements to author a slideshow.  
-% \subsubsection{The interface for editing}
-% The interface of editing mode is composed of the following panels. We arrange the position of these panels and their content to better match the observed authoring work flow: refine clusters, bind with templates, organize the structure of visual units, modify templates, add annotation. 
-% \textbf{\textit{Source Panel}: extracting and organizing graphic elements}
-% FigSource is a tabbed panel where the extracted graphical elements are associated with different tabs based on the pre-cluster results. 
-Editors add, delete and modify the graphical elements associated with each tab, making sure that 1) All the graphical elements of the same visual unit is with one tab 2) every graphical element belongs to one and only one tab. For each visual unit, the user call a template from our library in a drop-down list. \siwei{where is the drop-down list? }
+\subsubsection{Invoking Templates} 
 
-\subsubsection{Visual Unit Organization} 
-Editors are allowed to adjust the relationships between different visual units througn interacting in the \textit{Unit Tree} panel, where all visual units are shown as tree nodes.
-With drag and drop, editors organized and display the structure of the visual units, like what we have discussed in section 3.3 (DA5). 
-\original{To help editors better identify the relationship between visual units, which might be a new concept for them, we include a tutorial here. Even though learning the relationship between visual units requires extra effort and time, we believe it is worthwhile since it can give people a better understanding about the structure of a visualization. }\siwei{you spend too much words describing the tutorial. what is it? is it important?}
-Narvis will organize the narrative sequence of visual units based on the tree diagram. \siwei{sequential order is easy to understand. how about hierarchical order? which do you present first? do you mentioned this point in section 3? }
+After graphical elements are extracted and clustered based on visual representation, each cluster appears as a tabbed panel in the \textit{Source Panel} (Figure \siwei{ref}). 
 
-\subsubsection{Template Modification} 
+Editors can switch between these tabbed panels, add or delete graphical elements in each panel, making sure that 1) all the graphical elements of the same visual unit is in the same panel 2) every graphical element belongs to one and only panel. Then, for each visual unit, the user call an associated template from the library. For example, for the tabbed panel in \siwei{fig}, the editor should call a ``scatter plot'' template.
+
+The relationship between graphical elements and templates is similar to the one between data and function. Templates contain a set of operations to produce a sequence of slides from the input graphical elements.  (DE1, DE2) 
+
+\subsubsection{Organizing Templates} 
+Once invoked, a template will show on the \textit{Tree Panel} as a tree node. 
+Editors are allowed to adjust the relationships between invoked templates through interacting in the \textit{Unit Tree} panel, where all visual units are shown as tree nodes.
+By dragging and dropping these nodes, editors organize the structure of the tree diagram, which reflects the relationship between visual units and determines the narrative sequence of the slideshow.(DA5)
+
+\subsubsection{Modifying Templates} 
 % \textbf{\textit{ Unit Panel \& Editor panel}: personalized modification}
 % but it also allow the users high flexibity to modify these temples, thus guaranteeing the expressiveness of this system. 
 Narvis provides templates to generate slideshows with high efficiency. 
-It also supports flexible modification of templates for enough expressiveness.
-Editors can edit a template in the \textit{Unit Panle} by selecting a node on the \textit{Tree Panel}. For each visual units, the template enumerates possible encodings and leave the users to delete unused ones, thus eliminating the unconscious missing of crucial information (DA4). It also recommends a narrative sequence based on the metrics we mentioned in section 3.1.4 (DE1, DA3, DA5). 
-In the editor panel, users can further access the \textit{grammar} of each visual primitives, adding a short annotation to describe it (DA6), refine or remove the animation we embedded in a template. \siwei{add figure reference for each panel}
+It also supports flexible modification of templates for expressiveness.
+Editors can edit a template in the \textit{Unit Panel} by selecting a node on the \textit{Tree Panel}. In each template, all possible visual grammar are enumerated. Editors can delete unused one themselves, thus eliminating the unconscious omission of crucial information (DA.5). It also recommends a narrative sequence of visual grammars, based on the metrics we mentioned in section 3.1.4 (DE1, DA3, DA5). 
+In the \textit{Editor Panel}, with the hints from Narvis, editors add annotations to facilitate graph and chart comprehension. For each slide, Narvis offers questions or sentence with blank for adding text-based annotation, and a list of suggested design options for symbol-based annotation. \siwei{Fig}
 
-\subsubsection{A library of templates}
-We propose a library of templates for the narrative explanation of a visualization. A templates is a set of slides that tends to introduce a visual unit, which can be descibed as an orthogonal combination of a visual primitive and a construction rule, as shown in tab.1. Since advanced visualization design is the assembly of miscellaneous visual units, we conjecture such templates can achieve a high level of efficiency for the explanation of a viusalization. (DA1)Meanwhile, allowing users a high flexible, friendly interface to edit offered templates, Narvis maintains a considerable level of expressiveness and accessibility. 
+\subsubsection{A Library of Templates}
+We propose a library of templates for the narrative explanation of a visualization. A template is a set of slides that tends to introduce an visual unit, which can be descibed as an orthogonal combination of visual primitives and construction rules, as shown in tab.1. Since advanced visualization design is the assembly of miscellaneous visual units, we conjecture such templates can achieve a high level of efficiency for the explanation of a visualization. (DA1)Meanwhile, allowing users a high flexible, friendly interface to edit offered templates, Narvis maintains a considerable level of expressiveness and accessibility. 
 
 \textbf{Types of templates}
 
-The initial set of templates provided by Narvis can be described as  a 9*4 matrix, 9 types of visual primitives and 4 types of construction rules. Narvis is extensible, new templates can be added by its developer through programming, or by end users through uploading their modified templates. At the same time, all the supported templates are classified into a certain cell of the 9*4 matrix, so as to avoid overwhelming users with a cornucopia of confusing options.
+Narvis use a 8*3 table to organize the provided templates, as shown in \textbf{fig}. Narvis is extensible, new templates can be added by its developer through programming, or by end users through uploading their modified templates. At the same time, all newly added templates are classified into a certain cell of the 8*3 matrix, so as to avoid overwhelming users with a cornucopia of confusing options.
 
 \textbf{Templates design}
 
-We apply the analysis and theory model in section 3 for the design of templates. A template has three components: 1) a well-considered narrative sequence for visual grammar explanation, which  is discussed in section 3.3 and reveal encoding grammar gradually(DA3); 2) Embedded a series of narrative techniques such as attention cues, animated transitions, information repetition, to orientate visual attention and facilitate perception; 3) Formatted sentence for annotations (DA6) that will be gradually disclosed in the slide show. (DA3)
+We apply the analysis and theory model in section 3 for the design of templates. A template has four core components: 1) a well-considered narrative sequence for visual grammar explanation; 2) exaggeration or suppression of certain visual channels in some slides; 3) a series of narrative techniques such as attention cues, animated transitions, information repetition, to orientate visual attention and facilitate perception;(DE.1) 4) Hints for adding annotations (DE.2) in each slide(DA.4)
 
-With a visual unit, more specifically, a set of graphic elements, as input, a templates will generate a series of slide show and each slide is responsible for the explaining of one visual grammar. A visual properity show on a slide only after its grammar has been explained. For example, if we havn't explain the encoding of color, all the object in current slides will be gray. These slides are sorted based on the narrative sequence we discussed in section 3.3. The graphical elements in different slides, which might have different visual appearance, are perceptively connected through morphing animation.
+With a visual unit, more specifically, a set of graphic elements, as input, a templates will generate a slideshow and each slide is responsible for the explaining of one visual grammar.(DA.4) These slides are sorted based on the narrative sequence we discussed in section 3.3. In each slide, we offer hints to guide the annotation process. These hints are sentence with blanks to fill in, heuristic questions, or a list of suggestion symbols. A visual channel is suppressed until its grammar has been explained. For example, before we introduce the visual grammar of color, all the object will be gray.  The graphical elements in different slides, which might have different visual appearance due to the applied exaggeration or suppression of visual channels, are perceptively connected through morphing animation.
 
 \textbf{Animation embedded in templates }
 
-Narvis provides 8 types of animation, implement them in templates based on their effects on human attention and perception(DA1), which has been widely discussed in previous work.\cite{robertson_effectiveness_2008, waldner_attractive_2014, heer_animated_2007}We also provide an novel decomposition animation at the beginning of the introduction slide show to engage the audience as well as to help them get a sense of overview.
+Narvis provides 8 types of animation, implement them in templates based on their effects on human attention and perception(DA.1), which has been widely discussed in previous work.\cite{robertson_effectiveness_2008, waldner_attractive_2014, heer_animated_2007}We also provide a novel decomposition animation at the beginning of the introduction slideshow to engage the audience as well as to help them get a sense of overview.(DA.6)
 
 \begin{table}[tb]
   \caption{A summary of animation provided}
@@ -109,21 +88,21 @@ Narvis provides 8 types of animation, implement them in templates based on their
   \toprule
  \textbf{Animation} &\textbf{Engaging} & \textbf{orientate attention} & \textbf{perception} &\textbf{working scenario} &\textbf{ref} \\ 
   \midrule
-  \textbf{Morphing} &\checkmark & \checkmark &\checkmark & grammar of size, grammar of shape & \cite{ruchikachorn_learning_2015} \\ 
+  \textbf{Morphing} &\checkmark & \checkmark &\checkmark & grammar of size, grammar of shape & \cite{ruchikachorn_learning_2015, heer_animated_2007} \\ 
   \midrule
-  \textbf{Blur} &   &\checkmark  &   & focus+context & \\ 
+  \textbf{Blur} &   &\checkmark  &   & focus+context & \cite{pinto2008selecting}\\ 
+ \midrule
+  \textbf{Flicker} & & \checkmark &  & focus &\cite{waldner_attractive_2014} \\
   \midrule
-  \textbf{Flicker} & & \checkmark &  & focus & \\
-  \midrule
-  \textbf{Motion} & \checkmark & \checkmark & \checkmark &grammar of position &  \\
+  \textbf{Motion} & \checkmark & \checkmark & \checkmark & grammar of position & \cite{huber_visualizing_2005} \\
   \midrule
   \textbf{Zoom-in/out} & \checkmark &\checkmark &  & focus&  \\
   \midrule
-  \textbf{Annotation} &  & \checkmark &\checkmark &   textual explain & \\
+  \textbf{Annotation} &  & \checkmark &\checkmark &   textual explain & \cite{segel_narrative_2010 } \\
   \midrule
   \textbf{Fade in/out} &  & \checkmark &  & & \\
   \midrule
-  \textbf{Decompose} & \checkmark &  &\checkmark & Show how a visualization is composed by visual units & A novel design bu us \\
+  \textbf{Decompose} & \checkmark &  &\checkmark & Show how a visualization is composed by visual units & A novel design by us \\
   \bottomrule
 
   \end{tabular}
@@ -138,28 +117,26 @@ Animation is a double-edge sword, which introduces both benefits and pitfalls. W
 \subsubsection{The interface for audience}
 The interface of audience is composed of two panels.
 
-\textbf{\textit{Gallery:}the collection of generated slide show}
+\textbf{\textit{Gallery Panel:}the collection of generated slide show}
  
-Gallery exhibit all the slide show produced by editors and saved in Narvis. Every slide show is presented by a image, the visualization it tends to explain. By clicking on the image, users can watch this slide show in the \textit{Screen} panel. 
+\textit{Gallery Panel} exhibit all the slideshows produced by editors and saved in Narvis. Every slideshow is presented by an image, the visualization it tends to explain. By clicking on the image, users can watch this slideshow in the \textit{Screen Panel}. 
 
-\textbf{\textit{Screen:}  review and comment}
-Every slide show displayed in \textit{Gallery}is a series of slides, each of which is responsible for the delivery of one simple encoding information, for example, the horizontal position indicates time. In the \textit{Screen} panel, users click buttons to move forward or backward to view these slides. 
+\textbf{\textit{Screen Panel:}  review and comment}
+Every slide show displayed in \textit{Gallery}is a series of slides, each of which is responsible for the delivery of one simple encoding information, for example, the horizontal position indicates time. In the \textit{Screen} panel, users click buttons to move forward or backward to view these slides, and their click activity will be recorded automatically by Narvis. 
 \subsubsection{Generated Report}
-The report visualize the click activity of audience in the form of a stacked bar chart. The heigh of the bar indicates the time spent on watching this slide. If audiences go back to revist a slide while viewing, a bar will be stacked on the top of previous one. If there are animation in the slide show, a white line will be drawn on the bar chart, indicating the animation playing time of each slide, thus can indicate whether an animation is too fast or too slow. (DE2)
-\subsection{A working scenario}
+The report visualizes the click activity of audience in the form of a stacked bar chart, as\textbf{fig}. The heigh of the bar indicates the time spent on watching this slide. If audiences go back to a previous slide while viewing, a bar will be stacked on the top of the previous one. If there are animation in the slide show, a white line will be drawn upon the bar chart, referring to the animation playing time of each slide, thus gives a judgement whether an animation is too fast or too slow. (DE.3)
+\subsection{Iterative Design}
+To investigate the usability of Narvis, we invited 4 UGs from diverse backgrounds to watch an introduction slideshow produced by a data visualization professor with Narvis. 
+Based on their feedback, we iterate over the design of Narvis as follow:
+\subsubsection{An compulsory Introduction}
+In the initially design, an introduction slideshow is purely the combination of templates. In other words, it straightforwardly explain each visual units after an overview of the visualization. However, the participants complained that they are less motivated to learn a visual design without an awareness of the background. Questions like, \textit{what's the motivation of this visual design}, \textit{what's the dataset}, and \textit{what kinds of problems it can solve} need to be answered before the introduction of this visual design. Thus, we add a compulsory introduction slide at the beginning of each slideshow, which is displayed as a root node of the tree diagram in \textit{Tree Panel}. This slide contains questions that guide the editors to give a brief description of the background.
+\subsubsection{Different Levels of Detail}
+While 3 UGs appreciate this detailed introduction slideshow, and consider the animation applied as engaging and enjoyable. Another UG, who has taken a data visualization course before and is familiar with some visualization designs, thought some slides and animation are redundant. 
+Thus, we offer 3 levels of details which the audience can choose from. The detailed one displays all the animation, the normal ones skip the animation for some simple visual grammar such as color and size, and the abstract one discards all animation and put the annotation for color and size in one slide
+    
+\subsection{A Working Scenario}
 Jessica has extensive experience in the field of data visualization, and has implement a visual analytics tool in a review service website based on the design of OpinionSeer\cite{wu_opinionseer:_2010}. To help audience better understand this design, she needs to publish a tutorial accompanied with it.
-% Here, we demonstrate the utility of Narvis through the creation of a narrative explanation of a visualization design that published in TVCG (http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5613449). 
-
-% \subsubsection{Motivation}Jessica, a expert in data visualization, realizes the promising prospect of implementing this visualization design in an on-line review service website like Yelp. (pg student to classmates? prof to a journalist? prof with collaborators from other fields?  )\par
-% However, she has to present this design in a general meeting to get the financial support. She is familiar with this visualization design, yet not sure whether her audiences, with little knowledge about data visualization, can quickly learn this visualization design from her introduction. Without clear awareness of the visual encodings, audience can hardly identify the interesting patterns this visualization reveals and realize its utility.  
-% A traditional way is to add highlights and annotations in the original visualization. But Jessica worries about the effectiveness of information delivery. 
-% She considers about applying "focus + context" techniques,  but it will introduce some complicated operations for her, who has no experience in image editing. 
-% Moreover, with the large number of visual encodings existing, she fails to determine an optimized order for explaining them. Even though she has many years of experience in data visualization, she never think about this issue before. 
-% She then turns to Narvis for help. 
-
-% She first imports visualization design, in the form of a PNG file, and the corresponding text description, which she directly copy from the paper, into the system. 
-First, she loads the screen-shot of her system, as well as a piece of textual description, into Narvis.
-% After a few seconds, the system automatically detects graphics elements with a edge detection algorithm and cluster them based on their features. The algorithm cannot be perfect. For example, it puts geo ring and calendar ring in the same cluster based on their similar appearance. 
+First, she loads the screen-shot of her system, as well a textual description, into Narvis.
 After a few seconds, the system automatically extracts the graphics elements and clusters them based on features. As Figure\siwei{ref} shows, Jessica obtains four clusters. 
 
 Then, she defines visual units based on clusters. By default, each cluster includes all graphics elements belonging to one visual unit. However, she observes that geographic ring and calendar ring are in the same cluster due to their similar appearance. Therefore, she divides it into two clusters, containing geographic ring and calendar ring respectively.

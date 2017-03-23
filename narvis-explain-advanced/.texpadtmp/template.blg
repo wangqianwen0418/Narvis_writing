@@ -4,15 +4,16 @@ The top-level auxiliary file: template.aux
 The style file: ../abbrv-doi.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ../template.bib
-Repeated entry---line 22 of file ../template.bib
+Repeated entry---line 53 of file ../template.bib
  : @inproceedings{collins2009parallel
  :                                   ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "schmidt_living_2017" isn't style-file defined
---line 655 of file ../template.bib
+--line 686 of file ../template.bib
 Warning--entry type for "bliss_effects_1992" isn't style-file defined
---line 1866 of file ../template.bib
+--line 1897 of file ../template.bib
 Warning--I didn't find a database entry for "7042494"
+Warning--I didn't find a database entry for ""
 Warning--empty year in amini_understanding_2015
 Warning--empty journal in amini_authoring_2017
 Warning--empty year in amini_authoring_2017
@@ -57,6 +58,8 @@ Warning--empty journal in lee_sketchstory:_2013
 Warning--empty year in lee_sketchstory:_2013
 Warning--empty journal in lee_more_2015
 Warning--empty year in lee_more_2015
+Warning--empty journal in liu_online_2016
+Warning--empty year in liu_online_2016
 Warning--empty year in munzner_visualization_2014
 Warning--empty year in mendez_ivolver:_2016
 Warning--empty journal in nothdurft_salience_2000
@@ -85,45 +88,45 @@ Warning--empty journal in wu_opinionseer:_2010
 Warning--empty year in wu_opinionseer:_2010
 Warning--empty journal in zhao_x0023;fluxflow:_2014
 Warning--empty year in zhao_x0023;fluxflow:_2014
-You've used 46 entries,
+You've used 50 entries,
             2598 wiz_defined-function locations,
-            882 strings with 13361 characters,
-and the built_in function-call counts, 49083 in all, are:
-= -- 10961
-> -- 917
-< -- 1814
-+ -- 2167
-- -- 354
-* -- 1756
-:= -- 6969
-add.period$ -- 146
-call.type$ -- 46
-change.case$ -- 293
+            908 strings with 14082 characters,
+and the built_in function-call counts, 51615 in all, are:
+= -- 11382
+> -- 1004
+< -- 1866
++ -- 2251
+- -- 385
+* -- 1901
+:= -- 7347
+add.period$ -- 158
+call.type$ -- 50
+change.case$ -- 320
 chr.to.int$ -- 0
-cite$ -- 118
-duplicate$ -- 618
-empty$ -- 1431
-format.name$ -- 314
-if$ -- 12985
+cite$ -- 124
+duplicate$ -- 674
+empty$ -- 1557
+format.name$ -- 344
+if$ -- 13590
 int.to.chr$ -- 0
-int.to.str$ -- 46
-missing$ -- 46
-newline$ -- 463
-num.names$ -- 92
-pop$ -- 398
+int.to.str$ -- 50
+missing$ -- 50
+newline$ -- 489
+num.names$ -- 100
+pop$ -- 425
 preamble$ -- 1
-purify$ -- 249
+purify$ -- 272
 quote$ -- 0
-skip$ -- 421
+skip$ -- 462
 stack$ -- 0
-substring$ -- 3270
-swap$ -- 112
-text.length$ -- 992
+substring$ -- 3448
+swap$ -- 126
+text.length$ -- 1021
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 180
-warning$ -- 72
-while$ -- 266
-width$ -- 48
-write$ -- 1538
+type$ -- 196
+warning$ -- 74
+while$ -- 285
+width$ -- 52
+write$ -- 1611
 (There was 1 error message)
