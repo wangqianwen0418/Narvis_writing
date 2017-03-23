@@ -3,17 +3,17 @@ To help people better understand a data visualization design, we propose a metho
 
 \subsection{Compositions of a Visualization}
 We propose a model that decomposes a visualization into three levels of structure: visual primitives, visual units, and then an advanced visualization design. 
-% We apply this hierarchical structure theory to ``Opinionseer'' and decompose it, as shown in Fig.2. 
-We ground our model using OpinionSeer \siwei{[cite]}, a visual design proposed by Wu et al. to \siwei{do sth}. 
+We apply this hierarchical structure theory to ``Opinionseer''\cite{wu_opinionseer:_2010} and decompose it, as shown in Fig.2. 
 
-\textbf{A visual primitive} is one graphic element \siwei{in the paper, you use graphical element as well. Make them consistent.} whose visual channels, such as color, width, height, are mapped to data attributes. We employ the definition in previous work\cite{huron_constructive_2014, satyanarayan_vega-lite:_2017}, and use the term "grammar" to describe how the visual channels of a visual primitive is influenced by data.\siwei{previous work helps you define visual primitive or grammar? It is not clear} \original{For instance, a point whose size and color are encoded is a visual primitive. How the two visual channels, size and color, are related to data attributes is its visual grammar. }\siwei{I am confused with it. If I understand right, each visual channel is one grammar? In addition, you said you apply the model to OpinionSeer, please refer to the figure and explain what is visual primitive, visual channel and grammar.}
+\textbf{A visual primitive} is one graphic element whose visual channels, such as color, width, height, are mapped to data attributes with certain visual grammar.  For instance, a point whose size and color are encoded is a visual primitive. Size is a visual channel, and``size indicates the importance score'' is a visual grammar. 
 
-\textbf{A visual unit} is the assembly of visual primitives based on a certain construction rule, as tab.1 show \siwei{please justify how do you define or choose these construction rules?}. 
+\textbf{A visual unit} is the assembly of visual primitives based on a certain construction rule, as tab.1 show. 
 %For the taxonomy of constructing rule, we refer the ``alignment method'' in \cite{kucher2015text} but make it more specific. 
-A visual primitive can assemble different visual units by following different constructing rule, as demonstrated in Fig.3. \siwei{I do not understand this sentence with fig 3. please use an example here.} We are not pretending that our table includes all existing visual units, since new design is proposed constantly. A visual unit is the smallest functional unit of a visualization. Note that people might employ two visual primitives in a visualization design \siwei{what is the relationship between a visualization design and a visual unit? It seems a new term}. For example, \textit{Visual Sedimentation}\cite{huron_visual_2013} \siwei{visual sedimentation has many forms, such as pie chart. Only the bar chart form employs two visual primitives as you describe.} employs two visual primitives, bar and dot, to construct a novel design \siwei{what is the relationship between a design and a visual unit?}. 
+A visual primitive can assemble different visual units by following different constructing rule. For example, the visual primitives, dot, can assemble scatter plot, spiral dot chart, and circle packing chart by following radial, orthogonal, and metric-based construction rule, respectively. We are not pretending that our table includes all existing visual units, since new design is proposed constantly. A visual unit is the smallest functional unit of a visualization. Note that people might employ two visual primitives in a visualization unit. For example, Huron et al\cite{huron_visual_2013} employs two visual primitives, bar and dot, to construct a visual unit. 
 
 
-\textbf{A visualization} can be treated as the combination of visual units. An naive visualization can be as simple as one visual unit while an advanced one is usually the combination of several units. It doesn't simply put all visual units together but constructs them based on their relationships, as described in Section 3.2.1.
+\textbf{A visualization} can be treated as the combination of visual units. A naive visualization can be as simple as one visual unit while an advanced one is usually the combination of several units. 
+%It doesn't simply put all visual units together but constructs them based on their relationships, as described in Section 3.2.1.
 % with certain connections \siwei{what is certain connections? can you give an example?} with each other, which is detailedly discussed in section 3.1.2.\siwei{where is section 3.1.2?}
 
 \begin{figure}
@@ -45,74 +45,111 @@ A visual primitive can assemble different visual units by following different co
 %\footnotetext{https://plot.ly/~etpinard/84.embed}
 %\footnotetext{https://bl.ocks.org/mbostock/4063269}
 
-\begin{table*}[tb]
+%\begin{table*}[tb]
+%  \caption{A taxonomy of visual units.\notsure{How to avoid the name ambiguities}}
+%  \label{tab:unit}
+%  \small
+%  \centering
+%  \begin{tabular}{|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|}
+%  \toprule
+%   \textbf{} &\multicolumn{2}{|c|}{Polar Coordinates} &\multicolumn{3}{|c|}{Orthogonal Coordinates}&\multicolumn{3}{|c|}{Metric Dependent}   \\ 
+%  \midrule
+%  
+% \textbf{} &\textbf{Radial} &\textbf{Spiral} &\textbf{Orthogonal} & \textbf{Parallel Align}&\textbf{Map}&\textbf{Cluster}&\textbf{Force-direct}&\textbf{Others}   \\ 
+%  \midrule
+%  \textbf{Dot} &    &Spiral Dot Chart&Scatter Plot, Bubble Chart & Dot Plot & Bubble Map &  Circle packing    &TopicPanorama\cite{7042494}  &    \\
+%  \midrule
+%  \textbf{Line}&  Radar Chart   &  Spiral Plot    &Node-link Diagram, Line Chart & Parallel Coordinates, Arc Diagram &    &   &     & \\ 
+%  \midrule
+%   \textbf{Flow}&  Chord Diagram   &    & &Parallel Sets, Sankey Diagram & 
+%   Flow Map  &   &   &\\
+%  \midrule
+%  \textbf{Area}&    &Area Spiral Chart &Stream Graph &  & & &   &\\ 
+%  \midrule
+%  \textbf{Bar}&      Radial Bar Chart & Spiral Bar Chart  & Candlestick Chart & Bar Chart  &    &    &    &\\
+%  \midrule
+%  \textbf{Cell}& Sunburst Diagram  &    & Matrix, Tree Map &     & & &   &\\
+%  \midrule
+%  \textbf{Wedge}& Pie Chart, Donut Chart &  &   &   &  &    &   &\\
+%  \midrule
+%  \textbf{Text}&    &Parallel Tag Cloud \cite{collins2009parallel} &    &  Sentence Tree  &     &Word Cloud  &   &    \\
+%  %\midrule
+% % \textbf{Image}& & &Heatmap Matrix &Heatmap &\\
+%  \bottomrule
+%  
+%  \end{tabular}
+%  \vspace{1mm}
+%\end{table*}
+
+\begin{table}[tb]
   \caption{A taxonomy of visual units.\notsure{How to avoid the name ambiguities}}
   \label{tab:unit}
   \small
   \centering
-  \begin{tabular}{|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|}
+  \begin{tabular}{p{1.2cm}|p{1.6cm}|p{1.6cm}|p{1.6cm}}
   \toprule
-   \textbf{} &\multicolumn{2}{|c|}{Polar Coordinates} &\multicolumn{3}{|c|}{Orthogonal Coordinates}&\multicolumn{3}{|c|}{Metric Dependent}   \\ 
+  \textbf{} &\multicolumn{2}{|c|}{\textbf{Absolute Position}} &\textbf{Relative Position}   \\ 
   \midrule
-  
- \textbf{} &\textbf{Radial} &\textbf{Spiral} &\textbf{Orthogonal} & \textbf{Parallel Align}&\textbf{Map}&\textbf{Cluster}&\textbf{Force-direct}&\textbf{Others}   \\ 
+ \textbf{} &\textbf{Radial} &\textbf{Orthogonal, Align, Map} &\textbf{Metric-based}   \\ 
   \midrule
-  \textbf{Dot} &    &Spiral Dot Chart&Scatter Plot, Bubble Chart & Dot Plot & Bubble Map &  Circle packing    &TopicPanorama\cite{7042494}  &    \\
+  \textbf{Dot} &Spiral Dot Chart, Scatter Plot, Bubble Chart & Dot Plot,  Bubble Map &Circle packing, TopicPanorama\cite{7042494}\\
   \midrule
-  \textbf{Line}&  Radar Chart   &  Spiral Plot    &Node-link Diagram, Line Chart & Parallel Coordinates, Arc Diagram &    &   &     & \\ 
+  \textbf{Line}&  Radar Chart, Spiral Plot    &Line Chart, Parallel Coordinates, Arc Diagram &  Force-directed Node-link graph   \\ 
   \midrule
-   \textbf{Flow}&  Chord Diagram   &    & &Parallel Sets, Sankey Diagram & 
-   Flow Map  &   &   &\\
+   \textbf{Flow}&  Chord Diagram   &Parallel Sets, Sankey Diagram, 
+   Flow Map  & \\
   \midrule
-  \textbf{Area}&    &Area Spiral Chart &Stream Graph &  & & &   &\\ 
+  \textbf{Area}&  Area Spiral Chart &Stream Graph &  \\ 
   \midrule
-  \textbf{Bar}&      Radial Bar Chart & Spiral Bar Chart  & Candlestick Chart & Bar Chart  &    &    &    &\\
+  \textbf{Bar}&      Radial Bar Chart,Spiral Bar Chart  & Candlestick Chart, Bar Chart  &   \\
   \midrule
-  \textbf{Cell}& Sunburst Diagram  &    & Matrix, Tree Map &     & & &   &\\
+  \textbf{Cell}& Sunburst Diagram  &Matrix, Tree Map &  \\
   \midrule
-  \textbf{Wedge}& Pie Chart, Donut Chart &  &   &   &  &    &   &\\
+  \textbf{Wedge}& Pie Chart, Donut Chart &  &  \\
   \midrule
-  \textbf{Text}&    &Parallel Tag Cloud \cite{collins2009parallel} &    &  Sentence Tree  &     &Word Cloud  &   &    \\
+  \textbf{Text}&    &  Sentence Tree  & Word Cloud \\
   %\midrule
  % \textbf{Image}& & &Heatmap Matrix &Heatmap &\\
   \bottomrule
   
   \end{tabular}
   \vspace{1mm}
-\end{table*}
+\end{table}
 
-
-\subsection{Relationships between compositions}
-\subsubsection{Relationships between Visual Units}
-% An advanced 
+\subsection{Relationships Between Compositions}
+We first describe the relationship between conceptual compositions, then offer suggestion for narrative sequence based on these relationships. 
+\subsubsection{Relationships Between Visual Units}
 A visualization can be specified as the combination of several visual units. 
 % Through observing the approaches people apply to design new visualizations, 
 By observing how visualizations are designed,
 we define four types of relationship between visual units: irrelevance, relevance, enhancement, and dependency. 
 
-\original{\textbf{Irrelevance} refers to that two visual units have no correlations in the visual grammar. 
-It is a bi-directional relation. }
-\siwei{combine relationship and narrative seuqence}
-\siwei{If I understand right, you can write as: \textbf{Irrelevance} is a bi-directional relation meaning two visual units are independent and do not share any visual channel.}
-For example, 2 donut charts, Fig.4(a) and Fig.4(b), are applied to illustrate the distribution of age and gender groups respectively in a population. They are put together in Fig.4(c) just for space-efficiency and there is no correlation between these two charts. \siwei{all figure 4 is figure 3. do not type number. use ref instead}
+\textbf{Irrelevance} is a bi-directional relation meaning two visual units are independent and do not share any visual channel.
+For example, 2 donut charts, \ref{fig:relationship}(a) and \ref{fig:relationship}(b), are applied to illustrate the distribution of age and gender groups respectively in a population. They are put together in \ref{fig:relationship}(c) just for space-efficiency and there is no correlation between these two charts. 
 
 \textbf{Relevance} refers to that two visual units share some visual grammar and it is a bi-directional relation. 
-For example, a line chart, Fig.4(d), and a bar chart, Fig.4(d), share the same encoding of horizontal position and they are put together in Fig.4(e).  \siwei{what is the difference between visual grammar and visual channel? why horizontal position is visual grammar rather than visual channel?}
-\notsure{According to our survey, color and position are the most commonly shared visual encodings, which might be the result that color and position usually encoded with simple while crucial information. }
+For example, a line chart, \ref{fig:relationship}(d), indicates the temperature over a time period, and a bar chart, \ref{fig:relationship}(d), indicates the precipitation over a time period. They are put together in \ref{fig:relationship}(e) and they share the same visual grammar of horizontal position.  
+%\siwei{what is the difference between visual grammar and visual channel? why horizontal position is visual grammar rather than visual channel?}
+%\notsure{According to our survey, color and position are the most commonly shared visual encodings, which might be the result that color and position usually encoded with simple while crucial information. }
 
-\textbf{Enhancement} is an one-way relationship. If one visual unit ``A'' is the enhancement of another visual unit ``B'', it means that ``A'' is imported into ``B'', replaces some graphical elements of ``B'', thus enables the representation of some data attributes that ``B'' alone fails to convey. Suppose there are 5 types of area in a park. A bar chart, Fig.4(h), illustrates their average price per unit area, a chord diagram, Fig.4(g), illustrates how passengers travel through each area. In Fig.4(i), the bar chart take the place of node segments in a chord diagram, resulting in a novel and informative visualization \siwei{the bar chart and the chord diagram share the same radial position, why not relevance but enhancement? }. 
-Some actual examples are the heat map mapped upon the steams in a theme river\cite{wu_opinionflow:_2014}  and usage of glyphs to enhance the meaning of nodes in a multidimensional scaling plot.\cite{chen_peakvizor:_2016}\siwei{if you can explain the `enhancement' clearly with one example, the ``actual example'' seems redundant because you have no figure for them and they are hard to follow.} 
+\textbf{Enhancement} is an one-way relationship. If one visual unit ``A'' is the enhancement of another visual unit ``B'', it means that ``A'' is imported into ``B'', replaces some graphical elements of ``B'', thus enables the representation of some data attributes that ``B'' alone fails to convey. Suppose there are 5 types of area in a park. A bar chart, Fig.4(h), illustrates their average price per unit area, a chord diagram, Fig.4(g), illustrates how passengers travel through each area. In Fig.4(i), the bar chart take the place of node segments, which has the same height, in a chord diagram, resulting in a novel and informative visualization. 
+\siwei{how about now? can you understand? }.
+ 
+Enhancement widely exist in the advanced visualization design, such as the heat map mapped upon the steams in a theme river\cite{wu_opinionflow:_2014}  and usage of glyphs to enhance the meaning of nodes in a multidimensional scaling plot.\cite{chen_peakvizor:_2016} 
 
-\textbf{Dependence} is an one-way relationship. If one visual unit ``A'' is dependent on ``B'', it means that ``A'' reveal some information that results from the visualization of ``B''. \original{For example, a multiple dimensional scaling (MSD) map, Fig.4(j), shows the similarity between each restaurants in a city. A heat map, Fig.4(h), is then added to the MSD map to show the most common type of restaurants, which information can hardly be obtained from the dataset but quite evident from the MSD map, as in Fig.4(i).}\siwei{I cannot understand the example. First, Fig 3(k) seems contour map rather than heatmap. Second, you cannot say it shows the most common type of restaurants because it depends on your drawing.} The biggest difference between "\textbf{enhancement}" and "\textbf{dependence}" is that \textbf{enhancement} still illustrate the data attributes in the dataset, while \textbf{dependency} reveals the new knowledge we obtain from adopting a previous visualization to the dataset. 
+\textbf{Dependence} is a one-way relationship. If one visual unit ``A'' is dependent on ``B'', it means that ``A'' reveal some information that results from the visualization of ``B''. \original{For example, a multiple dimensional scaling (MSD) map, Fig.4(j), shows the similarity between each restaurants in a city. A contour map, Fig.4(h), is then added to the MSD map to show the most common type of restaurants, which information can hardly be obtained from the dataset but quite evident from the MSD map, as in Fig.4(i).}\siwei{Second, you cannot say it shows the most common type of restaurants because it depends on your drawing.} The biggest difference between "\textbf{enhancement}" and "\textbf{dependence}" is that 1)\textbf{enhancement} still illustrate the data attributes in the dataset, while \textbf{dependency} reveals the new knowledge we obtain from adopting a previous visualization to the dataset; 2)\textbf{enhancement} replace original graphical elements of other visual design while \textbf{dependence} add new graphical elements.
+
+A proper narrative sequence of visual units should take the relationships between them into consideration. For irrelevance, it doesn't matter whether these two visual units are explained sequentially. For relevance, these two visual units should be explained one after another. Since relevance is bidirectional, it doesn't matter which one is explained first. For dependency and enhancement, which are unidirectional, the two visual units should be explained sequentially in a specific order. 
+ Thus, we display the correlations between units in a tree diagram where a child node is the enhancement/dependence of its parent node and sibling nodes have relevance. A proper narrative sequence can be obtained by running a deep first search on this tree diagram. 
 
 \subsubsection{Relationships Between Visual Primitives}
-\siwei{There are some notes: 1. do not mention usually has 1 or 2 primitives. it is flawed. 2. Candlestick chart and error bar are quite similar expect their context. why one has no dependency and the other has logical dependency? 3. do not use two ``such as'' in one sentence.}
-The inner relationship between visual primitives is relatively simple.
-A visual unit usually has 1 or 2 visual primitives. 
+%\siwei{There are some notes: 1. do not mention usually has 1 or 2 primitives. it is flawed. 2. Candlestick chart and error bar are quite similar expect their context. why one has no dependency and the other has logical dependency? 3. do not use two ``such as'' in one sentence.}
+%The inner relationship between visual primitives is relatively simple.
+%A visual unit usually has 1 or 2 visual primitives. 
+%
+%\notsure{
+The relationship between two visual primitives of one visual unit are usually self-evident. One primitive either has no dependency on the other one, such as the bar and line in \textit{Candlestick Chart}, or has high and evident dependency.  This dependency can be logical, such as the line and bar in \textit{error bar chart}, or spacial, such as the node segment and arc in \textit{chord diagram}, or temporal, such as the stream and dot in \cite{liu_online_2016}
 
-\notsure{
-The relationship between the 2 visual primitives, if there are two, are usually self-evident. One primitive either has no dependency on the other one, such as the bar and line in \textit{Candlestick Chart}, or has high and evident dependency.  This dependency can be logical, such as the line and bar in \textit{error bar chart}, or spacial, such as the node segment and arc in \textit{chord diagram}, or temporal, such as the stream and dot in \cite{liu_online_2016}
-}
 
 \begin{figure}[tb]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -122,34 +159,18 @@ The relationship between the 2 visual primitives, if there are two, are usually 
 \end{figure}
 
 \subsubsection{Relationships Between Visual Channels}
-For a visual primitive, different channels are encoded with different data attribute. Thus, they are usually separated and have no logic dependency upon others. 
-
-\subsection{Design considerations of narrative sequence}
-
-
-\subsubsection{Narrative Sequence for Visual Channels}
-
-\original{An arbitrary explaining order of visual channels may lead to an inefficient information delivery, especially when this visual primitive has multiple channels, which is common in an advanced visualization. }
-\siwei{say following an order is important, and why. Do not say arbitrary order is bad. Because other improper order can also be bad.}
+For a visual primitive, different channels are encoded with different data attribute. Thus, they are usually separated and have no logic dependency upon others. It's hard to determine a narrative sequence from their inner logical dependency. 
 
 Therefore, we define two metrics to order the explaining of visual channels: \textbf{the complexity of their encoded information} and \textbf{saliency of their visual appearance}.
 
-First, a proper explanation should follow the order of decreasing visual saliency~\cite{cleveland_graphical_1984}. Even though different channels have intrinsically different perceptual salience and channel with high salience will suppress the expression of other, such salience strength can be influenced in a task-dependent manner \cite{nothdurft_salience_2000}. By introducing the channel with high saliency first, we remove it from the task list in our mind\cite{itti2001computational}, decrease its saliency and give other channels more chance to attract limited human attention. 
+First, the order of decreasing visual saliency can facilitate graphical perception\cite{cleveland_graphical_1984}. Even though different channels have intrinsically different perceptual salience and channel with high salience will suppress the expression of other, such salience strength can be influenced in a task-dependent manner \cite{nothdurft_salience_2000}. By introducing the channel with high saliency first, we remove it from the task list in our mind\cite{itti2001computational}, decrease its saliency and give other channels more chance to attract the limited human attention. 
 
-Second, we should follow the order of increasing complexity. “Easy to difficult” practice has been long used and confirmed to be effective for learning new tasks\cite{bliss_effects_1992}.
-
-\siwei{you said we should follow two orders. If they are not the same, which one should I follow?}
+Second, the order of increasing complexity leads to an effective learning process. “Easy to difficult” practice has been long used and confirmed to be effective for learning new tasks\cite{bliss_effects_1992}.
  
-The visual saliency of different channels is relatively constant and  well defined \cite{munzner_visualization_2014,cleveland_graphical_1984}, while the information complexity varies in different designs. 
+The visual saliency of different channels is relatively constant and  well defined \cite{munzner_visualization_2014,cleveland_graphical_1984}, while their information complexity varies in different designs. Thus, an effective narrative sequence is a trade-off between these two metrics. 
 
-\subsubsection{Narrative Sequence for Visual Primitives}
-As discussed in section 3.2.2, relationships between visual primitives are self-evident, thus need no special consideration for the narrative sequence. 
-
-\subsubsection{Narrative Sequence for Visual Units} 
-As discussed in section 3.1.2, there are four types of relationships between visual units, and they will influence the order of a narrative explanation. Thus, we display the correlations between units in a tree diagram where a child node is the enhancement/dependence of its parent node and sibling nodes have logic dependences. \notsure{as show in Fig}When explaining these visual units, we can simply follow a deep first search (DFS) order to visit all the visual units. \siwei{It is still no clear what is the relationships among: 1) the four relations, 2) the narrative sequence, 3) the tree diagram. For example, how to present irrelevance and relevance using the tree diagram? } 
-
-\subsubsection{Non-linear Sequence}
-So far, all the narrative explanation we discussed is linear. However, reading a lengthy, extremely detailed instruction maybe tedious. A good narrative explanation should include non-linear design, allowing users to skip uninterested parts, go back to previous information and freely switch between different parts. Also, users should be allowed the flexibility to choose explanations at different levels of details. 
+%\subsubsection{Non-linear Sequence}
+%So far, all the narrative explanation we discussed is linear. However, reading a lengthy, extremely detailed instruction maybe tedious. A good narrative explanation should include non-linear design, allowing users to skip uninterested parts, go back to previous information and freely switch between different parts. Also, users should be allowed the flexibility to choose explanations at different levels of details. 
 
 \subsection{Attention Orientation}
 To keep audience focus on the target object, it is necessary for us to identify and avoid visual distractions. 
