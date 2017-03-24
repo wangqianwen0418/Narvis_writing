@@ -37,47 +37,51 @@ For the input textual description, we offer a basic text detection and classific
 
 The algorithm we proposed is a compromise between efficiency and performance. At this time point, it is limited to images with high quality and clear edges, but its performance can be improved by adopting other well-established algorithm, such as the algorithm based on patch detection and clustering \cite{savva_revision:_2011} and the algorithm based on edge maps \cite{huang2003model}.
 
+
+
+
 \subsection{Phase2: Manual Editing}
-In Narvis, editors craft an introduction slideshow by constructing build-in blocks called as templates in Narvis.(DE1) We first introduce the workflow of this phase, which includes three steps, i.e., invoking templates, organizing templates and modifying templates, as illustrated in Figure \siwei{ref}. Then ,we explain how we design and organize the templates in Narvis. \siwei{sth}
+In Narvis, editors craft an introduction slideshow by constructing build-in blocks called as templates in Narvis (DE1) \siwei{what is the relationship between this sentence and DE1? }. We first introduce the workflow of this phase, which includes three steps, i.e., invoking templates, organizing templates and modifying templates, as illustrated in Figure \siwei{ref}. Then ,we explain how we design and organize the templates in Narvis. 
 % We introduce three panels in this phase acting as three steps in the workflow to allow editors  
 
 \subsubsection{Invoking Templates} 
 
 After graphical elements are extracted and clustered based on visual representation, each cluster appears as a tabbed panel in the \textit{Source Panel} (Figure \siwei{ref}). 
 
-Editors can switch between these tabbed panels, add or delete graphical elements in each panel, making sure that 1) all the graphical elements of the same visual unit is in the same panel 2) every graphical element belongs to one and only panel. Then, for each visual unit, the user call an associated template from the library. For example, for the tabbed panel in \siwei{fig}, the editor should call a ``scatter plot'' template.
+Editors can switch between these tabbed panels, add or delete graphical elements in each panel, making sure that 1) all the graphical elements of the same visual unit is in the same panel 2) every graphical element belongs to one and only panel. \original{Then, for each visual unit, the user call an associated template from the library} \siwei{rewrite this sentence because 1) what is library? You did not mention before. 2) if a template is associated with a visual unit, why you need to call it? Do you mean user associate a template with a visual unit?}. For example, for the tabbed panel in \siwei{fig}, the editor should call a ``scatter plot'' template.
 
-The relationship between graphical elements and templates is similar to the one between data and function. Templates contain a set of operations to produce a sequence of slides from the input graphical elements.  (DE1, DE2) 
+The relationship between graphical elements and templates is similar to the one between data and function. Templates contain a set of operations to produce a sequence of slides from the input graphical elements.  (DE1, DE2) \siwei{I do not understand this paragraph, too abstract}
 
 \subsubsection{Organizing Templates} 
 Once invoked, a template will show on the \textit{Tree Panel} as a tree node. 
-Editors are allowed to adjust the relationships between invoked templates through interacting in the \textit{Unit Tree} panel, where all visual units are shown as tree nodes.
-By dragging and dropping these nodes, editors organize the structure of the tree diagram, which reflects the relationship between visual units and determines the narrative sequence of the slideshow.(DA5)
+Editors are allowed to adjust the relationships between invoked templates through interacting in the \textit{Unit Tree} panel \siwei{``through interacting'' sounds strange. do you mean drag and drop?}, where all visual units are shown as tree nodes.
+By dragging and dropping these nodes, editors organize the structure of the tree diagram, which reflects the relationship between visual units and determines the narrative sequence of the slideshow.(DA5) \siwei{this sentence is somehow duplicated with the previous one. I suggest you combine the two sentences.}
 
 \subsubsection{Modifying Templates} 
 % \textbf{\textit{ Unit Panel \& Editor panel}: personalized modification}
 % but it also allow the users high flexibity to modify these temples, thus guaranteeing the expressiveness of this system. 
 Narvis provides templates to generate slideshows with high efficiency. 
 It also supports flexible modification of templates for expressiveness.
-Editors can edit a template in the \textit{Unit Panel} by selecting a node on the \textit{Tree Panel}. In each template, all possible visual grammar are enumerated. Editors can delete unused one themselves, thus eliminating the unconscious omission of crucial information (DA.5). It also recommends a narrative sequence of visual grammars, based on the metrics we mentioned in section 3.1.4 (DE1, DA3, DA5). 
-In the \textit{Editor Panel}, with the hints from Narvis, editors add annotations to facilitate graph and chart comprehension. For each slide, Narvis offers questions or sentence with blank for adding text-based annotation, and a list of suggested design options for symbol-based annotation. \siwei{Fig}
+Editors can edit a template in the \textit{Unit Panel} by selecting a node on the \textit{Tree Panel}. \original{In each template, all possible visual grammar are enumerated. Editors can delete unused one themselves, thus eliminating the unconscious omission of crucial information (DA.5).}\siwei{If I understand right, removal of unused grammar does not relate to unconscious omission. } 
+It also recommends a narrative sequence of visual grammars, based on the metrics we mentioned in section 3.1.4 (DE1, DA3, DA5). 
+In the \textit{Editor Panel} \siwei{refer to the figure of interface when introducing Panels.}, with the hints from Narvis, editors add annotations to facilitate graph and chart comprehension. For each slide \siwei{the advant of slide is strange. what is the relationship between slide, templates, and visual grammar? Please clarify in advanced.}, Narvis offers questions or sentence with blank for adding text-based annotation and a list of suggested design options for symbol-based annotation. \siwei{Can you give an example? It is hard to follow.}
 
 \subsubsection{A Library of Templates}
-We propose a library of templates for the narrative explanation of a visualization. A template is a set of slides that tends to introduce an visual unit, which can be descibed as an orthogonal combination of visual primitives and construction rules, as shown in tab.1. Since advanced visualization design is the assembly of miscellaneous visual units, we conjecture such templates can achieve a high level of efficiency for the explanation of a visualization. (DA1)Meanwhile, allowing users a high flexible, friendly interface to edit offered templates, Narvis maintains a considerable level of expressiveness and accessibility. 
+\siwei{this subsubsection can be move to the first subsubsection. otherwise the library you mentioned does not make sense.}
+We propose a library of templates for the narrative explanation of a visualization. A template is a set of slides that tends to introduce an visual unit, \original{which can be descibed as an orthogonal combination of visual primitives and construction rules, as shown in tab.1.}\siwei{you do not need to explain what is visual unit here if you have done in section 3} Since advanced visualization design is the assembly of miscellaneous visual units, we conjecture \siwei{remove ``we conjecture'' to make your argument stronger} such templates can achieve a high level of efficiency for the explanation of a visualization (DA1). \original{Meanwhile, allowing users a high flexible, friendly interface to edit offered templates, Narvis maintains a considerable level of expressiveness and accessibility. }\siwei{rewrite this sentence to make the english more native. I would suggest: Furthermore, to adapt to various usage scenario, Narvis allows users to modify and refine templates with rich interactions.}
 
-\textbf{Types of templates}
+\textbf{Types of templates.}
+Narvis use a 8*3 \siwei{what are eight rows and three columns?} table to organize the provided templates, as shown in \textbf{fig}. Narvis is extensible, new templates can be added by its developer through programming, or by end users through uploading their modified templates. At the same time, all newly added templates are classified into a certain cell of the 8*3 matrix \siwei{how to you classify a user-defined template?}, so as to avoid overwhelming users with a cornucopia of confusing options.
 
-Narvis use a 8*3 table to organize the provided templates, as shown in \textbf{fig}. Narvis is extensible, new templates can be added by its developer through programming, or by end users through uploading their modified templates. At the same time, all newly added templates are classified into a certain cell of the 8*3 matrix, so as to avoid overwhelming users with a cornucopia of confusing options.
+\textbf{Templates design.}
+We apply the analysis and theory model in section 3 \siwei{use ref rather than a direct number for reference.} for the design of templates. A template has four core components: 1) a well-considered narrative sequence for visual grammar explanation; 2) exaggeration or suppression of certain visual channels in some slides; 3) a series of narrative techniques such as attention cues, animated transitions, information repetition, to orientate visual attention and facilitate perception (DE.1); 4) Hints for adding annotations (DE.2) in each slide (DA.4) \siwei{do you use DA.4 or DA4? make it consistent in the whole paper.}
 
-\textbf{Templates design}
-
-We apply the analysis and theory model in section 3 for the design of templates. A template has four core components: 1) a well-considered narrative sequence for visual grammar explanation; 2) exaggeration or suppression of certain visual channels in some slides; 3) a series of narrative techniques such as attention cues, animated transitions, information repetition, to orientate visual attention and facilitate perception;(DE.1) 4) Hints for adding annotations (DE.2) in each slide(DA.4)
-
-With a visual unit, more specifically, a set of graphic elements, as input, a templates will generate a slideshow and each slide is responsible for the explaining of one visual grammar.(DA.4) These slides are sorted based on the narrative sequence we discussed in section 3.3. In each slide, we offer hints to guide the annotation process. These hints are sentence with blanks to fill in, heuristic questions, or a list of suggestion symbols. A visual channel is suppressed until its grammar has been explained. For example, before we introduce the visual grammar of color, all the object will be gray.  The graphical elements in different slides, which might have different visual appearance due to the applied exaggeration or suppression of visual channels, are perceptively connected through morphing animation.
+With a visual unit, more specifically, a set of graphic elements, as input, a templates will generate a slideshow and each slide illustrates one visual grammar.(DA.4) \siwei{move DA.4 before dot, and check all these reference} These slides are sorted based on the narrative sequence we discussed in section 3.3. In each slide, we offer hints to guide the annotation process. These hints are sentence with blanks to fill in, heuristic questions, or a list of suggestion symbols. A visual channel is suppressed until its grammar has been explained. For example, before we introduce the visual grammar of color, all the object will be gray.  The graphical elements in different slides, which might have different visual appearance due to the applied exaggeration or suppression of visual channels, are perceptively connected through morphing animation. \siwei{try to explain it using a figure. Otherwise, it is hard to follow.}
 
 \textbf{Animation embedded in templates }
 
-Narvis provides 8 types of animation, implement them in templates based on their effects on human attention and perception(DA.1), which has been widely discussed in previous work.\cite{robertson_effectiveness_2008, waldner_attractive_2014, heer_animated_2007}We also provide a novel decomposition animation at the beginning of the introduction slideshow to engage the audience as well as to help them get a sense of overview.(DA.6)
+Narvis provides 8 types of animation, implement them in templates based on their effects on human attention and perception(DA.1) \siwei{add a space before `(', check this problem in the whole paper}, which has been widely discussed in previous work.\cite{robertson_effectiveness_2008, waldner_attractive_2014, heer_animated_2007} \siwei{typesetting problem, check it in the whole paper} We also provide a novel decomposition animation at the beginning of the introduction slideshow to engage the audience as well as to help them get a sense of overview.(DA.6) \siwei{it is not clear how animation relates to DA6}
+\original{Animation is a double-edge sword, which introduces both benefits and pitfalls. We are not discussing the effects of animation here.} \siwei{Keep your sentence simple. I would suggest: Animation is optional} Editors can choose to remove these animation if they prefer an abstract slide show or they are suspicious of the effects of animation. 
 
 \begin{table}[tb]
   \caption{A summary of animation provided}
@@ -110,26 +114,28 @@ Narvis provides 8 types of animation, implement them in templates based on their
 \end{table}
 
 
-Animation is a double-edge sword, which introduces both benefits and pitfalls. We are not discussing the effects of animation here. Editors can choose to remove these animation if they prefer an abstract slide show or they are suspicious of the effects of animation. 
 
 
 \subsection{Phase3: Viewing}
 \subsubsection{The interface for audience}
+\siwei{before introducing interface, you should first introduce what the Phase does.}
 The interface of audience is composed of two panels.
 
-\textbf{\textit{Gallery Panel:}the collection of generated slide show}
- 
-\textit{Gallery Panel} exhibit all the slideshows produced by editors and saved in Narvis. Every slideshow is presented by an image, the visualization it tends to explain. By clicking on the image, users can watch this slideshow in the \textit{Screen Panel}. 
+\textbf{\textit{Gallery Panel:} the collection of generated slide show.} \siwei{introduce interface with figure reference.}
+\textit{Gallery Panel} exhibit all the slideshows produced by editors and saved in Narvis. Every slideshow \siwei{do you mean slide?} is presented by an image, the visualization it tends to explain. By clicking on the image, users can watch this slideshow in the \textit{Screen Panel}. 
 
 \textbf{\textit{Screen Panel:}  review and comment}
-Every slide show displayed in \textit{Gallery}is a series of slides, each of which is responsible for the delivery of one simple encoding information, for example, the horizontal position indicates time. In the \textit{Screen} panel, users click buttons to move forward or backward to view these slides, and their click activity will be recorded automatically by Narvis. 
+Every slide show \siwei{slide show or slideshow? make it consistent in the whole paper} displayed in \textit{Gallery} \siwei{make the name consistent, do you mean gallery panel?} is a series of slides, each of which is responsible for the delivery of one simple encoding information \siwei{what is simple encoding? do you mean one visual grammar? }, for example, the horizontal position indicates time. In the \textit{Screen} panel, users click buttons to move forward or backward to view these slides, and their click activity will be recorded automatically by Narvis. 
+
 \subsubsection{Generated Report}
 The report visualizes the click activity of audience in the form of a stacked bar chart, as\textbf{fig}. The heigh of the bar indicates the time spent on watching this slide. If audiences go back to a previous slide while viewing, a bar will be stacked on the top of the previous one. If there are animation in the slide show, a white line will be drawn upon the bar chart, referring to the animation playing time of each slide, thus gives a judgement whether an animation is too fast or too slow. (DE.3)
+
 \subsection{Iterative Design}
-To investigate the usability of Narvis, we invited 4 UGs from diverse backgrounds to watch an introduction slideshow produced by a data visualization professor with Narvis. 
+To investigate the usability of Narvis, we invited 4 UGs \siwei{4 or 7? make it consistent with Section 3} from diverse backgrounds to watch an introduction slideshow produced by a data visualization professor with Narvis. 
 Based on their feedback, we iterate over the design of Narvis as follow:
+
 \subsubsection{An compulsory Introduction}
-In the initially design, an introduction slideshow is purely the combination of templates. In other words, it straightforwardly explain each visual units after an overview of the visualization. However, the participants complained that they are less motivated to learn a visual design without an awareness of the background. Questions like, \textit{what's the motivation of this visual design}, \textit{what's the dataset}, and \textit{what kinds of problems it can solve} need to be answered before the introduction of this visual design. Thus, we add a compulsory introduction slide at the beginning of each slideshow, which is displayed as a root node of the tree diagram in \textit{Tree Panel}. This slide contains questions that guide the editors to give a brief description of the background.
+In the initially design, an introduction slideshow is purely the combination of templates. In other words, it straightforwardly \siwei{I have not seen this word in TVCG papers. Use explicitly instead} explain each visual units after an overview of the visualization. However, the participants complained that they are less motivated to learn a visual design without an awareness of the background. Questions like, \textit{what's the motivation of this visual design}, \textit{what's the dataset}, and \textit{what kinds of problems it can solve} need to be answered before the introduction of this visual design. Thus, we add a compulsory introduction slide at the beginning of each slideshow, which is displayed as a root node of the tree diagram in \textit{Tree Panel}. This slide contains questions that guide the editors to give a brief description of the background.
 \subsubsection{Different Levels of Detail}
 While 3 UGs appreciate this detailed introduction slideshow, and consider the animation applied as engaging and enjoyable. Another UG, who has taken a data visualization course before and is familiar with some visualization designs, thought some slides and animation are redundant. 
 Thus, we offer 3 levels of details which the audience can choose from. The detailed one displays all the animation, the normal ones skip the animation for some simple visual grammar such as color and size, and the abstract one discards all animation and put the annotation for color and size in one slide
