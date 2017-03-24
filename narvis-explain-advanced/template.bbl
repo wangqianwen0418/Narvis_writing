@@ -142,6 +142,12 @@ W.~Cui, S.~Liu, L.~Tan, C.~Shi, Y.~Song, Z.~Gao, H.~Qu, and X.~Tong.
 }{.}\hspace{.4pt}239}}
 
 
+\bibitem{doleisch2003interactive}
+H.~Doleisch, M.~Gasser, and H.~Hauser.
+\newblock Interactive feature specification for focus+ context visualization of
+  complex simulation data.
+\newblock In {\em VisSym}, vol.~3, pp. 239--248, 2003.
+
 \bibitem{eccles_stories_2007}
 R.~Eccles, T.~Kapler, R.~Harper, and W.~Wright.
 \newblock Stories in {GeoTime}.
@@ -220,6 +226,12 @@ W.~Huang and C.~L. Tan.
 }{.}\hspace{.4pt}1284427}}
 
 
+\bibitem{huang2003model}
+W.~Huang, C.~L. Tan, and W.~K. Leow.
+\newblock Model-based chart image recognition.
+\newblock In {\em International Workshop on Graphics Recognition}, pp. 87--99.
+  Springer, 2003.
+
 \bibitem{huber_visualizing_2005}
 D.~E. Huber and C.~G. Healey.
 \newblock Visualizing data with motion.
@@ -280,6 +292,11 @@ R.~Kosara and J.~Mackinlay.
 }{.}\hspace{.4pt}2013\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}36}}
 
+
+\bibitem{kosara2002focus+}
+R.~Kosara, S.~Miksch, and H.~Hauser.
+\newblock Focus+ context taken literally.
+\newblock {\em IEEE Computer Graphics and Applications}, 22(1):22--29, 2002.
 
 \bibitem{lee_sketchstory:_2013}
 B.~Lee, R.~H. Kazi, and G.~Smith.
@@ -346,6 +363,12 @@ H.-C. Nothdurft.
 }{)}00168\discretionary{%
 }{-}{-}1}}
 
+
+\bibitem{pinto2008selecting}
+Y.~Pinto, C.~N. Olivers, and J.~Theeuwes.
+\newblock Selecting from dynamic environments: Attention distinguishes between
+  blinking and moving.
+\newblock {\em Attention, Perception, \& Psychophysics}, 70(1):166--178, 2008.
 
 \bibitem{robertson_effectiveness_2008}
 G.~Robertson, R.~Fernandez, D.~Fisher, B.~Lee, and J.~Stasko.
