@@ -6,47 +6,40 @@
 \BOOKMARK [2][]{subsection.7}{Decompose a data visualization}{section.3}% 6
 \BOOKMARK [1][]{section.8}{Introducing a data visualization}{}% 7
 \BOOKMARK [2][]{subsection.9}{Compositions of a Visualization}{section.8}% 8
-\BOOKMARK [2][]{subsection.12}{Relationships between compositions}{section.8}% 9
-\BOOKMARK [3][-]{subsubsection.13}{Relationships between Visual Units}{subsection.12}% 10
+\BOOKMARK [2][]{subsection.12}{Relationships Between Compositions}{section.8}% 9
+\BOOKMARK [3][-]{subsubsection.13}{Relationships Between Visual Units}{subsection.12}% 10
 \BOOKMARK [3][-]{subsubsection.14}{Relationships Between Visual Primitives}{subsection.12}% 11
 \BOOKMARK [3][-]{subsubsection.16}{Relationships Between Visual Channels}{subsection.12}% 12
-\BOOKMARK [2][]{subsection.17}{Design considerations of narrative sequence}{section.8}% 13
-\BOOKMARK [3][-]{subsubsection.18}{Narrative Sequence for Visual Channels}{subsection.17}% 14
-\BOOKMARK [3][-]{subsubsection.19}{Narrative Sequence for Visual Primitives}{subsection.17}% 15
-\BOOKMARK [3][-]{subsubsection.20}{Narrative Sequence for Visual Units}{subsection.17}% 16
-\BOOKMARK [3][-]{subsubsection.21}{Non-linear Sequence}{subsection.17}% 17
-\BOOKMARK [2][]{subsection.22}{Attention Orientation}{section.8}% 18
-\BOOKMARK [3][-]{subsubsection.23}{Visual distraction from the context}{subsection.22}% 19
-\BOOKMARK [3][-]{subsubsection.24}{Visual distraction from sibling channels}{subsection.22}% 20
-\BOOKMARK [1][]{section.25}{Design Considerations}{}% 21
-\BOOKMARK [2][]{subsection.26}{User Perspectives and Methods}{section.25}% 22
-\BOOKMARK [2][]{subsection.27}{Design Tasks}{section.25}% 23
-\BOOKMARK [1][]{section.31}{Narvis: System Design and Implementation}{}% 24
-\BOOKMARK [2][]{subsection.33}{Phase1: Auto Analysis}{section.31}% 25
-\BOOKMARK [3][-]{subsubsection.34}{Analysis of input image}{subsection.33}% 26
-\BOOKMARK [3][-]{subsubsection.35}{Analysis of input textual description}{subsection.33}% 27
-\BOOKMARK [2][]{subsection.36}{Phase2: Manual Editing}{section.31}% 28
-\BOOKMARK [3][-]{subsubsection.37}{Invoking Templates}{subsection.36}% 29
-\BOOKMARK [3][-]{subsubsection.38}{Organizing Templates}{subsection.36}% 30
-\BOOKMARK [3][-]{subsubsection.39}{Modifying Templates}{subsection.36}% 31
-\BOOKMARK [3][-]{subsubsection.40}{A Library of Templates}{subsection.36}% 32
-\BOOKMARK [2][]{subsection.42}{Phase3: Viewing}{section.31}% 33
-\BOOKMARK [3][-]{subsubsection.43}{The interface for audience}{subsection.42}% 34
-\BOOKMARK [3][-]{subsubsection.44}{Generated Report}{subsection.42}% 35
-\BOOKMARK [2][]{subsection.45}{Iterative Design}{section.31}% 36
-\BOOKMARK [3][-]{subsubsection.46}{An compulsory Introduction}{subsection.45}% 37
-\BOOKMARK [3][-]{subsubsection.47}{Different Levels of Detail}{subsection.45}% 38
-\BOOKMARK [2][]{subsection.48}{A Working Scenario}{section.31}% 39
-\BOOKMARK [1][]{section.49}{Evaluation}{}% 40
-\BOOKMARK [2][]{subsection.50}{Participants}{section.49}% 41
-\BOOKMARK [2][]{subsection.51}{Material}{section.49}% 42
-\BOOKMARK [2][]{subsection.52}{Procedure}{section.49}% 43
-\BOOKMARK [3][-]{subsubsection.53}{Producing}{subsection.52}% 44
-\BOOKMARK [3][-]{subsubsection.54}{Reviewing and feedback}{subsection.52}% 45
-\BOOKMARK [2][]{subsection.55}{Results}{section.49}% 46
-\BOOKMARK [3][-]{subsubsection.56}{}{subsection.55}% 47
-\BOOKMARK [3][-]{subsubsection.57}{}{subsection.55}% 48
-\BOOKMARK [3][-]{subsubsection.58}{Generated slideshow}{subsection.55}% 49
-\BOOKMARK [3][-]{subsubsection.59}{Authoring experience}{subsection.55}% 50
-\BOOKMARK [1][]{section.60}{Limitation and Discussion}{}% 51
-\BOOKMARK [1][]{section.61}{Conclusion and Future Work}{}% 52
+\BOOKMARK [2][]{subsection.17}{Attention Orientation}{section.8}% 13
+\BOOKMARK [3][-]{subsubsection.18}{Visual distraction from the context}{subsection.17}% 14
+\BOOKMARK [3][-]{subsubsection.19}{Visual distraction from sibling channels}{subsection.17}% 15
+\BOOKMARK [1][]{section.20}{Design Considerations}{}% 16
+\BOOKMARK [2][]{subsection.21}{User Perspectives and Methods}{section.20}% 17
+\BOOKMARK [2][]{subsection.22}{Design Tasks}{section.20}% 18
+\BOOKMARK [1][]{section.26}{Narvis: System Design and Implementation}{}% 19
+\BOOKMARK [2][]{subsection.28}{Phase1: Auto Analysis}{section.26}% 20
+\BOOKMARK [3][-]{subsubsection.29}{Analysis of Input Image}{subsection.28}% 21
+\BOOKMARK [3][-]{subsubsection.30}{Analysis of Input Textual Description}{subsection.28}% 22
+\BOOKMARK [2][]{subsection.32}{Phase2: Authoring}{section.26}% 23
+\BOOKMARK [3][-]{subsubsection.33}{Invoking Templates}{subsection.32}% 24
+\BOOKMARK [3][-]{subsubsection.34}{Organizing Templates}{subsection.32}% 25
+\BOOKMARK [3][-]{subsubsection.35}{Modifying Templates}{subsection.32}% 26
+\BOOKMARK [3][-]{subsubsection.36}{A Library of Templates}{subsection.32}% 27
+\BOOKMARK [2][]{subsection.38}{Phase3: Viewing}{section.26}% 28
+\BOOKMARK [3][-]{subsubsection.39}{The Interface for Audience}{subsection.38}% 29
+\BOOKMARK [3][-]{subsubsection.40}{Generated Report}{subsection.38}% 30
+\BOOKMARK [2][]{subsection.41}{Iterative Design}{section.26}% 31
+\BOOKMARK [3][-]{subsubsection.42}{An Compulsory Introduction}{subsection.41}% 32
+\BOOKMARK [3][-]{subsubsection.43}{Different Levels of Detail}{subsection.41}% 33
+\BOOKMARK [2][]{subsection.45}{A Working Scenario}{section.26}% 34
+\BOOKMARK [1][]{section.46}{Evaluation}{}% 35
+\BOOKMARK [2][]{subsection.47}{Participants}{section.46}% 36
+\BOOKMARK [2][]{subsection.48}{Material}{section.46}% 37
+\BOOKMARK [2][]{subsection.49}{Procedure}{section.46}% 38
+\BOOKMARK [3][-]{subsubsection.50}{Generating Slideshows}{subsection.49}% 39
+\BOOKMARK [3][-]{subsubsection.51}{Evaluation Methods}{subsection.49}% 40
+\BOOKMARK [2][]{subsection.54}{Results}{section.46}% 41
+\BOOKMARK [3][-]{subsubsection.55}{Generated Slideshow}{subsection.54}% 42
+\BOOKMARK [3][-]{subsubsection.58}{Authoring Experience of Narvis}{subsection.54}% 43
+\BOOKMARK [1][]{section.59}{Limitation and Discussion}{}% 44
+\BOOKMARK [1][]{section.60}{Conclusion and Future Work}{}% 45

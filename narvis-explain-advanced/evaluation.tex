@@ -1,72 +1,152 @@
 \section{Evaluation}
-We conducted a user study to evaluate Narvis, and gain insights on how the authoring experience and output would compare to slideshows created with general presentation tools. Our study was a between-subjects design with two sample groups: one group of participants used Narvis, the other group used Powerpoint, commonly used to create presentation slideshow. We asked participants to produce an introduction slideshow that presents a visual design, based on a image of the visualization and the textual description we provided. 
-We report our qualitative observations during this process, and provide insights on the quality of the slideshows generated from both groups by asking 20 volunteers to rate them.
+We conducted a user study to evaluate Narvis, and gained insights on how the authoring experience and output would compare to slideshows created with general presentation tools. Our study was a between-subjects design with two sample groups: one group of participants used Narvis, the other group used Powerpoint, which is widely used to create presentation slideshow. 
+We report our qualitative observations during the authoring process, and provide insights on the quality of the slideshows generated from both groups.
 \subsection{Participants}
-We invites 4 experts in data visualization to this user study. Al of them have more-than-one-year experience in the design and implementation of data visualization. 
+We invited 4 experts in data visualization to this user study as editor participants, denoted as PC1 and PC2 for control group, PE1 and PE2 for experiment group. All of them have more-than-one-year experience in the design and implementation of data visualization. We also sent emails to students in the data visualization course we mentioned before and recruited 20 volunteers to evaluate the quality of the generated slideshow as audience participants, denoted as PAs. 
 %\textbf{Audience }are novice in data visualization. They will review the slideshow produced by the experts, rate it, give subjective comments, and answer a series of questions to check their understanding of this visualization.\par
 %For editors, we have 4 postgraduate students, aging between 22-30, and all of them have more than one year experience in data visualization.\par
 %For audiences, we have 20 under graduate students, whose majors vary from business to biology. 
 %According to the questionnaire, none of them have accessed advanced data visualization before. Only 13\% students know the tree map, and none can give a accurate explanation of theme river with topic splitting and merging.  \par
 \subsection{Material}
-We extract the visual design and the corresponding literature description from  a visualization design paper ``TextFlow: Towards Better Understanding of Evolving Topics in Text''\cite{cui_textflow:_2011}.
-We choose \textit{TextFlow} based on two considerations. First, it's not too difficult for a novice but still a novel design that requires extra effect to clarify it.
+We extracted the visual design and the corresponding literature description from  a visualization design paper ``TextFlow: Towards Better Understanding of Evolving Topics in Text''\cite{cui_textflow:_2011}.
+We chose \textit{TextFlow} based following considerations. First, it's not too difficult for a novice but still a novel design that requires extra effect to clarify.
 Second, it is a typical abstract data visualization that is fully consist of graphical element, which is in the coverage of our edge detection algorithm. 
+Third, it visualize evolving topics in social media, which is an interesting topic and can increase the engagement of audiences. 
 
-This visualization design employs three visual units to demonstrate the evolving topics in text data. It conveys multiple level results of topic evolution analysis: a set of topics
+This visualization design conveys multiple level results of topic evolution analysis: a set of topics
 with splitting/merging relationships among each other, which encodes a series of topic flows, a set of critical events, which encodes glyphs, and the keyword correlations, which encode threads.  
 
 \subsection{Procedure}
-We run a two-hour long sessions, which is consist of 3 phases: (1)\textit{learn visualization}, (2)\textit{idea generation and sketch}, (3)\textit{authoring}.\par
-In the \textit{learn visualization} phase, participants read the literature description we extract from the paper, which is two-page long and describes the visual design with diagrams. This phase ends when the participants report the experimenters that they finished reading and understund this visual design. 
-This phase takes about 15min, since all the participants are experts in data visualization and familiar with reading such papers.
+\subsubsection{Generating Slideshows}
+We ran 90-min long sessions for the four participants separately. This session consist of 3 phases: (1)\textit{Learning Phase}, (2)\textit{Sketch Phase}, (3)\textit{Authoring Phase}.
 
-In the \textit{idea generation and sketch} phase, participants are asked to sketch ideas for introducing \textit{TextFlow} to general public. They are encouraged to give considerations to (i) convey the insight to the general public; (ii) organize a clear narrative structure; (iii) think about additional annotation required. Participants are asked to think aloud and experimenters are present in the room to observe. 
+In the \textit{Learning Phase}, participants read the literature description we extracted from the paper, which offered a detailed description of the visual design with diagrams. This phase ended when the participants reported the experimenters that they finished reading and understund this visual design. 
+This phase took 15 min, 14 min, 17 min and 13 min for 4 participants respectively.
 
-In the \textit{authoring} phase, participants implement the ideas in their sketch as detailed as possible in a one-hour-long session. Participants in control group use Power Point, a presentation making tool that all the participants are familiar with. In experimental group, before authoring, experimenters demonstrate the capacity of Narvis through an automatic step by step tutorial included in Narvis. This training lasts about 15 min and is not counted in the one-hour authoring session. Participants are also allowed to ask additional questions in the authoring phase.
+In the \textit{Sketching Phase}, participants were asked to sketch ideas for introducing \textit{TextFlow}. They were encouraged to give considerations to (i) convey the insight to the people with less experience in data visualization; (ii) organize a clear narrative structure; (iii) think about additional annotation and animation required. Participants are asked to think aloud and experimenters are present in the room to observe. 
 
-\subsection{Results}
-We analyzed the following material: 1) video and notes that the experimenters took during the user study session, which the participants consented to. 2) the slides and the sketch created by participants, 3) the interview with the editor participants, 4) the ranking, comments, answers, click stream data from the audience participants. 
-\subsubsection{Authoring Experience of Narvis}
+In the \textit{Authoring Phase}, participants implemented the ideas in their sketch as detailed as possible in an one-hour-long session to produce a narrative slideshow that can be self-explainatory. We send each participant a PNG file and a txt file as the raw material for authoring. Participants in control group use Power Point, a presentation making tool that all the participants are familiar with. In experimental group, before authoring, experimenters demonstrate the working flow of Narvis through an automatic step by step tutorial included in Narvis. This training lasted about 15 min and is not counted in the one-hour authoring session. Participants are also allowed to ask additional questions in the authoring phase.
 
-\noindent
-\textbf{Authoring time}
+\subsubsection{Evaluation Methods}
+The evaluation focus on two parts, the authoring experience of Narvis and the quality of the generated slideshows. We report our observation of the authoring experience based on a interview with the two PEs and the video we took during the authoring session. 
 
-\noindent
-\textbf{Ideation}
+To evaluate the slideshow generated from both groups, we first analyzed the slideshows and reported some quantitative observations, such as the number of slides.
+Then, to get an independent opinion, we asked 20 PAs to evaluate the generated slideshows. To eliminate the error introduced by other variables such as the different watching environment, this part was conducted in a website we built. Each PA was randomly assigned a slideshow when visited this website. They watch all the slides by clicking two buttons, ``next'' and ``previous'', and their click activity was automatically recorded by a background program.  After watching the slideshow, they were asked to finish an online questionnaire composed of 2 parts: 1) a quiz about the visual design of ``TextFlow''(with a full mark of 5);2) rate the slideshow  1 (very poor) to 5(excellent) at various aspects. 
 
-\subsubsection{Generated Slideshow}
+\section{Results}
+%We analyzed the following material: 1) video and notes that the experimenters took during the user study session, which the participants consented to. 2) the slides and the sketch created by participants, 3) the interview with the editor participants, 4) the ranking, comments, answers, click stream data from the audience participants. 
 
-\noindent
-\textbf{Number of produced slides}
+\subsection{Generated Slideshow}
+We obtained 2 slideshows from the control group, denoted as SC1 and SC2, and 2 slideshows from the experiment group, denoted as SE1 and SE2(see in Figure~\ref{fig:user_study}). 
 
-\noindent
-\textbf{The utility of attention cue}
 
-\noindent
-\textbf{Information coverage}
-
-\noindent
-\textbf{Information delivery}
+\begin{figure*}
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\linewidth]{user_study}
+ \caption{The slideshows produced by (a)Narvis and (b),(c)Power Point to introduce a visual unit, thread, in \textit{TextFlow}\cite{cui_textflow:_2011}. Note that (b) and (c) both miss the visual grammar of thread color and (c) forgets to mention the visual grammar of wave bundling length. }
+ \label{fig:user_study}
+\end{figure*}
 
 \noindent
-\textbf{Subjective rating}
-We conducted a first pilot study to ensure the clarity of the instructions and control the time of experiments. 
+\textbf{Observation from experimenters}
 
-We asked a group of 20 volunteers to evaluate the quality of the generated slideshow from 4 aspects, reablibity, . We conducted a questionnaire in advance to make sure that they all have no experience or knowledge in advanced data visualization. In a one-hour session, they are asked to view, comment, and rate these slide shows. They also answer a series of questions to check their understanding of the visualization design. \par 
-We record video during this session with the participants permission. For participants who review the slide show generated by Narvis, their click activity will be recorded automatically and they can make comments on the slides. These click stream data, as well as the comments stream, will be used to generate a report, which will then send to its editor. \par
-To conclude the user study, the experimenters conduct an interview with the participants about their authoring experience, the issues they encountered, if there are any, and the feedback report Narvis generated. \par
-\noindent{}
-\textbf{Subjective Assessments of produced slideshows}
+Here, we report our observation of the 4 slideshows baed on 1)the generated slideshows and their sketch; 2)the video and notes we took during experiments; 3) the click activities of the PAs; 3) interviews with participants.
 
-%\subsubsection{}
-%\subsubsection{}
-%xuke\par
-%reading 15min\par
-%draft 5min \par
-%making slides 40min \par
-%qiaomu\par
-%reading 14min\par
-%draft 5min\par
-%making slide 40min\par
-%\subsubsection{Generated slideshow}
-%\subsubsection{Authoring experience}
+SE1 and SE2 are similar since they were conducted with the same templates in Narvis. However, SE1 included all the animations we embedded in offered templates while SE2, whose creator preferred an abstract introduction, deleted most animation. SC1 explained the visual design with long, detailed textual description that was formatted with bullet points. SC2 mainly used symbol-based annotation for explaining, and re-editted the image we offered in Power Point . Table~\ref{tab:slides2} gives a quantitative report of the four slideshows.
+
+Information omission occurred at all four sketches, even though their creators were given the freedom to check with the provided material. For example, three sketches (the sketches for SC1, SC2, SE1) failed to mention the visual grammar of the size of glyph, two sketches (SE1, SE2 )omitted the visual grammar of the color of thread. 3 mistakes out of 4 got corrected in SE1 and SE2. When editing in the \textit{Unit Panel} to delete unemployed channels, the two editors both felt unsure about whether certain channels should be deleted, which helped them correct their omission. 
+For SC1 and SC2, only one mistake got noticed and corrected by its editor while the other two remained the same.
+
+With the same authoring time, SE1 had 29 slides, SE2 had 22 slides, SC1 had 7 slides, SC2 had 3 slides. PC2(the creator of SC2) spent most of the time to add symbol-based annotation, re-edit the image to realize techniques such as zoom-in, thus had little time to organize the textual annotation. Huge blocks of text were put arbitrarily in SC2.
+
+The total time required to read SEs was not significantly longer than that for SCs. This was out of the experimenters' expectation, especially when considering the number of slides included. 
+In SES, the average staying time at each slide was evidently lower than that in SCs, which might come from the short length of text. 
+
+\noindent
+\textbf{Evaluation by PAs}
+
+Table~\ref{tab:slides2} presents the results of the questionnaire. 
+
+\begin{figure}
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\linewidth]{clickstream}
+ \caption{The visualization of clickstream data when PAs watch the slideshows created by PE1(a), PE2(b), PC1(c), and PC2(d), respectively. In the line charts (top), each line is the watching trace of one PA. x-axis indicates the number of slides and y-axis indicates the total time used from beginning. In the stacked bar chart(bottom), a series of bars represent the average time PAs spent on watching each slides. }
+ \label{fig:clickstream}
+\end{figure}
+
+
+
+\begin{table}
+  \caption{A summary of 4 slideshows}
+  \label{tab:slides1}
+  \small
+  \centering
+  \begin{tabu}{p{2cm}|p{0.9cm}|p{0.9cm}|p{0.9cm}|p{0.9cm}}
+  \toprule
+ \textbf{} &\textbf{SE1} & \textbf{SE2} & \textbf{SC1}& \textbf{SC2} \\ 
+   \midrule
+  \textbf{Number of Slides } & 29  & 33 & 7 & 3 \\ 
+ \midrule
+  \textbf{Average Reading Time(Total,s)} & 327.05 & 156.78 & 169.33 & 128.84\\ 
+ \midrule
+  \textbf{Averrage Reading Time(Per Slide, s)} & 11.27 & 7.09 &24 & 42\\ 
+   \midrule
+  \textbf{Information Missing (in Slideshow/in Sketch) }& 1/4 & 0/3 & 2/3 & 2/2\\ 
+     \midrule
+  \textbf{Average Length of Text (per Slide) }& 10.7 & 12.3 & 32 & 47\\ 
+    
+  \bottomrule
+
+  \end{tabu}
+  \vspace{1mm}
+\end{table}
+
+
+
+\begin{table}[tb]
+  \caption{The questionnaire result}
+  \label{tab:slides2}
+  \small
+  \centering
+  \begin{tabular}{p{1.5cm}|p{0.9cm}|p{0.9cm}|p{0.9cm}|p{0.9cm}}
+  \toprule
+ \textbf{} &\textbf{SE1} & \textbf{SE2} & \textbf{SC1}& \textbf{SC2} \\ 
+   \midrule
+  \textbf{Quiz Score } & 3.75  & 3.17 & 2.6 & 3.0 \\ 
+ \midrule
+ \midrule
+  \textbf{Readability} & 3.8 & 3.5 & 3.2& 2.75\\ 
+ \midrule
+  \textbf{Utility} & 3.875 & 3.375 & 2.4 & 3.35\\ 
+   \midrule
+  \textbf{Aesthetics }  & 4.125 & 3.4 & 2.1& 2.75\\ 
+  \midrule
+  \textbf{Attractiveness} & 3.9 & 3.3 & 2.2 & 2.5\\ 
+  
+  \bottomrule
+
+  \end{tabular}
+  \vspace{1mm}
+\end{table}
+
+For SEs, the PAs were excited about the animation applied and one PA even asked about the source code. No complain was made about the relatively long watching time for SEs, which might due to ``the transition is smooth and the structure is well organized''(from one PA) and the short staying time at each slide. PEs also appreciated that textual descriptions were brief and were separated into different slides.
+We got valuable suggestions for the improvement of Narvis, such as the inclusion of interaction and the implementation of a progress bar to demonstrate when an animation will end. 
+
+For SCs, the huge blocks of text, which appears in both SCs, got most complained. 
+One PA commented that`` it is hard to read and I have to admit I skipped some parts, thus still confused about this design.'' They enjoyed the symbol-based annotation and the way the creator re-edited the image in SC2. However, such operation is time-consuming in Power Point, resulted in a short, unfinished slideshow with unformatted text. 
+
+
+\subsection{Authoring Experience of Narvis}
+All 2 Participants were impressed by the overall Narvis design, mentioning that the workflow was intuitive and that the interactions and animations were smooth. 
+
+\noindent
+\textbf{Learnability}
+We confirmed that all 2 PCs were able to craft a slideshow with Narvis after a short training period. 
+
+\noindent
+\textbf{General comments from PEs}
+
+\noindent
+\textbf{Observation from }
+
+jj

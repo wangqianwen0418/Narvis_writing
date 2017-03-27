@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.14)  23 MAR 2017 16:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.14)  27 MAR 2017 12:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -266,6 +266,102 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@thisruleclass=\count99
 \@lastruleclass=\count100
 \@thisrulewidth=\dimen133
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/CJK.sty
+Package: CJK 2015/04/18 4.8.4
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/mule/MULEenc.sty
+Package: MULEenc 2015/04/18 4.8.4
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/cjk/texinput/CJK.enc
+File: CJK.enc 2015/04/18 4.8.4
+)
+LaTeX Info: Redefining \selectfont on input line 755.
+\CJK@indent=\box31
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count101
+\float@exts=\toks20
+\float@box=\box32
+\@float@everytoks=\toks21
+\@floatcapt=\box33
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks22
+\c@algorithm=\count102
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count103
+\c@ALG@rem=\count104
+\c@ALG@nested=\count105
+\ALG@tlm=\skip53
+\ALG@thistlm=\skip54
+\c@ALG@Lnr=\count106
+\c@ALG@blocknr=\count107
+\c@ALG@storecount=\count108
+\c@ALG@tmpcounter=\count109
+\ALG@tmplength=\skip55
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/10 v2.15b AMS math features
+\@mathmargin=\skip56
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen134
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen135
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count110
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count111
+\leftroot@=\count112
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count113
+\DOTSCASE@=\count114
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box34
+\strutbox@=\box35
+\big@size=\dimen136
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count115
+\c@MaxMatrixCols=\count116
+\dotsspace@=\muskip10
+\c@parentequation=\count117
+\dspbrk@lvl=\count118
+\tag@help=\toks24
+\row@=\count119
+\column@=\count120
+\maxfields@=\count121
+\andhelp@=\toks25
+\eqnshift@=\dimen137
+\alignsep@=\dimen138
+\tagshift@=\dimen139
+\tagwidth@=\dimen140
+\totwidth@=\dimen141
+\lineht@=\dimen142
+\@envbody=\toks26
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2016/05/05 v6.83n Hypertext links for LaTeX
  (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -309,19 +405,18 @@ Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen134
-\Hy@linkcounter=\count101
-\Hy@pagecounter=\count102
+\@linkdim=\dimen143
+\Hy@linkcounter=\count122
+\Hy@pagecounter=\count123
  (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count103
+\Hy@SavedSpaceFactor=\count124
  (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
@@ -332,16 +427,16 @@ Package hyperref Info: Plain pages OFF on input line 4461.
 Package hyperref Info: Backreferencing OFF on input line 4466.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4691.
-\c@Hy@tempcnt=\count104
+\c@Hy@tempcnt=\count125
  (/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip10
+\Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5044.
-\XeTeXLinkMargin=\dimen135
-\Fld@menulength=\count105
-\Field@Width=\dimen136
-\Fld@charsize=\dimen137
+\XeTeXLinkMargin=\dimen144
+\Fld@menulength=\count126
+\Field@Width=\dimen145
+\Fld@charsize=\dimen146
 Package hyperref Info: Hyper figures OFF on input line 6298.
 Package hyperref Info: Link nesting OFF on input line 6303.
 Package hyperref Info: Hyper index ON on input line 6306.
@@ -351,83 +446,151 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6323.
 Package hyperref Info: PDF/A mode OFF on input line 6328.
 LaTeX Info: Redefining \ref on input line 6368.
 LaTeX Info: Redefining \pageref on input line 6372.
-\Hy@abspage=\count106
-\c@Item=\count107
-\c@Hfootnote=\count108
+\Hy@abspage=\count127
+\c@Item=\count128
+\c@Hfootnote=\count129
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2016/05/05 v6.83n Hyperref driver for pdfTeX
-\Fld@listcount=\count109
-\c@bookmark@seq@number=\count110
+\Fld@listcount=\count130
+\c@bookmark@seq@number=\count131
  (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
-\Hy@SectionHShift=\skip53
+\Hy@SectionHShift=\skip59
 )
 
 Package hyperref Warning: Option `pdftex' has already been used,
-(hyperref)                setting the option has no effect on input line 143.
+(hyperref)                setting the option has no effect on input line 153.
 
 
 Package hyperref Warning: Option `pagebackref' has already been used,
-(hyperref)                setting the option has no effect on input line 143.
+(hyperref)                setting the option has no effect on input line 153.
 
-Package hyperref Info: Option `pageanchor' set `true' on input line 143.
-Package hyperref Info: Option `plainpages' set `false' on input line 143.
-Package hyperref Info: Option `hypertexnames' set `false' on input line 143.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 153.
+
+Package hyperref Info: Option `pageanchor' set `true' on input line 153.
+Package hyperref Info: Option `plainpages' set `false' on input line 153.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 153.
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 143.
+(hyperref)                setting the option has no effect on input line 153.
 
-Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 143.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 143.
-Package hyperref Info: Option `breaklinks' set `true' on input line 143.
-Package hyperref Info: Option `colorlinks' set `false' on input line 143.
-Package hyperref Info: Option `nesting' set `true' on input line 143.
-Package hyperref Info: Option `linktocpage' set `true' on input line 143.
+Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 153.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 153.
+Package hyperref Info: Option `breaklinks' set `true' on input line 153.
+Package hyperref Info: Option `colorlinks' set `false' on input line 153.
+Package hyperref Info: Option `nesting' set `true' on input line 153.
+Package hyperref Info: Option `linktocpage' set `true' on input line 153.
 (/Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.aux)
 \openout1 = `template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 148.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 148.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 158.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 158.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 148.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 158.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
-\scratchdimen=\dimen138
-\scratchbox=\box31
-\nofMPsegments=\count112
-\nofMParguments=\count113
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count114
-\MPscratchDim=\dimen139
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count132
+\scratchdimen=\dimen147
+\scratchbox=\box36
+\nofMPsegments=\count133
+\nofMParguments=\count134
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count135
+\MPscratchDim=\dimen148
+\MPnumerator=\count136
+\makeMPintoPDFobject=\count137
+\everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -439,7 +602,7 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \microtypecontext on input line 148.
+LaTeX Info: Redefining \microtypecontext on input line 158.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -452,24 +615,23 @@ Package microtype Info: No adjustment of character kerning.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
-\big@size=\dimen140
-\AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 148.
+\AtBeginShipoutBox=\box37
+Package hyperref Info: Link coloring OFF on input line 158.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count117
+\c@section@level=\count138
 )
-LaTeX Info: Redefining \ref on input line 148.
-LaTeX Info: Redefining \pageref on input line 148.
-LaTeX Info: Redefining \nameref on input line 148.
+LaTeX Info: Redefining \ref on input line 158.
+LaTeX Info: Redefining \pageref on input line 158.
+LaTeX Info: Redefining \nameref on input line 158.
  (/Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.out) (/Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.out)
 \@outlinefile=\write3
 \openout3 = `template.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 150.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 160.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
@@ -477,15 +639,15 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `phv' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-\abstractwidth=\skip54
- <pictures/teaser.png, id=213, 1368.61313pt x 621.07031pt>
+\abstractwidth=\skip60
+ <pictures/teaser.png, id=184, 1368.61313pt x 621.07031pt>
 File: pictures/teaser.png Graphic file (type png)
  <use pictures/teaser.png>
-Package pdftex.def Info: pictures/teaser.png used on input line 150.
+Package pdftex.def Info: pictures/teaser.png used on input line 160.
 (pdftex.def)             Requested size: 467.22528pt x 212.02348pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 150.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 150.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 160.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 160.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
@@ -493,30 +655,30 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `ztmcm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 150.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 160.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 150.
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 160.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 150.
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 160.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 150.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 160.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 150.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 160.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 150.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 160.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 150.
- <diamondrule.pdf, id=217, 213.79875pt x 12.045pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 160.
+ <diamondrule.pdf, id=188, 213.79875pt x 12.045pt>
 File: diamondrule.pdf Graphic file (type pdf)
  <use diamondrule.pdf>
-Package pdftex.def Info: diamondrule.pdf used on input line 150.
+Package pdftex.def Info: diamondrule.pdf used on input line 160.
 (pdftex.def)             Requested size: 213.79822pt x 12.04495pt.
  (./intro.tex
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
@@ -576,121 +738,126 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
- [2]) (./analysis.tex <pictures/hierarchic.png, id=315, 498.36188pt x 490.08093pt>
-File: pictures/hierarchic.png Graphic file (type png)
- <use pictures/hierarchic.png>
-Package pdftex.def Info: pictures/hierarchic.png used on input line 21.
-(pdftex.def)             Requested size: 251.31898pt x 247.14119pt.
+ [2]) (./analysis.tex <pictures/hierarchic2.png, id=288, 1312.15219pt x 384.6872pt>
+File: pictures/hierarchic2.png Graphic file (type png)
+ <use pictures/hierarchic2.png>
+Package pdftex.def Info: pictures/hierarchic2.png used on input line 23.
+(pdftex.def)             Requested size: 251.31898pt x 73.6783pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
-[]|\OT1/ptm/b/n/7 Parallel
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+[]|\OT1/ptm/b/n/7 Relative Po-si-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
-[]|\OT1/ptm/b/n/7 Force-
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+[]|\OT1/ptm/b/n/7 Orthogonal,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
 []|\OT1/ptm/m/n/7 (+20) Spiral Dot
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
-\OT1/ptm/m/n/7 (+20) Bub-ble
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\OT1/ptm/m/n/7 (+20) Chart, Scat-ter
  []
 
 
-LaTeX Warning: Citation `7042494' on page 3 undefined on input line 60.
-
-
-Overfull \hbox (8.62894pt too wide) in paragraph at lines 60--60
-[]|\OT1/ptm/m/n/7 (-20) TopicPanorama
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\OT1/ptm/m/n/7 (+20) Plot, Bub-ble
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--62
-[]|\OT1/ptm/m/n/7 (+20) Node-link
+LaTeX Warning: Citation `7042494' on page 3 undefined on input line 97.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+[]|\OT1/ptm/m/n/7 (+20) Circle pack-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--62
-\OT1/ptm/m/n/7 (+20) Di-a-gram,
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+\OT1/ptm/m/n/7 (+20) ing, Top-ic-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--62
-[]|\OT1/ptm/m/n/7 (+20) Parallel
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+[]|\OT1/ptm/m/n/7 (+20) Radar Chart,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--62
-\OT1/ptm/m/n/7 (+20) Co-or-di-
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+[]|\OT1/ptm/m/n/7 (+20) Line Chart,
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 62--62
-\OT1/ptm/m/n/7 (+20) nates, Arc
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\OT1/ptm/m/n/7 (+20) Par-al-lel Co-or-
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 64--64
-[]|\OT1/ptm/m/n/7 (+20) Chord Di-a-
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\OT1/ptm/m/n/7 (+20) di-nates, Arc
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--64
-[]|\OT1/ptm/m/n/7 (+20) Parallel
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+[]|\OT1/ptm/m/n/7 (+20) Force-directed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--64
-\OT1/ptm/m/n/7 (+20) Sets,
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+[]|\OT1/ptm/m/n/7 (+20) Parallel Sets,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--64
-\OT1/ptm/m/n/7 (+20) Sankey
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+\OT1/ptm/m/n/7 (+20) Sankey Di-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-[]|\OT1/ptm/m/n/7 (+20) Stream
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+\OT1/ptm/m/n/7 (+20) gram, Flow
  []
 
 
-Underfull \hbox (badness 3884) in paragraph at lines 69--69
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]|\OT1/ptm/m/n/7 (+20) Area Spi-ral
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
 []|\OT1/ptm/m/n/7 (+20) Radial Bar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
-[]|\OT1/ptm/m/n/7 (+20) Spiral Bar
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
 []|\OT1/ptm/m/n/7 (+20) Candlestick
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
-[]|\OT1/ptm/m/n/7 (+20) Pie Chart,
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+[]|\OT1/ptm/m/n/7 (+20) Sunburst Di-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--75
-[]|\OT1/ptm/m/n/7 (+20) Sentence
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+[]|\OT1/ptm/m/n/7 (+20) Matrix, Tree
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
+[]|\OT1/ptm/m/n/7 (+20) Pie Chart,
  []
 
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
- [3 <./pictures/hierarchic.png>] <pictures/unit_relationship.png, id=333, 1368.61313pt x 788.19469pt>
+ [3 <./pictures/hierarchic2.png>] <pictures/unit_relationship.png, id=312, 1368.61313pt x 788.19469pt>
 File: pictures/unit_relationship.png Graphic file (type png)
  <use pictures/unit_relationship.png>
-Package pdftex.def Info: pictures/unit_relationship.png used on input line 119.
+Package pdftex.def Info: pictures/unit_relationship.png used on input line 162.
 (pdftex.def)             Requested size: 251.31898pt x 144.73131pt.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -698,7 +865,7 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
- [4 <./pictures/unit_relationship.png>]) (./designtasks.tex
+) (./designtasks.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
@@ -706,151 +873,194 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-
+ [4 <./pictures/unit_relationship.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 30--30
 [][][]\OT1/ptm/m/n/8 (+20) https://support.office.com/en-us/article/About-PowerPoint-Designer-
  []
 
-) (./system.tex <pictures/overview.png, id=362, 1257.19687pt x 834.86906pt>
-File: pictures/overview.png Graphic file (type png)
- <use pictures/overview.png>
-Package pdftex.def Info: pictures/overview.png used on input line 13.
-(pdftex.def)             Requested size: 251.31898pt x 166.89442pt.
+) (./system.tex <pictures/overview2.png, id=340, 1257.19687pt x 832.61063pt>
+File: pictures/overview2.png Graphic file (type png)
+ <use pictures/overview2.png>
+Package pdftex.def Info: pictures/overview2.png used on input line 13.
+(pdftex.def)             Requested size: 251.31898pt x 166.44295pt.
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
- [5] [6 <./pictures/overview.png>]
-Overfull \hbox (3.4389pt too wide) in paragraph at lines 89--89
+ [5 <./pictures/overview2.png>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 41.
+ [6]
+Overfull \hbox (3.4389pt too wide) in paragraph at lines 120--120
 []|\OT1/ptm/b/n/7 Animation| 
  []
 
 
-Overfull \hbox (2.79147pt too wide) in paragraph at lines 89--89
+Overfull \hbox (2.79147pt too wide) in paragraph at lines 120--120
 []|\OT1/ptm/b/n/7 Engaging| 
  []
 
 
-Overfull \hbox (1.21637pt too wide) in paragraph at lines 89--89
+Overfull \hbox (1.21637pt too wide) in paragraph at lines 120--120
 []|\OT1/ptm/b/n/7 orientate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
+Underfull \hbox (badness 10000) in paragraph at lines 120--120
 \OT1/ptm/b/n/7 at-ten-
  []
 
 
-Overfull \hbox (6.1513pt too wide) in paragraph at lines 89--89
+Overfull \hbox (6.1513pt too wide) in paragraph at lines 120--120
 []|\OT1/ptm/b/n/7 perception| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
+Underfull \hbox (badness 10000) in paragraph at lines 120--120
 []|\OT1/ptm/b/n/7 working
  []
 
 
-Overfull \hbox (1.81496pt too wide) in paragraph at lines 91--91
+Overfull \hbox (1.81496pt too wide) in paragraph at lines 122--122
 []|\OT1/ptm/b/n/7 Morphing| 
  []
 
-LaTeX Font Info:    Try loading font information for U+dingbat on input line 91.
+LaTeX Font Info:    Try loading font information for U+dingbat on input line 122.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/dingbat/udingbat.fd
 File: udingbat.fd 2001/04/27 v1.00 Font definitions for the dingbat font
 )
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
 []|\OT1/ptm/m/n/7 (+20) grammar of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []|\OT1/ptm/b/n/7 Zoom-
  []
 
 
-Overfull \hbox (5.38493pt too wide) in paragraph at lines 101--101
+Overfull \hbox (5.38493pt too wide) in paragraph at lines 132--132
 []|\OT1/ptm/b/n/7 Annotation| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--103
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
 []|\OT1/ptm/b/n/7 Fade
  []
 
 
-Overfull \hbox (5.37094pt too wide) in paragraph at lines 105--105
+Overfull \hbox (5.37094pt too wide) in paragraph at lines 136--136
 []|\OT1/ptm/b/n/7 Decompose| 
  []
 
 
-Underfull \hbox (badness 5119) in paragraph at lines 105--105
+Underfull \hbox (badness 5119) in paragraph at lines 136--136
 []|\OT1/ptm/m/n/7 (+20) Show how a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--105
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
 \OT1/ptm/m/n/7 (+20) com-posed by
  []
 
 
-Underfull \hbox (badness 2443) in paragraph at lines 105--106
+Underfull \hbox (badness 2443) in paragraph at lines 136--137
 []|\OT1/ptm/m/n/7 (+20) A novel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 \OT1/ptm/m/n/7 (+20) de-sign
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 120.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 149.
+<pictures/interface2.png, id=375, 1097.60063pt x 575.90157pt>
+File: pictures/interface2.png Graphic file (type png)
+ <use pictures/interface2.png>
+Package pdftex.def Info: pictures/interface2.png used on input line 171.
+(pdftex.def)             Requested size: 251.31898pt x 131.85701pt.
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
- [7]) (./evaluation.tex) (./discussion_conclusion.tex) (/Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.bbl [8]
-Missing character: There is no √ in font ptmr7t!
-Missing character: There is no © in font ptmr7t!
+ [7 <./pictures/interface2.png>]) (./evaluation.tex <clickstream2.png, id=400, 1510.89468pt x 526.21594pt>
+File: clickstream2.png Graphic file (type png)
+ <use clickstream2.png>
+Package pdftex.def Info: clickstream2.png used on input line 38.
+(pdftex.def)             Requested size: 251.31898pt x 87.52847pt.
+ <pictures/user_study.png, id=401, 1509.38907pt x 360.59718pt>
+File: pictures/user_study.png Graphic file (type png)
+ <use pictures/user_study.png>
+Package pdftex.def Info: pictures/user_study.png used on input line 45.
+(pdftex.def)             Requested size: 514.92374pt x 123.01408pt.
 
-Underfull \hbox (badness 1189) in paragraph at lines 512--521
-[]\OT1/ptm/m/n/8 (+20) J. Zhao, N. Cao, Z. Wen, Y. Song, Y. R. Lin, and C. Collins.
+
+LaTeX Warning: Reference `fig:user_interface' on page 8 undefined on input line 55.
+
+[8 <./clickstream2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+[]\OT1/ptm/b/n/7 Average Read-ing
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 3098) in paragraph at lines 98--98
+[]\OT1/ptm/b/n/7 Averrage Read-ing
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+[]\OT1/ptm/b/n/7 Information
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+\OT1/ptm/b/n/7 Miss-ing (in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+\OT1/ptm/b/n/7 Slideshow/in
+ []
+
+) (./discussion_conclusion.tex) (/Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.bbl
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
- [9])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
- [10
+ [9 <./pictures/user_study.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+
+Underfull \hbox (badness 1189) in paragraph at lines 501--510
+[]\OT1/ptm/m/n/8 (+20) J. Zhao, N. Cao, Z. Wen, Y. Song, Y. R. Lin, and C. Collins.
+ []
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
+ [10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
  (/Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 176.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 176.
 Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
  ) 
 Here is how much of TeX's memory you used:
- 8974 strings out of 493014
- 138288 string characters out of 6133351
- 269314 words of memory out of 5000000
- 11899 multiletter control sequences out of 15000+600000
- 58981 words of font info for 294 fonts, out of 8000000 for 9000
+ 11081 strings out of 493014
+ 163417 string characters out of 6133351
+ 302369 words of memory out of 5000000
+ 13944 multiletter control sequences out of 15000+600000
+ 61765 words of font info for 307 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,38p,1416b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc} </Users/wangqianwen/Library/texlive/2016/texmf-var/fonts/pk/ljfour/public/dingbat/dingbat.420pk></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.pdf (10 pages, 1122108 bytes).
+ 34i,16n,38p,1416b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc} </Users/wangqianwen/Library/texlive/2016/texmf-var/fonts/pk/ljfour/public/dingbat/dingbat.420pk></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/wangqianwen/Desktop/coding-train/Narvis_writing/narvis-explain-advanced/.texpadtmp/template.pdf (10 pages, 2433218 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
- 441 compressed objects within 5 object streams
- 124 named destinations out of 1000 (max. 500000)
- 48570 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 493 PDF objects out of 1000 (max. 8388607)
+ 447 compressed objects within 5 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 48529 words of extra memory for PDF output out of 51595 (max. 10000000)
 

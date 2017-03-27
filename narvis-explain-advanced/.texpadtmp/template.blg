@@ -4,14 +4,10 @@ The top-level auxiliary file: template.aux
 The style file: ../abbrv-doi.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ../template.bib
-Repeated entry---line 62 of file ../template.bib
- : @inproceedings{collins2009parallel
- :                                   ,
-I'm skipping whatever remains of this entry
 Warning--entry type for "schmidt_living_2017" isn't style-file defined
---line 695 of file ../template.bib
+--line 710 of file ../template.bib
 Warning--entry type for "bliss_effects_1992" isn't style-file defined
---line 1906 of file ../template.bib
+--line 1921 of file ../template.bib
 Warning--I didn't find a database entry for "7042494"
 Warning--empty year in amini_understanding_2015
 Warning--empty journal in amini_authoring_2017
@@ -35,6 +31,7 @@ Warning--empty journal in cohn_visual_2013
 Warning--empty year in cohn_visual_2013
 Warning--empty journal in cui_textflow:_2011
 Warning--empty year in cui_textflow:_2011
+Warning--empty year in cunningham_culture_2009
 Warning--empty year in eccles_stories_2007
 Warning--empty journal in fulda_timelinecurator:_2016
 Warning--empty year in fulda_timelinecurator:_2016
@@ -69,8 +66,6 @@ Warning--empty journal in ruchikachorn_learning_2015
 Warning--empty year in ruchikachorn_learning_2015
 Warning--empty journal in satyanarayan_authoring_2014
 Warning--empty year in satyanarayan_authoring_2014
-Warning--empty journal in satyanarayan_vega-lite:_2017
-Warning--empty year in satyanarayan_vega-lite:_2017
 Warning--empty year in savva_revision:_2011
 Warning--empty journal in segel_narrative_2010
 Warning--empty year in segel_narrative_2010
@@ -87,45 +82,45 @@ Warning--empty journal in wu_opinionseer:_2010
 Warning--empty year in wu_opinionseer:_2010
 Warning--empty journal in zhao_x0023;fluxflow:_2014
 Warning--empty year in zhao_x0023;fluxflow:_2014
-You've used 51 entries,
+You've used 50 entries,
             2598 wiz_defined-function locations,
-            913 strings with 14234 characters,
-and the built_in function-call counts, 52075 in all, are:
-= -- 11431
-> -- 1022
-< -- 1867
-+ -- 2258
-- -- 391
-* -- 1929
-:= -- 7414
-add.period$ -- 162
-call.type$ -- 51
-change.case$ -- 326
+            907 strings with 13989 characters,
+and the built_in function-call counts, 50635 in all, are:
+= -- 11112
+> -- 994
+< -- 1816
++ -- 2197
+- -- 380
+* -- 1872
+:= -- 7216
+add.period$ -- 159
+call.type$ -- 50
+change.case$ -- 317
 chr.to.int$ -- 0
-cite$ -- 125
-duplicate$ -- 695
-empty$ -- 1596
-format.name$ -- 350
-if$ -- 13697
+cite$ -- 123
+duplicate$ -- 675
+empty$ -- 1552
+format.name$ -- 340
+if$ -- 13312
 int.to.chr$ -- 0
-int.to.str$ -- 51
+int.to.str$ -- 50
 missing$ -- 51
-newline$ -- 494
-num.names$ -- 102
-pop$ -- 434
+newline$ -- 484
+num.names$ -- 100
+pop$ -- 426
 preamble$ -- 1
-purify$ -- 277
+purify$ -- 270
 quote$ -- 0
-skip$ -- 477
+skip$ -- 462
 stack$ -- 0
-substring$ -- 3477
-swap$ -- 135
-text.length$ -- 1022
+substring$ -- 3372
+swap$ -- 127
+text.length$ -- 994
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 200
-warning$ -- 74
-while$ -- 290
-width$ -- 53
-write$ -- 1623
-(There was 1 error message)
+type$ -- 194
+warning$ -- 73
+while$ -- 281
+width$ -- 52
+write$ -- 1583
+(There were 76 warnings)

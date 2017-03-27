@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}  
+\usepackage{CJK}  
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}  
+\usepackage{algorithm}  
+\usepackage{algorithmicx}  
+\usepackage{algpseudocode}  
+\usepackage{amsmath}  
+\renewcommand{\algorithmicrequire}{\textbf{Data:}}
+\renewcommand{\algorithmicensure}{\textbf{Result:}}
+\renewcommand{\algorithmicforall}{\textbf{foreach:}}
+   
+\floatname{algorithm}{}
+   
+\begin{document}  
+    \begin{algorithm}  
+        \caption{Object Detection}  
+        \begin{algorithmic} % line number
+            \Require A bitmap in the form of a two-dimensional array: $A$
+            \Ensure A list of objects: $B$
+            \State $B \gets \{\}$
+            \ForAll{$pixel (x,y) \in A$} 
+                \If{no mark on $pixel(x,y)$}
+                    \State $Q \gets \{(x,y)\} $
+                    \State $Obj \gets \{\}$
+                    \ForAll{$(x,y) \in Q$}
+                        \State $Q = Q - \{(x,y)\}$
+                        \State $Obj = Obj \cup \{(x,y)\}$
+                        \ForAll {$(x',y')$ which $|x'-x|+|y'-y|\leq2$ and no mark on $pixel(x',y')$}
+                            \If{$pixel(x,y)$ and $pixel(x',y')$ have similar color}
+                                \State $Q = Q \cup \{(x',y')\}$
+                                \State Make a mark on $(x',y')$
+                            \EndIf
+                        \EndFor
+                    \EndFor
+                    \State $B = B \cup \{Obj\}$
+                \EndIf
+            \EndFor
+            \State \Return{$B$}
+        \end{algorithmic}  
+    \end{algorithm} 
+    \begin{algorithm}  
+        \caption{Object Clustering}  
+        \begin{algorithmic} % line number
+            \Require A list of objects: $A$, the number of clusters: $N$
+            \Ensure A list of objects: $B$
+            \State $E \gets \{\}$
+            \ForAll{$a_1 \in A$}
+                \ForAll{$a_2 \in A$ and $distance(a_1,a_2) \leq L$} \Comment{$L$ is a parameter that accelerates our calculations}
+                    \If{$a_1$ and $a_2$ have similar color}
+                        \State $d \gets$ the distance between $a_1$ and $a_2$
+                        \State $E \gets E \cup \{(a_1, a_2, d)\}$
+                    \EndIf
+                \EndFor
+            \EndFor
+            \State $B \gets A$
+            \State $E \gets$ sort $E$ by the $d$ of each elements in descending order
+            \ForAll{$(a_1,a_2, d) \in E$}
+                \State $b_1 \gets b|b\in B, a_1 \subseteq b$
+                \State $b_2 \gets b|b\in B, a_2 \subseteq b$
+                \If{$b_1 \neq b_2$}
+                    \State $B = (B - \{b1\} - \{b2\})\cup \{b1 \cup b2\}$
+                \EndIf
+                \If{$|B|\leq N$}
+                    \State break
+                \EndIf
+            \EndFor
+            \State \Return{$B$}
+        \end{algorithmic}  
+    \end{algorithm} 
+\end{document}  
