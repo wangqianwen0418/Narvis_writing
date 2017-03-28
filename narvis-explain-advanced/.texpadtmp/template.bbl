@@ -51,6 +51,12 @@ M.~Bostock and J.~Heer.
 }{.}\hspace{.4pt}174}}
 
 
+\bibitem{bostock2011d3}
+M.~Bostock, V.~Ogievetsky, and J.~Heer.
+\newblock D$^3$ data-driven documents.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  17(12):2301--2309, 2011.
+
 \bibitem{bryan_temporal_2016}
 C.~Bryan, K.~L. Ma, and J.~Woodring.
 \newblock Temporal summary images: An approach to narrative visualization via
@@ -320,17 +326,6 @@ B.~Lee, N.~H. Riche, P.~Isenberg, and S.~Carpendale.
 }{/}MCG\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}2015\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}99}}
-
-
-\bibitem{liu_online_2016}
-S.~Liu, J.~Yin, X.~Wang, W.~Cui, K.~Cao, and J.~Pei.
-\newblock Online visual analytics of text streams.
-\newblock 22(11):2451--2466. doi: {{%
-10\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}1109\discretionary{/}{%
-}{/}TVCG\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}2015\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}2509990}}
 
 
 \bibitem{munzner_visualization_2014}

@@ -1,14 +1,17 @@
 \section{Limitation and Discussion}
 
-Results of our study indicate that editors could make slideshow more efficiently with Narvis than with professional software. In addition, audience report that the perceived quality of slideshow generated with Narvis is higher than those created by editors from scratch. However, we identify four limitations existed in Narvis.
+Results of our study indicate that editors could make slideshow more efficiently with Narvis than with professional software. In addition, audience report that the perceived quality of slideshow generated with Narvis is higher than those created with Other tools. However, we identify three limitations existed in Narvis.
 
 First, the library of templates cannot cover all innovative designs. In current prototype, we allow users to extend existing templates to alleviate this issue. 
 % To deal with emerging designs, we plan to adopt more custom-defined templates by creating open platform that supports template sharing and downloading in future research. 
 % Second, to decompose visualization precisely, users are required to import images with high resolution, which cannot be guaranteed. 
-Second, the results of visualization decomposition highly depend on the quality of imported images. We plan to design more robust algorithm to tackle input with various resolution.
-Third, interactive features are important and commonly-seen in modern visualization. However, Narvis is limited to static visual design. We plan to investigate narrative introduction of interactions in future research. The fourth limitation of our study is the evaluation. \siwei{I do not know what is our limitations in evaluation. Involve small number of editors? Or audience? The evaluation of quality of slideshow is limited? Our system is only compared to ppt? We try small number of designs? }
+Second, Narvis only accepts limited types of input. It is specified for static visual design and  the decomposition performance highly depends on the quality of the input image. 
+%%We plan to implement more robust algorithm to tackle input with various resolution.
+%Third, interactive features are important and commonly-seen in modern visualization. However, Narvis is limited to static visual design. 
+%We plan to investigate narrative introduction of interactions in future research.
+ The third limitation of our study is the evaluation. As with all user studies with small sample size, these results should be treated with caution and Narvis warrants further evaluation to confirm our initial insights. Another limitation in the evaluation is the metrics for assessing the quality of slideshow, which remains an opening question. Our study makes an attempt to assessing its quality but does not delve into all relevant metrics (e.g. memorability).
 
-It worth noting that we propose a model for narrative presentation of data visualization. The model can be generalized to create other forms of presentation, such as narrative posters and data videos. \siwei{more generalization is better}
+%It worth noting that we propose a model for narrative presentation of data visualization. The model can be generalized to create other forms of presentation, such as narrative posters, comic strips and data videos, and to produce self-explanatory tutorial, which is in high demand because of the rapid growth of visual analysis tool.  
 
 
 % We are not pretending that Narvis are exclusive for all types of visualization design. However, by allowing users a high flexibility to create and edit templates, we believe its coverage  will quickly broaden as more and more users contribute their own templates to our library. \par
@@ -18,11 +21,13 @@ It worth noting that we propose a model for narrative presentation of data visua
 
 
 \section{Conclusion and Future Work}
-We have presented Narvis, an authoring tool to generate slideshow for explaining visual designs. We developed Narvis based on our close collaboration with two editors and seven audience. \siwei{I am not sure about the logic workflow. Have you decided whether the tasks drive our model and system, or the tasks and model drives the system?}
+We have presented Narvis, an authoring tool to generate slideshow for explaining visual designs. 
+The design and implementation of Narvis is guided by a constructive model we proposed for introducing visual designs, as well as the collaboration with end users. 
+Narvis allows users to create a self-explanatory slideshow through assembling the offered templates, supports easy creation of animations tailored for presenting visual design, suggests design options based on content, thus enables a high efficient crafting process.
+The user studies have confirmed the utility and effectiveness of Narvis. To the best of our knowledge, this is the first framework designed for presenting new visual designs. Though Narvis is designed for making introduction slideshow, it can be generalized to create other forms of presentation, such as narrative posters, comic strips and data videos, and to produce self-explanatory tutorial, which is in high demand because of the rapid growth of visual analysis tools.
 
-In future work, we envision two main research directions. First, with the popularity of visualization toolkits, such as D3 \siwei{cite d3 paper}, an increasing number of visual designs are deployed online. To support a border usage scenario, we plan to equip Narvis with the ability to parse and analyze online visualizations. 
-Second, we aim at iterative refinement of templates based on click behaviors of audience. Click behavior of audience is valuable for editors to improve and edit their slideshows.  
-It will be great if Narvis can give suggestions to editors for revision of slideshow. 
-
-
+In future work, we envision three main research directions. 
+First, we will deepening our understanding of makes compelling and comprehensive introduction slideshows for presenting visual design based on click behaviors of audience. 
+Second, with the popularity of visualization toolkits, such as D3 ~\cite{bostock2011d3}, an increasing number of visual designs are deployed online. To support a border usage scenario, we plan to equip Narvis with the ability to parse and analyze online visualizations. 
+Third, apart from visualize the click stream data, we aim at implementing a model in Narvis to analyze these data, and offers suggestions for editors to revise their slideshow.  
 %% if specified like this the section will be committed in review mode
