@@ -1,11 +1,3 @@
-
-\begin{figure*}
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\linewidth]{hierarchic}
- \caption{An example of the hierarchical structure of a visualization, Opinion Seer\cite{wu_opinionseer:_2010}}
- \label{fig:hierarchic}
-\end{figure*} 
-
 \section{Introducing a data visualization} \label{analysis}
 To help people better understand a data visualization design, we propose a model that introduces a data visualization through constructing, which has been proven as an effective teaching method\cite{huron_constructive_2014, chapman_constructive_1988}. Thus, there are three questions we need to answer in our model: ``\textit{what are the basic components that compose a data visualization? }'' ,``\textit{what is the relationship between these components? }'', ``\textit{How should we deal with these relationships in our narrative?}''. At the same time, considering a large number of graphical elements employed in a data visualization design, we should eliminate the visual distraction to keep audience's focus on the target.
 
@@ -28,12 +20,11 @@ One type of visual primitives can constitute different visual units by following
 %It doesn't simply put all visual units together but constructs them based on their relationships, as described in Section 3.2.1.
 % with certain connections \siwei{what is certain connections? can you give an example?} with each other, which is detailedly discussed in section 3.1.2.\siwei{where is section 3.1.2?}
 
-
-\begin{figure}[tb]
+\begin{figure}
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{unit_relationship}
- \caption{Illustration of the 4 types of relationship between visual units}
- \label{fig:relationship}
+ \includegraphics[width=\columnwidth]{hierarchic}
+ \caption{An example of the hierarchical structure of a visualization, Opinion Seer\cite{wu_opinionseer:_2010}}
+ \label{fig:hierarchic}
 \end{figure}
 
 %\begin{figure}
@@ -166,7 +157,12 @@ A proper narrative sequence of visual units should take the relationships betwee
 %The relationship between two visual primitives of one visual unit are usually self-evident. One primitive either has no dependency on the other one, such as the bar and line in \textit{Candlestick Chart}, or has high and evident dependency.  This dependency can be logical, such as the line and bar in \textit{error bar chart}, or spacial, such as the node segment and arc in \textit{chord diagram}, or temporal, such as the stream and dot in \cite{liu_online_2016}
 
 
-
+\begin{figure}[tb]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{unit_relationship}
+ \caption{Illustration of the 4 types of relationship between visual units}
+ \label{fig:relationship}
+\end{figure}
 
 \subsubsection{Relationships Between Visual Channels}
 For a visual primitive, different channels are encoded with different data attribute. Thus, they are usually separated and have no logic dependency upon others. It's hard to determine a narrative sequence from their inner logical dependency. 
