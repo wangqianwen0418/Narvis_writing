@@ -70,7 +70,7 @@ The input of Narvis includes two parts: one image presenting a visual design (ma
                 \State $b_1 \gets b|b\in B, a_1 \subseteq b$
                 \State $b_2 \gets b|b\in B, a_2 \subseteq b$
                 \If{$b_1 \neq b_2$}
-                    \State $B = (B - \{b1\} - \{b2\})\cup \{b1 \cup b2\}$
+                    \State $B = (B - \{b_1\} - \{b_2\})\cup \{b_1 \cup b_2\}$
                 \EndIf
                 \If{$|B|\leq N$}
                     \State break
@@ -211,7 +211,8 @@ Audiences can choose one slideshow for watching, click buttons to move forward o
 These clickstream data will be visualized in the form of a stacked bar chart and a line chart (see in Figure~\ref{fig:feedback}).  
 The \textit{x} axis represents the slide's number in both charts. In the line chart, the \textit{y} axis represents the accumulated watching times, and each line refers to the watching behavior of one individual audience. In the bar chart, the y axis represents the average watching time of all users for a certain slide. Each bar is split into colored bar segments. The bottom bar segment represents the time audience spent the first time for watching this slide, if they go back and watch this slide for the second time, a bar segment with darker color will be placed on the top of the previous one, and so on. 
 
-The line chart emphasizes on the watching behavior of every individual while the bar chart focuses on the description of every single slide. \notsure{do I need this?For example, in Figure~\ref{fig:feedback}, the line chart indicates that some audiences go back frequently while other audiences go through all the slides sequentially. The bar chart indicates that it is the second slide that audience spent relatively longer time to read. Even though the going back behavior is frequent, the time people spent for it is little.} 
+The line chart emphasizes on the watching behavior of every individual while the bar chart focuses on the description of every single slide. 
+%\notsure{do I need this?For example, in Figure~\ref{fig:feedback}, the line chart indicates that some audiences go back frequently while other audiences go through all the slides sequentially. The bar chart indicates that it is the second slide that audience spent relatively longer time to read. Even though the going back behavior is frequent, the time people spent for it is little.} 
 With the help of these two charts, the editor is able observe how the audiences watch his slideshow and generates ideas for later revision (DE.3). 
 
 %\subsection{Iterative Design}

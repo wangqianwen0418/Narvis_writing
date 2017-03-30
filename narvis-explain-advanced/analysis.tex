@@ -1,27 +1,25 @@
 \section{Introducing a data visualization} \label{analysis}
 
-To help people better understand a data visualization design, we propose a model that introduces a data visualization through constructing, which has been proven as an effective teaching method\cite{huron_constructive_2014, chapman_constructive_1988}. Thus \siwei{the conjecture is wrong here, or the logic is not correct.}, there are three questions we need to answer in our model: ``\textit{what are the basic components that compose a data visualization? }'' ,``\textit{what is the relationship between these components? }'', ``\textit{How should we deal with these relationships in our narrative?}''. At the same time, considering a large number of graphical elements \siwei{grahpical elements or graphic elements? Be consistent} employed in a data visualization design, we should eliminate the visual distraction to keep audience's focus on the target.
+To help people better understand a data visualization design, we propose a model that introduces a data visualization through constructing, which has been proven as an effective teaching method\cite{huron_constructive_2014, chapman_constructive_1988}. To build a constructive model for presenting visual designs, there are three questions we need to answer: ``\textit{what are the basic components that compose a data visualization? }'' ,``\textit{what is the relationship between these components? }'', ``\textit{How should we deal with these relationships in our narrative?}''. At the same time, considering a large number of graphical elements employed in a data visualization design, we should eliminate the visual distraction to keep audience's focus on the target.
 
 We propose this model based on our observation of the 375 text visualizations collected and classified in the survey made by Kucher~\cite{kucher2015text}, as well as the lessons from previous work. 
 
 \subsection{Compositions of a Visualization}\label{compositions}
-Several work focus on identifying the atomic building blocks of a visualization~\cite{mendez_ivolver:_2016, bertin1983semiology}. 
-This model is the extension of previous work on taking the special requirements of presenting visual designs into consideration \siwei{what are your requirements? if you say so, please put section 4 ahead}. 
+Several work has taken efforts to identify the atomic building blocks of a visualization~\cite{mendez_ivolver:_2016, bertin1983semiology}. 
+This model is the extension of previous work by 1) including the relationship bet. 
 In our model, a visualization is decomposed into a hierarchical structure of three levels, including
 % three levels of structure: 
 visual primitives, visual units, and an advanced visualization design. 
 % For example, we apply this hierarchical structure theory to 
 Taking OpinionSeer~\cite{wu_opinionseer:_2010} as an example, we apply the hierarchical model and decompose it into five visual units, as shown in Figure~\ref{fig:hierarchic}. 
 
-\textbf{A visual primitive} is one graphic element whose visual channels, such as color, width, height, are mapped to data attributes with certain visual grammar. \siwei{what is graphic element? have you defined before? I suggest you use ``atomic building blocks'' you mentioned before} For instance, a point whose size and color are encoded \siwei{are encoded to what? the sentence is broken.} is a visual primitive. Size is a visual channel, and``size indicates the importance score'' is a visual grammar. \siwei{Please define visual grammar before using an example. Further, please distinguish visual channel and visual grammar here.}
+\textbf{A visual primitive} is one graphical element whose visual channels, such as color, width, height, are mapped to data attributes with certain visual grammars. Visual channels are visual properties that control the appearance of a graphical element, and a visual grammar describes how a visual channel indicates a data attribute. For instance, a point is a visual primitive, size is a visual channel, and``size indicates the importance score'' is a visual grammar. 
 
-
-\textbf{A visual unit} is the assembly of one kind of visual primitives based on a certain construction rule \siwei{where are the construction rules come from? Cite}, as Table~\ref{tab:unit} show. 
+\textbf{A visual unit} is the assembly of one kind of visual primitives based on a certain construction rule, as Table~\ref{tab:unit} show. Considering the fact that new designs are appearing continually, the purpose of this table is not to cover all visual units but to demonstrate how a visual unit can fit in a table cell.
 %For the taxonomy of constructing rule, we refer the ``alignment method'' in \cite{kucher2015text} but make it more specific. 
-Visual primitives of one kind can constitute different visual units by following different constructing rules \siwei{construction rule or constructing rule? Be consistent}. For example, dots can constitute scatter plot, spiral dot chart, or circle packing chart by following radial, orthogonal, or metric-based construction rules, respectively. 
-\original{We are not pretending that our table includes all existing visual units, since new design is proposed constantly. }\siwei{do not say we are not pretend to do what, say we plan to do what.}
+Visual primitives of one kind can constitute different visual units by following different construction rules. For example, dots can constitute scatter plot, spiral dot chart, or circle packing chart by following radial, orthogonal, or metric-based construction rules, respectively. 
 A visual unit is the smallest functional unit of a visualization. 
-\original{Note that we only consider statical visualization.}\siwei{mention it in limitations} People might employ several visual primitives in an animated visualization unit.\siwei{in the first sentence, you said a visual unit is the assemble of ONE kind of... revise it.} For example, Huron et al.~\cite{huron_visual_2013} employed two visual primitives to mimic the physical process of sedimentation for visualizing data streams. 
+%\original{Note that we only consider statical visualization.}\siwei{mention it in limitations} People might employ several visual primitives in an animated visualization unit.\siwei{in the first sentence, you said a visual unit is the assemble of ONE kind of... revise it.} For example, Huron et al.~\cite{huron_visual_2013} employed two visual primitives to mimic the physical process of sedimentation for visualizing data streams. 
 
 \textbf{A visualization} can be treated as the combination of visual units. A simple visualization contains only one visual unit while an advanced one is usually the combination of multiple visual units. 
 %It doesn't simply put all visual units together but constructs them based on their relationships, as described in Section 3.2.1.
@@ -129,7 +127,7 @@ A visual unit is the smallest functional unit of a visualization.
 
 \subsection{Relationships Between Compositions}
 \label{relationship}
-We first describe the relationship between conceptual compositions, then offer suggestion for narrative sequence based on these relationships. Notice that we skip the relationship between visual primitives since there is only one kind of visual primitives in a visual unit. \siwei{it is not correct. you mentioned a visual unit may contains multiple visual primitives.}
+We first describe the relationship between conceptual compositions, then offer suggestions for narrative sequence based on these relationships. Notice that we skip the relationship between visual primitives since there is only one kind of visual primitives in a visual unit. 
 
 \subsubsection{Relationships Between Visual Units}
 A visualization can be specified as the combination of several visual units. 
@@ -179,7 +177,7 @@ First, the order of decreasing visual saliency can facilitate graphical percepti
 
 Second, the order of increasing complexity leads to an effective learning process. “Easy to difficult” practice has been long used and confirmed to be effective for learning new tasks~\cite{bliss_effects_1992}.
  
-The visual saliency of different channels is relatively constant and  well defined ~\cite{munzner_visualization_2014,cleveland_graphical_1984}, while their information complexity varies in different designs. Thus, an effective narrative sequence is a trade-off between these two metrics. 
+The visual saliency of different channels is relatively constant and  well defined ~\cite{munzner_visualization_2014,cleveland_graphical_1984}, while their information complexity varies in different designs. And an effective narrative sequence is a trade-off between these two metrics. 
 
 %\subsubsection{Non-linear Sequence}
 %So far, all the narrative explanation we discussed is linear. However, reading a lengthy, extremely detailed instruction maybe tedious. A good narrative explanation should include non-linear design, allowing users to skip uninterested parts, go back to previous information and freely switch between different parts. Also, users should be allowed the flexibility to choose explanations at different levels of details. 
@@ -193,6 +191,6 @@ This kind of distraction has been widely discussed in the field of object detect
 Focus + Context, which might be the most popular techniques for this problem, make uneven use of graphic resources to discriminate focus from their context. At the same time, adding dynamic changes to focus elements has also been demonstrated as effective under various conditions\cite{waldner_attractive_2014}. We support easy implementation of these techniques in our system. 
 
 \subsubsection{Visual distraction from sibling channels}
-A visual primitive usually has more than one visual channels. Thus, when recognizing one primitive, the channels with high visual saliency can significantly influence the expression of other channels. For example, color can be a strong noise when the focus is supposed to be the shape. By applying animated transition and revealing only one channel at a time, as demonstrated in \notsure{Fig1, the second line}, we are able to reduce such distraction.
+A visual primitive usually has more than one visual channels. Thus, when recognizing one primitive, the channels with high visual saliency can significantly influence the expression of other channels. For example, color can be a strong noise when the focus is supposed to be the shape. By exaggerating or suppressing certain visual channels, we try to reduce such distractions.
 
 
