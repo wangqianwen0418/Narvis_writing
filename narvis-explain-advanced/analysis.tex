@@ -1,19 +1,18 @@
 \section{Introducing a data visualization} \label{analysis}
-To help people better understand a data visualization design, we propose a method that introduces a data visualization through constructing, which has been proven as an effective teaching method\cite{huron_constructive_2014, chapman_constructive_1988} . Thus, there are three questions we need to answer: ``\textit{what are the basic components that compose a data visualization? }'' ,``\textit{what is the relationship between these components? }'', ``\textit{How should we deal with these relationships in our narrative?}''. At the same time, considering the large number of graphical elements employed in a data visualization design, we should eliminate the visual distraction to keep audience's focus on the target.
+To help people better understand a data visualization design, we propose a method that introduces a data visualization through constructing, which has been proven as an effective teaching method\cite{huron_constructive_2014, chapman_constructive_1988} . Thus \siwei{thus is not correct here because the content does not have ``therefore'' or ``as a result'' relationships}, there are three questions we need to answer: ``\textit{what are the basic components that compose a data visualization? }'' ,``\textit{what is the relationship between these components? }'', ``\textit{How should we deal with these relationships in our narrative?}''. At the same time, considering the large number of graphical elements employed in a data visualization design, we should eliminate the visual distraction to keep audience's focus on the target.
 
 \subsection{Compositions of a Visualization}\label{compositions}
 We propose a model that decomposes a visualization into three levels of structure: visual primitives, visual units, and then an advanced visualization design. 
 We apply this hierarchical structure theory to ``Opinionseer''~\cite{wu_opinionseer:_2010} and decompose it, as shown in Figure~\ref{fig:hierarchic}. 
 
-\noindent
-\textbf{A visual primitive} is one graphic element whose visual channels, such as color, width, height, are mapped to data attributes with certain visual grammar.  For instance, a point whose size and color are encoded is a visual primitive. Size is a visual channel, and``size indicates the importance score'' is a visual grammar. 
+\textbf{A visual primitive} is one graphic element whose visual channels, such as color, width, height, are mapped to data attributes with certain visual grammar. \siwei{what is graphic element? have you defined before? cite papers here} For instance, a point whose size and color are encoded \siwei{are encoded to what? the sentence is broken.} is a visual primitive. Size is a visual channel, and``size indicates the importance score'' is a visual grammar. \siwei{Please define visual grammar before using an example. Further, please distinguish visual channel and visual grammar here.}
 
-\noindent
-\textbf{A visual unit} is the assembly of visual primitives based on a certain construction rule, as Table~\ref{tab:unit} show. 
+\textbf{A visual unit} is the assembly of visual primitives based on a certain construction rule, as Table~\ref{tab:unit} shows. 
 %For the taxonomy of constructing rule, we refer the ``alignment method'' in \cite{kucher2015text} but make it more specific. 
-A visual primitive can assemble different visual units by following different constructing rule. For example, the visual primitive, dot, can assemble scatter plot, spiral dot chart, or circle packing chart by following radial, orthogonal, or metric-based construction rule, respectively. We are not pretending that our table includes all existing visual units, since new design is proposed constantly. A visual unit is the smallest functional unit of a visualization. Note that we only consider statical visualization. People might employ two visual primitives in an animated visualization unit. For example, Huron et al.\cite{huron_visual_2013} employed two visual primitives to mimic the physical process of sedimentation for visualizing data streams. 
+A visual primitive can form different visual units by following different constructing rule \siwei{you use construction rule before. Please be consistent. Further, maybe ``layout'' is a better word?}. For example, the visual primitive, dot, can assemble \siwei{the word assemble used here seems not correct. use ``form'' or sth similar} scatter plot, spiral dot chart, or circle packing chart by following radial, orthogonal, or metric-based construction rule, respectively. \original{We are not pretending that our table includes all existing visual units, since new design is proposed constantly.}\siwei{say what you have done, rather what you do not pretend to do. please say sth like: we selectively list several visual units in Table 1.} A visual unit is the smallest functional unit of a visualization. 
+\original{Note that we only consider statical visualization. } \siwei{this is redundant here, mention it in Discussion part}
+People might employ two visual primitives in an animated visualization unit. For example, Huron et al.\cite{huron_visual_2013} employed two visual primitives to mimic the physical process of sedimentation for visualizing data streams. 
 
-\noindent
 \textbf{A visualization} can be treated as the combination of visual units. A naive visualization can be as simple as one visual unit while an advanced one is usually the combination of several units. 
 %It doesn't simply put all visual units together but constructs them based on their relationships, as described in Section 3.2.1.
 % with certain connections \siwei{what is certain connections? can you give an example?} with each other, which is detailedly discussed in section 3.1.2.\siwei{where is section 3.1.2?}
@@ -119,7 +118,7 @@ A visual primitive can assemble different visual units by following different co
 \end{table}
 
 \subsection{Relationships Between Compositions}
-We first describe the relationship between conceptual compositions, then offer suggestion for narrative sequence based on these relationships. Notice that we skip the relationship between viusal primitives since there is only one kind of visual primitive in a visual unit. 
+We first describe the relationship between conceptual compositions, then offer suggestion for narrative sequence based on these relationships. \original{Notice that we skip the relationship between viusal primitives since there is only one kind of visual primitive in a visual unit. }\siwei{this is wrong because you mentioned a visual unit can contain two visual primitives. do you mean there is on kind of relationship among visual primitives?}
 \subsubsection{Relationships Between Visual Units}
 A visualization can be specified as the combination of several visual units. 
 % Through observing the approaches people apply to design new visualizations, 
@@ -129,19 +128,16 @@ we define four types of relationship between visual units: irrelevance, relevanc
 \textbf{Irrelevance} is a bi-directional relation meaning two visual units are independent and do not share any visual channel.
 For example, 2 donut charts, Figure~\ref{fig:relationship}(a) and Figure~\ref{fig:relationship}(b), are applied to illustrate the distribution of age and gender groups respectively in a population. They are put together in Figure~\ref{fig:relationship}(c) just for space-efficiency and there is no correlation between these two charts. 
 
-\noindent
 \textbf{Relevance} refers to that two visual units share some visual grammar and it is a bi-directional relation. 
 For example, a line chart, Figure~\ref{fig:relationship}(d), indicates the temperature over a time period, and a bar chart, Figure~\ref{fig:relationship}(d), indicates the precipitation over a time period. They are put together in Figure~\ref{fig:relationship}(e) and they share the same visual grammar of horizontal position.  
 %\siwei{what is the difference between visual grammar and visual channel? why horizontal position is visual grammar rather than visual channel?}
 %\notsure{According to our survey, color and position are the most commonly shared visual encodings, which might be the result that color and position usually encoded with simple while crucial information. }
 
 
-\noindent
 \textbf{Enhancement} is an one-way relationship. If one visual unit ``A'' is the enhancement of another visual unit ``B'', it means that ``A'' is imported into ``B'', replaces some graphical elements of ``B'', thus enables the representation of some data attributes that ``B'' alone fails to convey. Suppose there are 5 types of area in a park. A bar chart, Figure~\ref{fig:relationship}(h), illustrates their average price per unit area, a chord diagram, Figure~\ref{fig:relationship}(g), illustrates how passengers travel through each area. In Figure~\ref{fig:relationship}(i), the bar chart take the place of node segments, which has the same height, in a chord diagram, resulting in a novel and informative visualization.
  
 Enhancement widely exist in the advanced visualization design, such as the heat map mapped upon the steams in a theme river~\cite{wu_opinionflow:_2014}  and usage of glyphs to enhance the meaning of nodes in a multidimensional scaling plot~\cite{chen_peakvizor:_2016}. 
 
-\noindent
 \textbf{Dependence} is a one-way relationship. If one visual unit ``A'' is dependent on ``B'', it means that ``A'' reveal some information that results from the visualization of ``B''. For example, a multiple dimensional scaling (MSD) map, Figure~\ref{fig:relationship}(j), shows the similarity between each restaurants in a city. A contour map, Figure~\ref{fig:relationship}(h), is then added to the MSD map to \notsure{show the most common type of restaurants, which information can hardly be obtained from the dataset but quite evident from the MSD map}, as in Figure~\ref{fig:relationship}(i).The biggest difference between "\textbf{enhancement}" and "\textbf{dependence}" is that 1)\textbf{enhancement} still illustrate the data attributes in the dataset, while \textbf{dependency} reveals the new knowledge we obtain from adopting a previous visualization to the dataset; 2)\textbf{enhancement} replace original graphical elements of other visual design while \textbf{dependence} add new graphical elements.
 
 A proper narrative sequence of visual units should take the relationships between them into consideration. For irrelevance, it doesn't matter whether these two visual units are explained sequentially. For relevance, these two visual units should be explained one after another. Since relevance is bidirectional, it doesn't matter which one is explained first. For dependency and enhancement, which are unidirectional, the two visual units should be explained sequentially in a specific order. 

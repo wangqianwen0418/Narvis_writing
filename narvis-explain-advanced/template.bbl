@@ -125,12 +125,6 @@ N.~Cohn.
 }{.}\hspace{.4pt}12016}}
 
 
-\bibitem{collins2009parallel}
-C.~Collins, F.~B. Viegas, and M.~Wattenberg.
-\newblock Parallel tag clouds to explore and analyze faceted text corpora.
-\newblock In {\em Visual Analytics Science and Technology, 2009. VAST 2009.
-  IEEE Symposium on}, pp. 91--98. IEEE, 2009.
-
 \bibitem{cui_textflow:_2011}
 W.~Cui, S.~Liu, L.~Tan, C.~Shi, Y.~Song, Z.~Gao, H.~Qu, and X.~Tong.
 \newblock {TextFlow}: Towards better understanding of evolving topics in text.
@@ -141,6 +135,12 @@ W.~Cui, S.~Liu, L.~Tan, C.~Shi, Y.~Song, Z.~Gao, H.~Qu, and X.~Tong.
 }{.}\hspace{.4pt}2011\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}239}}
 
+
+\bibitem{cunningham_culture_2009}
+L.~S. Cunningham and J.~J. Reich.
+\newblock {\em Culture and Values: A Survey of the Humanities}.
+\newblock Cengage Learning.
+\newblock Google-Books-{ID}: {wXcEAAAAQBAJ}.
 
 \bibitem{doleisch2003interactive}
 H.~Doleisch, M.~Gasser, and H.~Hauser.
@@ -322,17 +322,6 @@ B.~Lee, N.~H. Riche, P.~Isenberg, and S.~Carpendale.
 }{.}\hspace{.4pt}99}}
 
 
-\bibitem{liu_online_2016}
-S.~Liu, J.~Yin, X.~Wang, W.~Cui, K.~Cao, and J.~Pei.
-\newblock Online visual analytics of text streams.
-\newblock 22(11):2451--2466. doi: {{%
-10\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}1109\discretionary{/}{%
-}{/}TVCG\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}2015\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}2509990}}
-
-
 \bibitem{munzner_visualization_2014}
 T.~Munzner.
 \newblock {\em Visualization Analysis and Design}.
@@ -401,17 +390,6 @@ A.~Satyanarayan and J.~Heer.
 }{.}\hspace{.4pt}1111\discretionary{/}{%
 }{/}cgf\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}12392}}
-
-
-\bibitem{satyanarayan_vega-lite:_2017}
-A.~Satyanarayan, D.~Moritz, K.~Wongsuphasawat, and J.~Heer.
-\newblock Vega-lite: A grammar of interactive graphics.
-\newblock 23(1):341--350. doi: {{%
-10\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}1109\discretionary{/}{%
-}{/}TVCG\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}2016\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}2599030}}
 
 
 \bibitem{savva_revision:_2011}
