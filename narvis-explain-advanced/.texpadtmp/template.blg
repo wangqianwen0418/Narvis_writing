@@ -4,16 +4,21 @@ The top-level auxiliary file: template.aux
 The style file: ../abbrv-doi.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ../template.bib
+Repeated entry---line 122 of file ../template.bib
+ : @inproceedings{kucher2015text
+ :                              ,
+I'm skipping whatever remains of this entry
 Warning--entry type for "schmidt_living_2017" isn't style-file defined
---line 710 of file ../template.bib
+--line 735 of file ../template.bib
 Warning--entry type for "bliss_effects_1992" isn't style-file defined
---line 1921 of file ../template.bib
+--line 1946 of file ../template.bib
 Warning--I didn't find a database entry for "7042494"
 Warning--empty year in amini_understanding_2015
 Warning--empty journal in amini_authoring_2017
 Warning--empty year in amini_authoring_2017
 Warning--empty journal in bach_graphdiaries:_2014
 Warning--empty year in bach_graphdiaries:_2014
+Warning--empty journal in bertin1983semiology
 Warning--empty journal in bostock_protovis:_2009
 Warning--empty year in bostock_protovis:_2009
 Warning--empty journal in bryan_temporal_2016
@@ -54,8 +59,6 @@ Warning--empty journal in lee_sketchstory:_2013
 Warning--empty year in lee_sketchstory:_2013
 Warning--empty journal in lee_more_2015
 Warning--empty year in lee_more_2015
-Warning--empty journal in liu_online_2016
-Warning--empty year in liu_online_2016
 Warning--empty year in munzner_visualization_2014
 Warning--empty year in mendez_ivolver:_2016
 Warning--empty journal in nothdurft_salience_2000
@@ -82,45 +85,45 @@ Warning--empty journal in wu_opinionseer:_2010
 Warning--empty year in wu_opinionseer:_2010
 Warning--empty journal in zhao_x0023;fluxflow:_2014
 Warning--empty year in zhao_x0023;fluxflow:_2014
-You've used 50 entries,
+You've used 52 entries,
             2598 wiz_defined-function locations,
-            907 strings with 13989 characters,
-and the built_in function-call counts, 50635 in all, are:
-= -- 11112
-> -- 994
-< -- 1816
-+ -- 2197
-- -- 380
-* -- 1872
-:= -- 7216
-add.period$ -- 159
-call.type$ -- 50
-change.case$ -- 317
+            918 strings with 14307 characters,
+and the built_in function-call counts, 50368 in all, are:
+= -- 10923
+> -- 999
+< -- 1767
++ -- 2149
+- -- 379
+* -- 1885
+:= -- 7191
+add.period$ -- 166
+call.type$ -- 52
+change.case$ -- 323
 chr.to.int$ -- 0
-cite$ -- 123
-duplicate$ -- 675
-empty$ -- 1552
+cite$ -- 124
+duplicate$ -- 708
+empty$ -- 1612
 format.name$ -- 340
-if$ -- 13312
+if$ -- 13196
 int.to.chr$ -- 0
-int.to.str$ -- 50
-missing$ -- 51
-newline$ -- 484
-num.names$ -- 100
-pop$ -- 426
+int.to.str$ -- 52
+missing$ -- 53
+newline$ -- 488
+num.names$ -- 104
+pop$ -- 433
 preamble$ -- 1
-purify$ -- 270
+purify$ -- 274
 quote$ -- 0
-skip$ -- 462
+skip$ -- 489
 stack$ -- 0
-substring$ -- 3372
-swap$ -- 127
-text.length$ -- 994
+substring$ -- 3363
+swap$ -- 139
+text.length$ -- 968
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 194
-warning$ -- 73
-while$ -- 281
-width$ -- 52
-write$ -- 1583
-(There were 76 warnings)
+type$ -- 202
+warning$ -- 72
+while$ -- 286
+width$ -- 54
+write$ -- 1576
+(There was 1 error message)

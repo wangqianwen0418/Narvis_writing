@@ -35,6 +35,11 @@ B.~Bach, E.~Pietriga, and J.~D. Fekete.
 }{.}\hspace{.4pt}254}}
 
 
+\bibitem{bertin1983semiology}
+J.~Bertin.
+\newblock Semiology of graphics: diagrams, networks, maps.
+\newblock 1983.
+
 \bibitem{bliss_effects_1992}
 J.~P. Bliss, D.~R. Lampton, and J.~A. Boldovici.
 \newblock The effects of easy-to-difficult, difficult-only, and
@@ -50,6 +55,12 @@ M.~Bostock and J.~Heer.
 }{.}\hspace{.4pt}2009\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}174}}
 
+
+\bibitem{bostock2011d3}
+M.~Bostock, V.~Ogievetsky, and J.~Heer.
+\newblock D$^3$ data-driven documents.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  17(12):2301--2309, 2011.
 
 \bibitem{bryan_temporal_2016}
 C.~Bryan, K.~L. Ma, and J.~Woodring.
@@ -297,6 +308,13 @@ R.~Kosara and J.~Mackinlay.
 R.~Kosara, S.~Miksch, and H.~Hauser.
 \newblock Focus+ context taken literally.
 \newblock {\em IEEE Computer Graphics and Applications}, 22(1):22--29, 2002.
+
+\bibitem{kucher2015text}
+K.~Kucher and A.~Kerren.
+\newblock Text visualization techniques: Taxonomy, visual survey, and community
+  insights.
+\newblock In {\em Visualization Symposium (PacificVis), 2015 IEEE Pacific}, pp.
+  117--121. IEEE, 2015.
 
 \bibitem{lee_sketchstory:_2013}
 B.~Lee, R.~H. Kazi, and G.~Smith.
