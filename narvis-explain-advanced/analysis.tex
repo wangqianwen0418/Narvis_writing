@@ -20,16 +20,16 @@ We propose this model based on our observation of the 375 text visualizations co
 
 \subsection{Compositions of a Visualization}\label{compositions}
 Several work has taken efforts to identify the atomic building blocks of a visualization~\cite{mendez_ivolver:_2016, bertin1983semiology}. 
-This model is the extension of previous work by 1) including the relationship bet. 
+This model is the extension of previous work by 1) including the relationship bet. \siwei{not complete} 
 In our model, a visualization is decomposed into a hierarchical structure of three levels, including
 % three levels of structure: 
 visual primitives, visual units, and an advanced visualization design. 
 % For example, we apply this hierarchical structure theory to 
 Taking OpinionSeer~\cite{wu_opinionseer:_2010} as an example, we apply the hierarchical model and decompose it into five visual units, as shown in Figure~\ref{fig:hierarchic}. 
 
-\textbf{A visual primitive} is one graphical element whose visual channels, such as color, width, height, are mapped to data attributes with certain visual grammars. Visual channels are visual properties that control the appearance of a graphical element, and a visual grammar describes how a visual channel indicates a data attribute. For instance, a point is a visual primitive, size is a visual channel, and``size indicates the importance score'' is a visual grammar. 
+\textbf{A visual primitive} is one graphical element whose visual channels, such as color, width, height, are mapped to data attributes with certain visual grammars. Visual channels are visual properties that control the appearance of a graphical element, and a visual grammar describes how a visual channel indicates a data attribute. For instance, a point is a visual primitive, size is a visual channel, and ``size indicates the importance score'' is a visual grammar. 
 
-\textbf{A visual unit} is the assembly of one kind of visual primitives based on a certain construction rule, as Table~\ref{tab:unit} show. Considering the fact that new designs are appearing continually, the purpose of this table is not to cover all visual units but to demonstrate how a visual unit can fit in a table cell.
+\textbf{A visual unit} is the assembly of one kind of visual primitives based on a certain construction rule, as Table~\ref{tab:unit} shows. Considering the fact that new designs are emerging, the purpose of this table is not to cover all visual units but to demonstrate how a visual unit can fit in a table cell.
 %For the taxonomy of constructing rule, we refer the ``alignment method'' in \cite{kucher2015text} but make it more specific. 
 Visual primitives of one kind can constitute different visual units by following different construction rules. For example, dots can constitute scatter plot, spiral dot chart, or circle packing chart by following radial, orthogonal, or metric-based construction rules, respectively. 
 A visual unit is the smallest functional unit of a visualization. 
@@ -158,7 +158,6 @@ We display relationships between units through a tree diagram where every visual
 
 \subsubsection{Relationships Between Visual Channels}
 For a visual primitive, different channels are encoded with different data attribute. Thus, they are usually separated and have no logic dependency upon others. It's hard to determine a narrative sequence from their inner logical dependency. 
-
 Therefore, we define two metrics to order the explaining of visual channels: \textbf{the complexity of their encoded information} and \textbf{saliency of their visual appearance}.
 
 First, the order of decreasing visual saliency can facilitate graphical perception~\cite{cleveland_graphical_1984}. Even though different channels have intrinsically different perceptual salience and channel with high salience will suppress the expression of other, such salience strength can be influenced in a task-dependent manner ~\cite{nothdurft_salience_2000}. By introducing the channel with high saliency first, we remove it from the task list in our mind~\cite{itti2001computational}, decrease its saliency and give other channels more chance to attract the limited human attention. 
@@ -171,14 +170,15 @@ The visual saliency of different channels is relatively constant and  well defin
 %So far, all the narrative explanation we discussed is linear. However, reading a lengthy, extremely detailed instruction maybe tedious. A good narrative explanation should include non-linear design, allowing users to skip uninterested parts, go back to previous information and freely switch between different parts. Also, users should be allowed the flexibility to choose explanations at different levels of details. 
 
 \subsection{Attention Orientation}
-To keep audiences focusing on the target object, it is necessary to identify visual distractions so that measurements can be taken to avoid them. 
-We identify two kinds of visual distractions: the one from context and the one from sibling channels, which refer to the visual channels belonging to the same visual primitives. 
+To keep the audience focusing on target objects, it is necessary to identify and avoid visual distractions. 
+\siwei{How you identify? You should say: Based on...} We identify two kinds of visual distractions: the one from context and the one from sibling channels, which refer to the visual channels belonging to the same visual primitives. 
 
 \subsubsection{Visual Distraction from the Context}
 This kind of distraction has been widely discussed in the field of object detection and human visual attention ~\cite{nothdurft_salience_2000, standage_modelling_2005}. Its intensity is mainly  determined by spatial distance and appearance similarity ~\cite{wolfe_guided_1994}. 
-Focus + Context, which might be the most popular techniques for this problem, make uneven use of graphic resources to discriminate focus from their context. At the same time, adding dynamic changes to focus elements has also been demonstrated as effective under various conditions\cite{waldner_attractive_2014}. We support easy implementation of these techniques in our system. 
+Focus + Context, which might be the most popular techniques for this problem, make uneven use of graphic resources to discriminate focus from their context. At the same time, adding dynamic changes to focus elements has also been demonstrated as effective under various conditions\cite{waldner_attractive_2014}. We support easy application of these techniques in our system. 
 
 \subsubsection{Visual Distraction from Sibling Channels}
-A visual primitive usually has more than one visual channels. Thus, when recognizing one primitive, the channels with high visual saliency can significantly influence the expression of other channels. For example, color can be a strong noise when the focus is supposed to be the shape. By exaggerating or suppressing certain visual channels, we try to reduce such distractions.
+A visual primitive usually has more than one visual channels. Thus, when recognizing one primitive, the channels with high visual saliency can significantly influence the expression of other channels. For example, color can be a strong noise when the focus is supposed to be the shape.
+Our system is able to eliminate this kind of distractions by exaggerating or suppressing specific visual channels.
 
 
