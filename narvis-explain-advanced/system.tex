@@ -2,7 +2,7 @@
 
 % Thus, it has two kinds of users: editors, the data visualization experts who use Narvis to create an explanation slideshow, and audiences, the general audience who watch the slideshow created by ediors.
 
-Guided by the theory model discussed in Section~\ref{analysis},  we design and implement Narvis, an authoring tool for crafting slideshows for the presentation of visualization. The workflow of Narvis consists of three phases (Figure ~\ref{fig:overview}), i.e., Automatic Analysis Phase, Authoring Phase, and Viewing Phase.
+Guided by the theory model discussed in Section~\ref{analysis}, as well as the design tasks discussed in Section~\ref{sec:design_task} we design and implement Narvis, an authoring tool for crafting slideshows for the presentation of visualization. The workflow of Narvis consists of three phases (Figure ~\ref{fig:overview}), i.e., Automatic Analysis Phase, Authoring Phase, and Viewing Phase.
 
 % The workflow of Narvis includes three phases (Figure \siwei{ref}):  In Automatic Analysis Phase, the system accepts the input visualization, extracts graphical elements and classifies them into groups for further edit. 
 % In Human Editing Phase, editors will be involved to modify the output from the Automatic Analysis Phase, and use the templates Narvis provide to craft a explanation slideshow. 
@@ -20,34 +20,34 @@ Guided by the theory model discussed in Section~\ref{analysis},  we design and i
 % The auto analysis has two parts: one for input image and one for input text. It automatically extract the graphic elements and divide them into different cluster, facilitating later editing.(DE1) Note that the textual input is not necessary but it provides hints when editors add annotations manually in the Human Editing Phase.(DE1)
 
 The input of Narvis includes two parts: one image presenting a visual design (mandatory) and a piece of text describing the design (optional). Considering that the vast majority of visualizations are only available as bitmap images, we offer an algorithm to detect and extract the graphical elements from the input image. Here, we explain the basic idea of how Narvis analyzes these input sources to facilitate further authoring. 
-\begin{algorithm} 
-        \caption{Object Detection}  
-        \label{alg:alg1}
-        \begin{algorithmic} % line number
-            \Require A bitmap in the form of a two-dimensional array: $A$
-            \Ensure A list of objects: $B$
-            \State $B \gets \{\}$
-            \ForAll{$pixel (x,y) \in A$} 
-                \If{no mark on $pixel(x,y)$}
-                    \State $Q \gets \{(x,y)\} $
-                    \State $Obj \gets \{\}$
-                    \ForAll{$(x,y) \in Q$}
-                        \State $Q = Q - \{(x,y)\}$
-                        \State $Obj = Obj \cup \{(x,y)\}$
-                        \ForAll {$(x',y')$ which $|x'-x|+|y'-y|\leq2$ and no mark on $pixel(x',y')$}
-                            \If{$pixel(x,y)$ and $pixel(x',y')$ have similar color}
-                                \State $Q = Q \cup \{(x',y')\}$
-                                \State Make a mark on $(x',y')$
-                            \EndIf
-                        \EndFor
-                    \EndFor
-                    \State $B = B \cup \{Obj\}$
-                \EndIf
-            \EndFor
-            \State \Return{$B$}
-        \end{algorithmic}  
-    \end{algorithm} 
-    
+%\begin{algorithm} 
+%        \caption{Object Detection}  
+%        \label{alg:alg1}
+%        \begin{algorithmic} % line number
+%            \Require A bitmap in the form of a two-dimensional array: $A$
+%            \Ensure A list of objects: $B$
+%            \State $B \gets \{\}$
+%            \ForAll{$pixel (x,y) \in A$} 
+%                \If{no mark on $pixel(x,y)$}
+%                    \State $Q \gets \{(x,y)\} $
+%                    \State $Obj \gets \{\}$
+%                    \ForAll{$(x,y) \in Q$}
+%                        \State $Q = Q - \{(x,y)\}$
+%                        \State $Obj = Obj \cup \{(x,y)\}$
+%                        \ForAll {$(x',y')$ which $|x'-x|+|y'-y|\leq2$ and no mark on $pixel(x',y')$}
+%                            \If{$pixel(x,y)$ and $pixel(x',y')$ have similar color}
+%                                \State $Q = Q \cup \{(x',y')\}$
+%                                \State Make a mark on $(x',y')$
+%                            \EndIf
+%                        \EndFor
+%                    \EndFor
+%                    \State $B = B \cup \{Obj\}$
+%                \EndIf
+%            \EndFor
+%            \State \Return{$B$}
+%        \end{algorithmic}  
+%    \end{algorithm} 
+%    
     
     \begin{algorithm}  
         \caption{Object Clustering} 
@@ -87,7 +87,7 @@ The analysis of the input image includes two steps, object detection and object 
 
 % The first step, object detection, is done by iterating through all the pixels on the bitmap. 
 \noindent
-\textbf{Object detection.} We iterate through all pixels, and clusters all the pixels that are i) neighbors and ii) have the similar color through a modified Breath-first search algorithm (see in Algorithm~\ref{alg:alg1}). Simple objects, such as a bar in a bar chart, a node in a scatter plot, are detected and extracted after this step.
+\textbf{Object detection.} We iterate through all pixels, and clusters all the pixels that are i) neighbors and ii) have the similar color through a modified breath-first search algorithm. Simple objects, such as a bar in a bar chart, a node in a scatter plot, are detected and extracted after this step.
 
 \noindent
 \textbf{Object clustering.} All the objects with spatial and appearance similarity are clustered to allow an efficient manipulation, as described in Algorithm~\ref{alg:alg2}. For example, all the nodes in a scatter plot should be put in one cluster, instead of letting the editor add them one by one manually.     

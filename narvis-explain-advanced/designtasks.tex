@@ -1,4 +1,4 @@
-\section{Design Considerations}
+\section{Design Considerations}\label{sec:design_task}
 In this section, we first describe our understanding of two groups of end users, i.e., editors and the general audiences. Then, we distil design tasks to guide our design and development of Narvis.
 
 \subsection{User Perspectives and Methods}
@@ -6,13 +6,13 @@ In this section, we first describe our understanding of two groups of end users,
 Narvis aims to offer an efficient, expressive and friendly authoring tool for experts in data visualization, assisting them to create a slideshow to introduce advanced visual design to the general audience.  
 Hence, we identify two different user perspectives: the editors and the general audience perspectives. Editors are visualization experts who have the need to create a slideshow to present visual designs. The general audiences have no prerequisite for visualization. They gain an understanding of a visual design through the slideshow created by the editor. 
 
-To understand the current practice of making slideshows and the experience of reading tutorials, we collaborated with two teaching assistants (TAs) of a Data Visualization course and seven undergraduate students (UGs) taking this course. The two TAs are postgraduate students whose research interests are information visualization. Their duty of this course involves making slides to introduce visual designs from major publications in the field of visualization. The slides should cover fine-grained description to help students review them after class. The seven UGs have no prior experience in visualization, and have taken this course for no more than one month.  
+To understand the current practice of making slideshows and the experience of reading tutorials, we collaborated with four teaching assistants (TAs) of a Data Visualization course and seven undergraduate students (UGs) taking this course. The four TAs are postgraduate students whose research interests are information visualization. Their duty of this course involves making slides to introduce visual designs from major publications in the field of visualization. The slides should cover fine-grained description to help students review them after class. The seven UGs have no prior experience in visualization, and have taken this course for no more than one month.  
 
 We began by conducting semi-structured interviews with TAs, whom we identified as editors, and UGs, as general audiences. During the interviews with TAs, we asked their workflows of making slideshows and explaining visual design. To identify opportunities for Narvis, we also asked them to enumerate a list of challenges faced in the workflows. The interviews with UGs are semi-structured as well. We asked their comments in reading the slideshows and attending course lectures. Then, we used mind-mapping to find clusters in their comments that defined goals for an ideal slideshow. 
 
 
 \subsection{Design Tasks}
-Based on our observations and the interviews, we categorize six design tasks to guide the design of Narvis. Three tasks, denoted as DE, are originated from the interview with editors, i.e., the two TAs, and other three tasks (DA) are from the general audiences (UGs).
+Based on our observations and the interviews, we categorize six design tasks to guide the design of Narvis. Three tasks, denoted as DE, are originated from the interview with editors, i.e., the four TAs, and other three tasks (DA) are from the general audiences (UGs).
 
 %Our premise is that the editor is familiar with a visualization design but unclear how to educate his audiences in an efficient way. Since the background of the audiences cannot be guaranteed, we assume they all have no prior knowledge in data visualization. 
 \noindent
@@ -57,6 +57,4 @@ Considering the importance of information integrity to a comprehensive slideshow
 %Grouping slides into sections, and inserting visual notice, like a progress bar, to indicate the overall structure is an effective and widely used presentation skill \siwei{if you say they are widely used, please cite}. 
 %However, partly due to the lack of a clear narrative structure, this technique is rarely used in the presentation of a visualization, in spite of the demands from audiences.
 %\siwei{do not say the technique is rarely used in visualization because it is not convincing. say how the technique can help visualization presentation, therefore it is important.}
-When conveying a considerable amount of information to the audiences, they can easily get distracted or forget previous information. Thus, a reminder of the overall structure . 
-
-
+When conveying a considerable amount of information to the audiences, they can easily get distracted or forget previous information. In this situation, taking some measures to inform the audiences of the overall structure and the current state can help the perception process. 
