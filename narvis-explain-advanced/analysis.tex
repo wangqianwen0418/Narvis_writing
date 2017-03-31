@@ -1,4 +1,4 @@
-\section{Introducing a data visualization} \label{analysis}
+\section{Introducing A Data Visualization} \label{analysis}
 
 To help people better understand a data visualization design, we propose a model that introduces a data visualization through constructing, which has been proven as an effective teaching method\cite{huron_constructive_2014, chapman_constructive_1988}. To build a constructive model for presenting visual designs, there are three questions we need to answer: ``\textit{what are the basic components that compose a data visualization? }'' ,``\textit{what is the relationship between these components? }'', ``\textit{How should we deal with these relationships in our narrative?}''. At the same time, considering a large number of graphical elements employed in a data visualization design, we should eliminate the visual distraction to keep audience's focus on the target.
 
@@ -56,7 +56,7 @@ A visual unit is the smallest functional unit of a visualization.
 
 %\begin{table*}[tb]
 %  \caption{A taxonomy of visual units.\notsure{How to avoid the name ambiguities}}
-%  \label{tab:unit}
+%  \label{unit}
 %  \small
 %  \centering
 %  \begin{tabular}{|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|}
@@ -91,7 +91,7 @@ A visual unit is the smallest functional unit of a visualization.
 %\end{table*}
 
 \begin{table}[tb]
-  \caption{A taxonomy of visual units.\notsure{How to avoid the name ambiguities}\siwei{Use citation to avoid ambiguity. Note that the sum of column width should be around 7cm. I have changed it.}}
+  \caption{A taxonomy of visual units.}
   \label{tab:unit}
   \small
   \centering
@@ -108,7 +108,7 @@ A visual unit is the smallest functional unit of a visualization.
    \textbf{Flow}&  Chord Diagram   &Parallel Sets, Sankey Diagram, 
    Flow Map  & \\
   \midrule
-  \textbf{Area}&  Area Spiral Chart &Stream Graph &  \\ 
+  \textbf{Area}&  Area Spiral Chart &Stream Graph & Contour Map \\ 
   \midrule
   \textbf{Bar}&      Radial Bar Chart,Spiral Bar Chart  & Candlestick Chart, Bar Chart  &   \\
   \midrule
@@ -116,7 +116,7 @@ A visual unit is the smallest functional unit of a visualization.
   \midrule
   \textbf{Wedge}& Pie Chart, Donut Chart &  &  \\
   \midrule
-  \textbf{Text}&    &  Sentence Tree  & Word Cloud \\
+  \textbf{Text}&  People Spiral in\cite{dork_visual_2010}  &  Sentence Tree  & Word Cloud \\
   %\midrule
  % \textbf{Image}& & &Heatmap Matrix &Heatmap &\\
   \bottomrule
@@ -128,6 +128,13 @@ A visual unit is the smallest functional unit of a visualization.
 \subsection{Relationships Between Compositions}
 \label{relationship}
 We first describe the relationship between conceptual compositions, then offer suggestions for narrative sequence based on these relationships. Notice that we skip the relationship between visual primitives since there is only one kind of visual primitives in a visual unit. 
+
+\begin{figure}[tb]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{unit_relationship}
+ \caption{Illustration of the two kinds of relationship between visual units}
+ \label{fig:unit_relationship}
+\end{figure}
 
 \subsubsection{Relationships Between Visual Units}
 A visualization can be specified as the combination of several visual units. 
@@ -144,13 +151,6 @@ A proper narrative sequence of visual units should take these two types of relat
 We display relationships between units through a tree diagram where every visual unit is represented by a tree node. Sibling nodes stand for visual units with a bidirectional relationship while a child node and a parent node stand for two visual units that have a unidirectional relationship. A proper narrative sequence can be obtained by running a deep first search on this tree diagram. 
 
 
-
-\begin{figure}[tb]
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{unit_relationship}
- \caption{Illustration of the 4 types of relationship between visual units}
- \label{fig:unit_relationship}
-\end{figure}
 
 \subsubsection{Relationships Between Visual Channels}
 For a visual primitive, different channels are encoded with different data attribute. Thus, they are usually separated and have no logic dependency upon others. It's hard to determine a narrative sequence from their inner logical dependency. 
@@ -170,11 +170,11 @@ The visual saliency of different channels is relatively constant and  well defin
 To keep audiences focusing on the target object, it is necessary to identify visual distractions so that measurements can be taken to avoid them. 
 We identify two kinds of visual distractions: the one from context and the one from sibling channels, which refer to the visual channels belonging to the same visual primitives. 
 
-\subsubsection{Visual distraction from the context}
+\subsubsection{Visual Distraction from the Context}
 This kind of distraction has been widely discussed in the field of object detection and human visual attention ~\cite{nothdurft_salience_2000, standage_modelling_2005}. Its intensity is mainly  determined by spatial distance and appearance similarity ~\cite{wolfe_guided_1994}. 
 Focus + Context, which might be the most popular techniques for this problem, make uneven use of graphic resources to discriminate focus from their context. At the same time, adding dynamic changes to focus elements has also been demonstrated as effective under various conditions\cite{waldner_attractive_2014}. We support easy implementation of these techniques in our system. 
 
-\subsubsection{Visual distraction from sibling channels}
+\subsubsection{Visual Distraction from Sibling Channels}
 A visual primitive usually has more than one visual channels. Thus, when recognizing one primitive, the channels with high visual saliency can significantly influence the expression of other channels. For example, color can be a strong noise when the focus is supposed to be the shape. By exaggerating or suppressing certain visual channels, we try to reduce such distractions.
 
 
