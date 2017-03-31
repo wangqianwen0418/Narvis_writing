@@ -13,13 +13,13 @@ Satyanarayan and Heer, through interviews with professional journalists~\cite{sa
 
 These works, however, rarely discuss the narrative structures used for explaining visual designs. We propose a narrative framework to fill this gap.
 
-\subsection{Animation for Data Visualizations}
-There is a wide discussion about the effects of animation when used in a data visualization environment.
-Animation can facilitate the cognitive process. Heer and Robertson~\cite{heer_animated_2007-1} confirm the effectiveness of animation when relating data visualizations backed by a shared dataset. Ruchikachorn et al.~\cite{ruchikachorn_learning_2015}, going a step further, design morphing animations which bridge the gap between a familiar visualization and an unfamiliar one, thus introducing a new visualization design through animation. Graphdiaries~\cite{bach_graphdiaries:_2014} uses animation to help audiences track and understand changes in a dynamic visualization. 
-
-Animation can also be an effective tool to attract and guide visual attention. Huber et al.~\cite{huber_visualizing_2005} study the perceptual properties of different kinds of animation, as well as their effects on human attention. Waldner et al.~\cite{waldner_attractive_2014} focus on a specific animation, i.e., flicker. By dividing the animation into an “orientation stage” and an “engagement stage”, they strike a good balance between the attraction effectiveness and annoyance caused by flickering. 
-
-It is, however, noteworthy that animation, in spite of all the advantages mentioned above, can bring about negative effects when used improperly~\cite{robertson_effectiveness_2008}. Based on the results of previous research \siwei{cite}, our work provides a guideline on how to implement animations in our system.
+%\subsection{Animation for Data Visualizations}
+%There is a wide discussion about the effects of animation when used in a data visualization environment.
+%Animation can facilitate the cognitive process. Heer and Robertson~\cite{heer_animated_2007-1} confirm the effectiveness of animation when relating data visualizations backed by a shared dataset. Ruchikachorn et al.~\cite{ruchikachorn_learning_2015}, going a step further, design morphing animations which bridge the gap between a familiar visualization and an unfamiliar one, thus introducing a new visualization design through animation. Graphdiaries~\cite{bach_graphdiaries:_2014} uses animation to help audiences track and understand changes in a dynamic visualization. 
+%
+%Animation can also be an effective tool to attract and guide visual attention. Huber et al.~\cite{huber_visualizing_2005} study the perceptual properties of different kinds of animation, as well as their effects on human attention. Waldner et al.~\cite{waldner_attractive_2014} focus on a specific animation, i.e., flicker. By dividing the animation into an “orientation stage” and an “engagement stage”, they strike a good balance between the attraction effectiveness and annoyance caused by flickering. 
+%
+%It is, however, noteworthy that animation, in spite of all the advantages mentioned above, can bring about negative effects when used improperly~\cite{robertson_effectiveness_2008}. In our work, we implement animations in our system guided by the results of these previous work.
 
 \subsection{Authoring Tools for Narrative Visualizations}
 The extensive needs of data communication exist not only in the data visualization field but also in journalism, media, etc. This has motivated researchers to investigate ways for authoring narrative visualization. 
@@ -28,7 +28,7 @@ User experience is of great concern when utilizing an authoring tool. Sketch sto
 
 However, it is information delivery that is the core consideration of an authoring tool. Existing authoring tools usually choose a specific type of narrative visualization based on the information type~\cite{amini_authoring_2017, fulda_timelinecurator:_2016}. Meanwhile, integrating an authoring tool for narrative visualization with a  data analysis tool has become a trend since it effectively bridges the gap between data analysis and data communication~\cite{eccles_stories_2007, bryan_temporal_2016,lee_more_2015}. 
  
-These tools offer inspiring user interaction design as well as good examples to implement narrative visualization. However, they treat visual encodings as cognitively obvious attributes that can be universally recognized without a formal introduction, which is not appropriate for introducing visual designs. In our paper, we \siwei{please write sth. what we have done to differ from their work}  
+These tools offer inspiring user interaction design as well as good examples to implement narrative visualization. However, they treat visual encodings as cognitively obvious attributes that can be universally recognized without a formal introduction, which is not appropriate for introducing visual designs. In our paper, we propose an authoring tool specified for presenting visual designs in a narrative way. 
 % making them inapplicable in our case. 
 
 \subsection{Decomposition of Data Visualization}
@@ -39,5 +39,5 @@ Such theoretical work motivates the designers of visualization tools to contribu
 On the other hand, theoretically identifying the basic components of a data visualization enables people to physically extract them, and remap them to an alternative design without involving any programming work. Harper and Agrawala~\cite{harper_deconstructing_2014} contribute a tool that extracts visual variables from existing online visualization designs to generate a new design. Huang et al.~\cite{Huang:2007:SUI:1284420.1284427} propose a system that recognizes and interprets imaged
 infographics from a scanned document. Revision~\cite{savva_revision:_2011} applies computer vision methods to recognize the types, marks, encodings of a data visualization, and allows the users to create a new design based on these data. 
 
-However, these decomposing methods exclusively focus on simple visualization designs, such as bar chart, line chart, dot chart, and are not applicable for advanced visualization designs, which assemble miscellaneous visualization approaches to realize a novel presentation. Moreover, these methods are not specified of explaining a visual design, thus giving no consideration for graphical perception process and visual attention shift. \siwei{We...}
+However, these decomposing methods exclusively focus on simple visualization designs, such as bar chart, line chart, dot chart, and are not applicable for complex visualization designs, which assemble miscellaneous visualization approaches to realize a novel presentation. Moreover, these methods are not specified of explaining a visual design, thus giving no consideration for graphical perception process and visual attention shift. In this work, we attempt to propose a model which can fill this gap.
 
