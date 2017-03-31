@@ -159,6 +159,17 @@ H.~Doleisch, M.~Gasser, and H.~Hauser.
   complex simulation data.
 \newblock In {\em VisSym}, vol.~3, pp. 239--248, 2003.
 
+\bibitem{dork_visual_2010}
+M.~Dörk, D.~Gruen, C.~Williamson, and S.~Carpendale.
+\newblock A visual backchannel for large-scale events.
+\newblock 16(6):1129--1138. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2010\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}129}}
+
+
 \bibitem{eccles_stories_2007}
 R.~Eccles, T.~Kapler, R.~Harper, and W.~Wright.
 \newblock Stories in {GeoTime}.
