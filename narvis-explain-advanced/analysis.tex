@@ -131,41 +131,27 @@ We first describe the relationship between conceptual compositions, then offer s
 
 \subsubsection{Relationships Between Visual Units}
 A visualization can be specified as the combination of several visual units. 
-% Through observing the approaches people apply to design new visualizations, 
-We go through all the text visualizations collected in Kucher and Kerren's survey~\cite{kucher2015text}, and define four types of relationships that commonly exist between visual units: irrelevance, sharing, enhancement, and dependency. 
+% Through observing the approaches people apply to design new visualizations,
+We go through all the text visualizations collected in Kucher and Kerren's survey~\cite{kucher2015text}, and identify two types of relationships between visual units: unidirectional relationship and bidirectional relationship. Since visual units are the combination of construction rules and visual primitives, we can describe the relationship between two visual units through describing the relationship between their visual units and constructing rules.  
 
-\textbf{Irrelevance} is a bi-directional relation meaning two visual units are independent and do not share any visual channel.
-For example, 2 donut charts, Figure~\ref{fig:relationship}(a) and Figure~\ref{fig:relationship}(b), are applied to illustrate the distribution of age and gender groups respectively in a population. They are put together in Figure~\ref{fig:relationship}(c) just for space-efficiency and there is no correlation between these two charts. 
+\noindent
+\textbf{Bidirectional relationship} refers to that the dependency of two visual units is mutual. They share the same construction rule and their visual primitives indicate separate data attributes in a dataset.
+For example, in Figure~\ref{fig:relationship}(a) a line chart and  a bar chart are put together with the same construction rule. 
 
-\textbf{Sharing} refers to that two visual units share some visual grammars and it is a bi-directional relationship. 
-For example, a line chart, Figure~\ref{fig:relationship}(d), indicates the temperature over a time period, and a bar chart, Figure~\ref{fig:relationship}(d), indicates the precipitation over a time period. They are put together in Figure~\ref{fig:relationship}(e) and they share the same visual grammar of horizontal position.  
-%\siwei{what is the difference between visual grammar and visual channel? why horizontal position is visual grammar rather than visual channel?}
-%\notsure{According to our survey, color and position are the most commonly shared visual encodings, which might be the result that color and position usually encoded with simple while crucial information. }
+\noindent
+\textbf{Unidirectional relationship} refers to that one visual unit ``A'' depends on another visual unit ``B''.  This dependency is established neither by ``replacing'' or ``adding''. A dependency established by ``replacing'' refers to that ``A'' replaces the original graphical elements in ``B'' to build a new visual design. For example, in Figure~\ref{fig:unit_relationship}(b), a bar chart replaces the node segments in a chord diagram. This kind of dependency widely exists in the advanced visualization design, such as the heat map mapped upon the streams in a theme river~\cite{wu_opinionflow:_2014}  and usage of glyphs to replace the nodes in a multidimensional scaling (MDS) plot~\cite{chen_peakvizor:_2016}. A dependency established by ``adding'' means that ``A'' is added to reveal a more detailed description of ``B''. Such description can be the more detailed information from dataset, or information obtained from the previous visualization (Figure~\ref{fig:unit_relationship}(c)). For example, in Figure~\ref{fig:unit_relationship}(c), a contour map is mapped upon a MDS map to illustrate the area with high distribution density, which information is obtained from the MSD map rather than a dataset. While in Figure~\ref{fig:unit_relationship}(d), a donut chart is added to another donut chart, to reveal a low hierarchical information, which is directly obtained from the dataset. 
 
 
-\textbf{Enhancement} is a one-way relationship. If one visual unit ``A'' is the enhancement of another visual unit ``B'', it means that ``A'' is imported into ``B'', replaces some graphical elements of ``B'', thus enables the representation of some data attributes that ``B'' alone fails to convey. Suppose there are 5 types of area in a park. A bar chart, Figure~\ref{fig:relationship}(h), illustrates their average price per unit area, a chord diagram, Figure~\ref{fig:relationship}(g), illustrates how passengers travel through each area. In Figure~\ref{fig:relationship}(i), the bar chart takes the place of node segments, which has the same height, in a chord diagram, resulting in a novel and informative visualization.
- 
-Enhancement widely exist in the advanced visualization design, such as the heat map mapped upon the streams in a theme river~\cite{wu_opinionflow:_2014}  and usage of glyphs to enhance the meaning of nodes in a multidimensional scaling plot~\cite{chen_peakvizor:_2016}. 
+A proper narrative sequence of visual units should take these two types of relationships into consideration. For a unidirectional relationship, the dependent should be explained after the visual unit it depends on. For a bidirectional relationship, these two visual units should be explained together but the sequence can be random. 
+We display relationships between units through a tree diagram where every visual unit is represented by a tree node. Sibling nodes stand for visual units with a bidirectional relationship while a child node and a parent node stand for two visual units that have a unidirectional relationship. A proper narrative sequence can be obtained by running a deep first search on this tree diagram. 
 
-\textbf{Dependence} is a one-way relationship. If one visual unit ``A'' is dependent on ``B'', it means that ``A'' reveal some information that results from the visualization of ``B''. For example, a multiple dimensional scaling (MSD) map, Figure~\ref{fig:relationship}(j), shows the similarity between each restaurant in a city. A contour map, Figure~\ref{fig:relationship}(h), is then added to the MSD map to \notsure{show the most common type of restaurants, which information can hardly be obtained from the dataset but quite evident from the MSD map}, as in Figure~\ref{fig:relationship}(i).The biggest difference between "\textbf{enhancement}" and "\textbf{dependence}" is that 1) \textbf{enhancement} still illustrate the data attributes in the dataset, while \textbf{dependency} reveals the new knowledge we obtain from adopting a previous visualization to the dataset; 2) \textbf{enhancement} replace original graphical elements of other visual design while \textbf{dependence} adds new graphical elements.
-
-A proper narrative sequence of visual units should take the relationships between them into consideration. For irrelevance, it doesn't matter whether these two visual units are explained sequentially. For sharing, these two visual units should be explained one after another. Since sharing is bidirectional, it doesn't matter which one is explained first. For dependency and enhancement, which are unidirectional, the two visual units should be explained sequentially in a specific order. 
- Thus, we display the correlations between units in a tree diagram where a child node is the enhancement/dependence of its parent node and sibling nodes have sharing. A proper narrative sequence can be obtained by running a deep first search on this tree diagram. 
-
-%\subsubsection{Relationships Between Visual Primitives}
-%%\siwei{There are some notes: 1. do not mention usually has 1 or 2 primitives. it is flawed. 2. Candlestick chart and error bar are quite similar expect their context. why one has no dependency and the other has logical dependency? 3. do not use two ``such as'' in one sentence.}
-%%The inner relationship between visual primitives is relatively simple.
-%%A visual unit usually has 1 or 2 visual primitives. 
-%%
-%%\notsure{
-%The relationship between two visual primitives of one visual unit are usually self-evident. One primitive either has no dependency on the other one, such as the bar and line in \textit{Candlestick Chart}, or has high and evident dependency.  This dependency can be logical, such as the line and bar in \textit{error bar chart}, or spacial, such as the node segment and arc in \textit{chord diagram}, or temporal, such as the stream and dot in \cite{liu_online_2016}
 
 
 \begin{figure}[tb]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
  \includegraphics[width=\columnwidth]{unit_relationship}
  \caption{Illustration of the 4 types of relationship between visual units}
- \label{fig:relationship}
+ \label{fig:unit_relationship}
 \end{figure}
 
 \subsubsection{Relationships Between Visual Channels}
