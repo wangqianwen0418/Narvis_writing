@@ -12,3 +12,4 @@
 *.fdb_latexmk
 .DS_Store
 CVS/*
+template.pdf
