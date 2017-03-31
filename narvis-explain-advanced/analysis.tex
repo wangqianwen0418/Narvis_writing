@@ -20,7 +20,7 @@ We propose this model based on our observation of the 375 text visualizations co
 
 \subsection{Compositions of a Visualization}\label{compositions}
 Several work has taken efforts to identify the atomic building blocks of a visualization~\cite{mendez_ivolver:_2016, bertin1983semiology}. 
-This model is the extension of previous work by 1) including the relationship bet. \siwei{not complete} 
+This model is the extension of previous work by 1) proposing a hierarchical structure; 2) including the relationship between components; 3)considering the requirements for composing a comprehensive narrative sequence. 
 In our model, a visualization is decomposed into a hierarchical structure of three levels, including
 % three levels of structure: 
 visual primitives, visual units, and an advanced visualization design. 
@@ -146,7 +146,7 @@ A visualization can be specified as the combination of several visual units.
 We go through all the text visualizations collected in Kucher and Kerren's survey~\cite{kucher2015text}, and identify two types of relationships between visual units: unidirectional relationship and bidirectional relationship. Since visual units are the combination of construction rules and visual primitives, we can describe the relationship between two visual units through describing the relationship between their visual units and constructing rules.  
 
 \textbf{Bidirectional relationship} refers to that the dependency of two visual units is mutual. They share the same construction rule and their visual primitives indicate separate data attributes in a dataset.
-For example, in Figure~\ref{fig:relationship}(a) \siwei{citation error} a line chart and  a bar chart are put together with the same construction rule. 
+For example, in Figure~\ref{fig:unit_relationship}(a) a line chart and  a bar chart are put together with the same construction rule. 
 
 \textbf{Unidirectional relationship} refers to that one visual unit ``A'' depends on another visual unit ``B''.  This dependency is established either by ``replacing'' or ``adding''. A dependency established by ``replacing'' refers to that ``A'' replaces the original graphical elements in ``B'' to build a new visual design. For example, in Figure~\ref{fig:unit_relationship}(b), a bar chart replaces the node segments in a chord diagram. This kind of dependency widely exists in the advanced visualization design, such as the heat map mapped upon the streams in a theme river~\cite{wu_opinionflow:_2014}  and usage of glyphs to replace the nodes in a multidimensional scaling (MDS) plot~\cite{chen_peakvizor:_2016}. A dependency established by ``adding'' means that ``A'' is added to reveal a more detailed description of ``B''. Such description can be the more detailed information from dataset, or information obtained from the previous visualization (Figure~\ref{fig:unit_relationship}(c)). For example, in Figure~\ref{fig:unit_relationship}(c), a contour map is mapped upon a MDS map to illustrate the area with high distribution density, \original{which information is obtained from the MSD map rather than a dataset.}\siwei{this is problematic} While in Figure~\ref{fig:unit_relationship}(d), a donut chart is added to another donut chart, to reveal more hierarchies, \original{which is directly obtained from the dataset. }\siwei{why do you need to emphasize where the information come from?}
 

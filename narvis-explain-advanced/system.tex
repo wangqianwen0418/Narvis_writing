@@ -1,3 +1,12 @@
+
+\begin{figure}
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{overview}
+ \caption{An abstract representation of the workflow of Narvis: (i)Auto Analysis; (ii) Authoring; (iii) Reviewing.}
+ \label{fig:overview}
+\end{figure}
+
+
 \section{Narvis: System Design and Implementation}
 
 % Thus, it has two kinds of users: editors, the data visualization experts who use Narvis to create an explanation slideshow, and audiences, the general audience who watch the slideshow created by ediors.
@@ -8,18 +17,10 @@ Guided by the theory model discussed in Section~\ref{analysis}, as well as the d
 % In Human Editing Phase, editors will be involved to modify the output from the Automatic Analysis Phase, and use the templates Narvis provide to craft a explanation slideshow. 
 % In Reviewing Phase, audience can assess the slide show generated in Human Editing Phase. Their click activity and comments will be recorded and send to the editors, helping them improve the quality of the slide show. 
 
-\begin{figure}
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{overview}
- \caption{The system overview}
- \label{fig:overview}
-\end{figure}
 
-
-\subsection{Phase1: Auto Analysis}
 
 % The auto analysis has two parts: one for input image and one for input text. It automatically extract the graphic elements and divide them into different cluster, facilitating later editing.(DE1) Note that the textual input is not necessary but it provides hints when editors add annotations manually in the Human Editing Phase.(DE1)
-
+\subsection{Phase1: Auto Analysis}
 The input of Narvis includes two parts: one image presenting a visual design (mandatory) and a piece of text describing the design (optional). Considering that the vast majority of visualizations are only available as bitmap images, we offer an algorithm to detect and extract the graphical elements from the input image. Here, we explain the basic idea of how Narvis analyzes these input sources to facilitate further authoring. 
 %\begin{algorithm} 
 %        \caption{Object Detection}  
@@ -137,7 +138,7 @@ We apply the analysis and theory model in Section~\ref{analysis} for the design 
 With a visual unit, more specifically, a set of graphic elements, as input, a template will generate a slideshow and each slide illustrates one visual grammar(DE.1). These slides are sorted based on the narrative sequence we discussed in section 3.3. In each slide, we offer hints to guide the annotation process (DE.2). These hints are a sentence with blanks to fill in, heuristic questions, or a list of suggestion symbols. A visual channel is suppressed until its grammar has been explained. For example, in Figure~\ref{fig:template}, before we introduce the visual grammar of color, all the object will be blue. The graphical elements in different slides, which have different visual appearances due to the applied exaggeration or suppression of certain visual channels, are perceptively connected through morphing animation. 
 
 \begin{table}[tb]
-  \caption{A summary of animation provided}
+  \caption{A summary of the animations provided by Narvis}
   \label{tab:animation}
   \small
   \centering
@@ -169,7 +170,6 @@ With a visual unit, more specifically, a set of graphic elements, as input, a te
 
 \noindent
 \textbf{Animation embedded in templates }
-
 Narvis provides 8 types of animation, implement them in templates based on their effects on human attention and perception (DA.1), which has been widely discussed in previous work~\cite{robertson_effectiveness_2008, waldner_attractive_2014, heer_animated_2007}. We also provide a novel decomposition animation, which displays how a visualization is decomposed to several visual units. This animation, at the beginning of the introduction slideshow, aims to engage the audience as well as to help them get a sense of overview (DA.6).
 Animation is a double-edge sword, which brings both benefits and pitfalls. We are not discussing its effects here but leave it to the judgment of editors by giving them the freedom to remove it.
 
